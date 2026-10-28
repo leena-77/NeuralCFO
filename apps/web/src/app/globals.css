@@ -65,14 +65,17 @@
   background: rgba(0, 229, 163, 0.7);
 }
 
-/* Rich Emerald Forest Foliage Canvas with Organic Gradient Depth */
+/* Lush Emerald Silk Gradient Canvas (User Uploaded Exact Reference) */
 body {
-  background: 
-    radial-gradient(ellipse 75% 45% at 15% 10%, rgba(16, 185, 129, 0.45) 0%, transparent 65%),
-    radial-gradient(ellipse 65% 55% at 85% 20%, rgba(52, 211, 153, 0.35) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 50% 85%, rgba(5, 150, 105, 0.40) 0%, transparent 65%),
-    radial-gradient(circle at 80% 60%, rgba(13, 148, 136, 0.28) 0%, transparent 50%),
-    linear-gradient(135deg, #064e3b 0%, #065f46 25%, #043f30 55%, #022c22 80%, #011912 100%);
+  background-color: #07221b;
+  background-image: 
+    radial-gradient(ellipse at 50% 88%, rgba(39, 163, 101, 0.30) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(24, 110, 78, 0.20) 0%, transparent 50%),
+    radial-gradient(ellipse at 15% 40%, rgba(18, 88, 64, 0.25) 0%, transparent 55%),
+    url('/bg-emerald-gradient.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   color: #ffffff;
   min-height: 100vh;

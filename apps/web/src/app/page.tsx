@@ -63,11 +63,10 @@ export default function UnifiedSystemCockpit() {
   return (
     <div className="flex h-screen w-screen overflow-hidden p-2.5 gap-2.5 font-sans relative">
       {/* ============================================================== */}
-      {/* 0. VIBRANT MULTI-TONE GREEN AMBIENT MESH (Frosted Refraction)  */}
+      {/* 0. LUSH EMERALD AMBIENT LIGHTING (Enhances Silk Wallpaper)     */}
       {/* ============================================================== */}
-      <div className="fixed -top-32 -left-20 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#10b981]/40 via-[#059669]/25 to-transparent blur-[130px] pointer-events-none z-0" />
-      <div className="fixed top-1/4 -right-20 w-[650px] h-[650px] rounded-full bg-gradient-to-bl from-[#34d399]/35 via-[#047857]/30 to-transparent blur-[140px] pointer-events-none z-0" />
-      <div className="fixed -bottom-28 left-1/4 w-[750px] h-[500px] rounded-full bg-gradient-to-tr from-[#059669]/40 via-[#10b981]/20 to-transparent blur-[130px] pointer-events-none z-0" />
+      <div className="fixed -top-24 -left-24 w-96 h-96 rounded-full bg-[#10b981]/15 blur-[120px] pointer-events-none z-0" />
+      <div className="fixed bottom-0 right-0 w-[500px] h-[400px] rounded-full bg-[#27a365]/20 blur-[130px] pointer-events-none z-0" />
 
       {/* ============================================================== */}
       {/* 1. LEFT NAVIGATION RAIL (White Transparent Liquid Crystal Rail)*/}
