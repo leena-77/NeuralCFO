@@ -259,29 +259,29 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
   return (
     <div className="space-y-5 pb-8 font-sans">
       {/* 1. Telemetry Strip (Clay Cushion) */}
-      <div className="clay-card p-4 rounded-3xl flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-700 shadow-sm">
+      <div className="clay-card p-4 rounded-3xl flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-200 shadow-sm">
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
             <span>
-              API Gateway: <strong className="text-emerald-700">/v1/moonshot</strong>
+              API Gateway: <strong className="text-emerald-400">/v1/moonshot</strong>
             </span>
           </div>
           <div className="flex items-center space-x-2">
-            <ShieldCheck className="w-4 h-4 text-[#648283]" />
+            <ShieldCheck className="w-4 h-4 text-emerald-400" />
             <span>
-              Verifier: <strong className="text-[#648283]">HR-01 to HR-12 Enforced</strong>
+              Verifier: <strong className="text-emerald-400">HR-01 to HR-12 Enforced</strong>
             </span>
           </div>
           <div className="flex items-center space-x-2">
-            <Hash className="w-4 h-4 text-[#8e7ca8]" />
+            <Hash className="w-4 h-4 text-amber-400" />
             <span>
-              Quotes: <strong className="text-[#8e7ca8]">SHA-256 Verbatim</strong>
+              Quotes: <strong className="text-amber-400">SHA-256 Verbatim</strong>
             </span>
           </div>
         </div>
-        <div className="text-slate-500">
-          Tenant: <strong className="text-slate-800">Acme Agency (Dev Org)</strong>
+        <div className="text-slate-400">
+          Tenant: <strong className="text-slate-200">Acme Agency (Dev Org)</strong>
         </div>
       </div>
 
@@ -289,56 +289,56 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {/* Stat 1: Approved Strategies */}
         <div className="clay-cushion p-4 space-y-2">
-          <div className="flex items-center justify-between text-xs font-bold text-slate-500">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-400">
             <span>Approved Strategies</span>
-            <Layers className="w-4 h-4 text-[#648283]" />
+            <Layers className="w-4 h-4 text-emerald-400" />
           </div>
-          <div className="text-2xl font-black text-slate-900 tracking-tight">
+          <div className="text-2xl font-black text-white tracking-tight">
             {cards.length || 12} Cards
           </div>
-          <div className="text-[10px] font-bold text-[#648283]">
+          <div className="text-[10px] font-bold text-emerald-400">
             100% Primary Archival Filings
           </div>
         </div>
 
         {/* Stat 2: Median Reversibility */}
         <div className="clay-cushion p-4 space-y-2">
-          <div className="flex items-center justify-between text-xs font-bold text-slate-500">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-400">
             <span>Median Reversibility</span>
             <RefreshCw className="w-4 h-4 text-emerald-600" />
           </div>
-          <div className="text-2xl font-black text-slate-900 tracking-tight">
+          <div className="text-2xl font-black text-white tracking-tight">
             &lt; $5,000
           </div>
-          <div className="text-[10px] font-bold text-emerald-700">
+          <div className="text-[10px] font-bold text-emerald-400">
             14-30 Day Rapid Signal Window
           </div>
         </div>
 
         {/* Stat 3: Runway Extension */}
         <div className="clay-cushion p-4 space-y-2">
-          <div className="flex items-center justify-between text-xs font-bold text-slate-500">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-400">
             <span>Runway Extension</span>
-            <TrendingUp className="w-4 h-4 text-[#cb7a72]" />
+            <TrendingUp className="w-4 h-4 text-rose-400" />
           </div>
-          <div className="text-2xl font-black text-slate-900 tracking-tight">
+          <div className="text-2xl font-black text-white tracking-tight">
             +{simRunwayMonths} Mo
           </div>
-          <div className="text-[10px] font-bold text-[#cb7a72]">
+          <div className="text-[10px] font-bold text-rose-400">
             Deterministic Zero-Debt Growth
           </div>
         </div>
 
         {/* Stat 4: Verifier Confidence */}
         <div className="clay-cushion p-4 space-y-2">
-          <div className="flex items-center justify-between text-xs font-bold text-slate-500">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-400">
             <span>Verifier Confidence</span>
-            <ShieldCheck className="w-4 h-4 text-[#8e7ca8]" />
+            <ShieldCheck className="w-4 h-4 text-amber-400" />
           </div>
-          <div className="text-2xl font-black text-slate-900 tracking-tight">
+          <div className="text-2xl font-black text-white tracking-tight">
             100%
           </div>
-          <div className="text-[10px] font-bold text-[#8e7ca8]">
+          <div className="text-[10px] font-bold text-amber-400">
             Strict Mathematical Proofs
           </div>
         </div>
@@ -350,24 +350,24 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
         <div className="lg:col-span-2 space-y-4">
           <div className="clay-card p-6 rounded-3xl space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-base font-extrabold text-slate-900 flex items-center space-x-2">
+              <h2 className="text-base font-extrabold text-white flex items-center space-x-2">
                 <Zap className="w-4 h-4 text-emerald-600" />
                 <span>Strategic Goal Statement</span>
               </h2>
-              <span className="text-[10px] px-3 py-1 rounded-full clay-card-inset text-slate-700 font-mono font-bold">
+              <span className="text-[10px] px-3 py-1 rounded-full clay-card-inset text-slate-300 font-mono font-bold">
                 Card 1 Intake Seam
               </span>
             </div>
 
             {/* Quick preset chips */}
             <div className="flex flex-wrap items-center gap-2 text-xs">
-              <span className="text-slate-500 font-semibold">Presets:</span>
+              <span className="text-slate-400 font-semibold">Presets:</span>
               <button
                 type="button"
                 onClick={() =>
                   setGoal("Transition our agency from billing hourly to $15k monthly upfront retainers")
                 }
-                className="clay-btn px-3 py-1 rounded-full text-slate-700 font-semibold"
+                className="clay-btn px-3 py-1 rounded-full text-slate-300 font-semibold"
               >
                 Upfront Retainers
               </button>
@@ -376,7 +376,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                 onClick={() =>
                   setGoal("Launch self-serve annual prepayment tier with 20% discount for cash flow float")
                 }
-                className="clay-btn px-3 py-1 rounded-full text-slate-700 font-semibold"
+                className="clay-btn px-3 py-1 rounded-full text-slate-300 font-semibold"
               >
                 Annual Prepay Tier
               </button>
@@ -385,7 +385,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                 onClick={() =>
                   setGoal("Shift client payment terms from Net 60 to Net 15 with 2% discount incentive")
                 }
-                className="clay-btn px-3 py-1 rounded-full text-slate-700 font-semibold"
+                className="clay-btn px-3 py-1 rounded-full text-slate-300 font-semibold"
               >
                 Net 15 Terms
               </button>
@@ -396,45 +396,45 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
               value={goal}
               onChange={(e) => setGoal(e.target.value)}
               rows={3}
-              className="w-full clay-card-inset p-4 rounded-2xl text-xs text-slate-900 placeholder-slate-500 focus:outline-none transition-all font-sans leading-relaxed"
+              className="w-full clay-card-inset p-4 rounded-2xl text-xs text-white placeholder-slate-500 focus:outline-none transition-all font-sans leading-relaxed"
               placeholder="Enter your strategic bold move statement..."
             />
 
             {/* Operating Bounds Controls */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
               <div>
-                <label className="text-slate-600 font-bold block mb-1">Horizon (Weeks)</label>
+                <label className="text-slate-300 font-bold block mb-1">Horizon (Weeks)</label>
                 <input
                   type="number"
                   value={horizonWeeks}
                   onChange={(e) => setHorizonWeeks(Number(e.target.value))}
-                  className="w-full clay-card-inset p-2.5 rounded-xl text-slate-900 font-mono font-bold"
+                  className="w-full clay-card-inset p-2.5 rounded-xl text-white font-mono font-bold"
                 />
               </div>
               <div>
-                <label className="text-slate-600 font-bold block mb-1">Budget Cap ($)</label>
+                <label className="text-slate-300 font-bold block mb-1">Budget Cap ($)</label>
                 <input
                   type="number"
                   value={budgetCap}
                   onChange={(e) => setBudgetCap(Number(e.target.value))}
-                  className="w-full clay-card-inset p-2.5 rounded-xl text-slate-900 font-mono font-bold"
+                  className="w-full clay-card-inset p-2.5 rounded-xl text-white font-mono font-bold"
                 />
               </div>
               <div>
-                <label className="text-slate-600 font-bold block mb-1">Team Size</label>
+                <label className="text-slate-300 font-bold block mb-1">Team Size</label>
                 <input
                   type="number"
                   value={teamSize}
                   onChange={(e) => setTeamSize(Number(e.target.value))}
-                  className="w-full clay-card-inset p-2.5 rounded-xl text-slate-900 font-mono font-bold"
+                  className="w-full clay-card-inset p-2.5 rounded-xl text-white font-mono font-bold"
                 />
               </div>
               <div>
-                <label className="text-slate-600 font-bold block mb-1">Risk Tolerance</label>
+                <label className="text-slate-300 font-bold block mb-1">Risk Tolerance</label>
                 <select
                   value={riskTolerance}
                   onChange={(e) => setRiskTolerance(e.target.value as any)}
-                  className="w-full clay-card-inset p-2.5 rounded-xl text-slate-900 font-mono font-bold"
+                  className="w-full clay-card-inset p-2.5 rounded-xl text-white font-mono font-bold"
                 >
                   <option value="low">Low (Worst Case)</option>
                   <option value="medium">Medium (Expected)</option>
@@ -444,10 +444,10 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
             </div>
 
             {/* Action Bar */}
-            <div className="pt-2 flex items-center justify-between border-t border-slate-300">
-              <span className="text-xs text-slate-600 font-mono">
+            <div className="pt-2 flex items-center justify-between border-t border-white/10">
+              <span className="text-xs text-slate-300 font-mono">
                 {currentStage ? (
-                  <span className="text-emerald-700 flex items-center space-x-2 font-bold">
+                  <span className="text-emerald-400 flex items-center space-x-2 font-bold">
                     <RefreshCw className="w-3.5 h-3.5 animate-spin" />
                     <span>{currentStage}</span>
                   </span>
@@ -459,7 +459,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                 type="button"
                 onClick={handleRun}
                 disabled={isLoading}
-                className="px-6 py-2.5 clay-pill-sage text-slate-900 font-bold text-xs rounded-full flex items-center space-x-2 shadow-md transition-all"
+                className="px-6 py-2.5 clay-pill-sage text-white font-bold text-xs rounded-full flex items-center space-x-2 shadow-md transition-all"
               >
                 <span>Run Moonshot Synthesis</span>
                 <ArrowRight className="w-4 h-4" />
@@ -480,7 +480,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
               <div className="space-y-3 text-xs">
                 {clarification.questions?.map((q: any) => (
                   <div key={q.question_id || q.field_name} className="p-4 clay-card-inset rounded-2xl">
-                    <div className="text-slate-800 font-bold mb-2">{q.prompt || q.question}</div>
+                    <div className="text-slate-200 font-bold mb-2">{q.prompt || q.question}</div>
                     <div className="flex flex-wrap gap-2">
                       {(q.options || q.tappable_options)?.map((opt: any) => {
                         const optVal = typeof opt === "string" ? opt : opt.label;
@@ -493,8 +493,8 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                             onClick={() => setSelectedOptions((prev) => ({ ...prev, [key]: optVal }))}
                             className={`px-3 py-1.5 rounded-full text-xs font-bold transition ${
                               isSelected
-                                ? "clay-pill-sage text-slate-900 shadow-md"
-                                : "clay-btn text-slate-700"
+                                ? "clay-pill-sage text-white shadow-md"
+                                : "clay-btn text-slate-300"
                             }`}
                           >
                             {optVal}
@@ -508,7 +508,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
               <button
                 type="button"
                 onClick={handleAnswerSubmit}
-                className="px-5 py-2 clay-pill-sage text-slate-900 font-bold text-xs rounded-full shadow-md"
+                className="px-5 py-2 clay-pill-sage text-white font-bold text-xs rounded-full shadow-md"
               >
                 Submit Answers & Continue
               </button>
@@ -518,8 +518,8 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
           {/* Strategy Explorer (Cards Array) */}
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <h3 className="text-sm font-extrabold text-slate-900 flex items-center space-x-2">
-                <Sliders className="w-4 h-4 text-[#8e7ca8]" />
+              <h3 className="text-sm font-extrabold text-white flex items-center space-x-2">
+                <Sliders className="w-4 h-4 text-amber-400" />
                 <span>Archival Precedent Strategy Cards</span>
               </h3>
               <div className="clay-segmented-bar flex space-x-1 text-xs">
@@ -531,7 +531,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                     className={`px-3 py-1 rounded-full capitalize font-bold transition ${
                       activeFilter === f
                         ? "clay-pill-lavender shadow-sm"
-                        : "text-slate-600 hover:text-slate-900"
+                        : "text-slate-300 hover:text-white"
                     }`}
                   >
                     {f}
@@ -552,37 +552,37 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                     <div className="flex items-start justify-between">
                       <div>
                         <div className="flex items-center space-x-2">
-                          <span className="text-[10px] px-2.5 py-0.5 rounded-full clay-card-inset font-mono font-bold text-slate-700">
+                          <span className="text-[10px] px-2.5 py-0.5 rounded-full clay-card-inset font-mono font-bold text-slate-300">
                             #{idx + 1}
                           </span>
-                          <span className="text-sm font-extrabold text-slate-900">{card.title}</span>
+                          <span className="text-sm font-extrabold text-white">{card.title}</span>
                           <span
                             className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
                               card.evidence_tier === "A"
-                                ? "bg-emerald-100 text-emerald-800 border border-emerald-300"
-                                : "bg-blue-100 text-blue-800 border border-blue-300"
+                                ? "bg-emerald-100 text-emerald-300 border border-emerald-300"
+                                : "bg-cyan-950/80 text-cyan-300 border border-cyan-500/40"
                             }`}
                           >
                             Tier {card.evidence_tier}
                           </span>
                         </div>
-                        <p className="text-xs text-slate-600 mt-1">{card.summary}</p>
+                        <p className="text-xs text-slate-300 mt-1">{card.summary}</p>
                       </div>
                       <div className="text-right text-xs font-mono">
-                        <span className="text-slate-500">Signal: </span>
-                        <strong className="text-emerald-700 font-bold">{card.time_to_signal_days}d</strong>
+                        <span className="text-slate-400">Signal: </span>
+                        <strong className="text-emerald-400 font-bold">{card.time_to_signal_days}d</strong>
                       </div>
                     </div>
 
                     {/* Segmented 3-Tab Bar */}
-                    <div className="flex border-b border-slate-300 text-xs font-semibold">
+                    <div className="flex border-b border-white/10 text-xs font-semibold">
                       <button
                         type="button"
                         onClick={() => setCardTabs((prev) => ({ ...prev, [card.id]: "mechanism" }))}
                         className={`pb-1.5 px-3 transition border-b-2 ${
                           activeTab === "mechanism"
-                            ? "border-emerald-600 text-emerald-800 font-bold"
-                            : "border-transparent text-slate-500 hover:text-slate-800"
+                            ? "border-emerald-600 text-emerald-300 font-bold"
+                            : "border-transparent text-slate-400 hover:text-slate-200"
                         }`}
                       >
                         [STRATEGIC MECHANISM]
@@ -592,8 +592,8 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                         onClick={() => setCardTabs((prev) => ({ ...prev, [card.id]: "quote" }))}
                         className={`pb-1.5 px-3 transition border-b-2 ${
                           activeTab === "quote"
-                            ? "border-purple-600 text-purple-800 font-bold"
-                            : "border-transparent text-slate-500 hover:text-slate-800"
+                            ? "border-purple-600 text-amber-300 font-bold"
+                            : "border-transparent text-slate-400 hover:text-slate-200"
                         }`}
                       >
                         [ARCHIVAL QUOTE & SHA-256]
@@ -603,8 +603,8 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                         onClick={() => setCardTabs((prev) => ({ ...prev, [card.id]: "cfo" }))}
                         className={`pb-1.5 px-3 transition border-b-2 ${
                           activeTab === "cfo"
-                            ? "border-[#648283] text-[#648283] font-bold"
-                            : "border-transparent text-slate-500 hover:text-slate-800"
+                            ? "border-[#648283] text-emerald-400 font-bold"
+                            : "border-transparent text-slate-400 hover:text-slate-200"
                         }`}
                       >
                         [CFO SIMULATION]
@@ -614,26 +614,26 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                     {/* Tab Contents */}
                     {activeTab === "mechanism" && (
                       <div className="p-3 clay-card-inset rounded-2xl text-xs space-y-2">
-                        <div className="text-slate-800 leading-relaxed font-sans">
+                        <div className="text-slate-200 leading-relaxed font-sans">
                           {card.strategic_mechanism ||
                             "Transition contract terms to upfront cash payments to build negative working capital."}
                         </div>
-                        <div className="grid grid-cols-3 gap-2 pt-2 border-t border-slate-300 text-slate-600 font-mono text-[11px]">
-                          <div>Cost to Undo: <strong className="text-slate-900">${card.cost_to_undo}</strong></div>
-                          <div>Upfront Cost: <strong className="text-slate-900">${card.upfront_cost}</strong></div>
-                          <div>Lever Type: <strong className="text-emerald-700">{card.lever_type}</strong></div>
+                        <div className="grid grid-cols-3 gap-2 pt-2 border-t border-white/10 text-slate-300 font-mono text-[11px]">
+                          <div>Cost to Undo: <strong className="text-white">${card.cost_to_undo}</strong></div>
+                          <div>Upfront Cost: <strong className="text-white">${card.upfront_cost}</strong></div>
+                          <div>Lever Type: <strong className="text-emerald-400">{card.lever_type}</strong></div>
                         </div>
                       </div>
                     )}
 
                     {activeTab === "quote" && (
                       <div className="p-3 clay-card-inset rounded-2xl text-xs space-y-2">
-                        <blockquote className="text-slate-800 italic border-l-2 border-purple-500 pl-3 py-1 font-serif">
+                        <blockquote className="text-slate-200 italic border-l-2 border-purple-500 pl-3 py-1 font-serif">
                           &ldquo;{card.source_excerpt}&rdquo;
                         </blockquote>
-                        <div className="flex items-center justify-between text-slate-600 pt-1 font-mono text-[11px]">
-                          <span>Source: <strong className="text-slate-900">{card.source_citation}</strong></span>
-                          <span className="flex items-center space-x-1 text-emerald-700 font-bold">
+                        <div className="flex items-center justify-between text-slate-300 pt-1 font-mono text-[11px]">
+                          <span>Source: <strong className="text-white">{card.source_citation}</strong></span>
+                          <span className="flex items-center space-x-1 text-emerald-400 font-bold">
                             <CheckCircle2 className="w-3.5 h-3.5" />
                             <span>SHA-256 Verified ({card.source_excerpt_hash.slice(0, 8)}...)</span>
                           </span>
@@ -645,16 +645,16 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                       <div className="p-3 clay-card-inset rounded-2xl text-xs space-y-2">
                         <div className="grid grid-cols-3 gap-3 text-center">
                           <div className="p-2.5 clay-cushion rounded-xl">
-                            <div className="text-slate-500 text-[10px] font-bold">Expected End Cash</div>
-                            <div className="text-emerald-700 font-black text-sm mt-0.5">$145,000</div>
+                            <div className="text-slate-400 text-[10px] font-bold">Expected End Cash</div>
+                            <div className="text-emerald-400 font-black text-sm mt-0.5">$145,000</div>
                           </div>
                           <div className="p-2.5 clay-cushion rounded-xl">
-                            <div className="text-slate-500 text-[10px] font-bold">Min Cash Floor</div>
-                            <div className="text-slate-800 font-black text-sm mt-0.5">$100,000</div>
+                            <div className="text-slate-400 text-[10px] font-bold">Min Cash Floor</div>
+                            <div className="text-slate-200 font-black text-sm mt-0.5">$100,000</div>
                           </div>
                           <div className="p-2.5 clay-cushion rounded-xl">
-                            <div className="text-slate-500 text-[10px] font-bold">Runway Forecast</div>
-                            <div className="text-[#648283] font-black text-sm mt-0.5">24 Weeks</div>
+                            <div className="text-slate-400 text-[10px] font-bold">Runway Forecast</div>
+                            <div className="text-emerald-400 font-black text-sm mt-0.5">24 Weeks</div>
                           </div>
                         </div>
                       </div>
@@ -670,19 +670,19 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
         <div className="space-y-4">
           {/* Financial Lever Playground */}
           <div className="clay-card p-6 rounded-3xl space-y-4">
-            <h3 className="text-sm font-extrabold text-slate-900 flex items-center space-x-2">
+            <h3 className="text-sm font-extrabold text-white flex items-center space-x-2">
               <Coins className="w-4 h-4 text-emerald-600" />
               <span>Live Financial Lever Playground</span>
             </h3>
-            <p className="text-xs text-slate-600 leading-relaxed font-sans">
+            <p className="text-xs text-slate-300 leading-relaxed font-sans">
               Tweak contract parameters live to preview balance sheet impact without debt or external financing:
             </p>
 
             <div className="space-y-4 text-xs font-sans">
               <div>
-                <div className="flex justify-between text-slate-800 font-bold mb-1">
+                <div className="flex justify-between text-slate-200 font-bold mb-1">
                   <span>Upfront Prepayment Acceptance:</span>
-                  <strong className="text-emerald-700 font-mono">{prepayRate}%</strong>
+                  <strong className="text-emerald-400 font-mono">{prepayRate}%</strong>
                 </div>
                 <input
                   type="range"
@@ -690,14 +690,14 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                   max="100"
                   value={prepayRate}
                   onChange={(e) => setPrepayRate(Number(e.target.value))}
-                  className="w-full accent-[#648283] cursor-pointer"
+                  className="w-full accent-[#00A884] cursor-pointer"
                 />
               </div>
 
               <div>
-                <div className="flex justify-between text-slate-800 font-bold mb-1">
+                <div className="flex justify-between text-slate-200 font-bold mb-1">
                   <span>Price Hike Incentive:</span>
-                  <strong className="text-[#8e7ca8] font-mono">+{priceHike}%</strong>
+                  <strong className="text-amber-400 font-mono">+{priceHike}%</strong>
                 </div>
                 <input
                   type="range"
@@ -705,23 +705,23 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                   max="50"
                   value={priceHike}
                   onChange={(e) => setPriceHike(Number(e.target.value))}
-                  className="w-full accent-[#8e7ca8] cursor-pointer"
+                  className="w-full accent-[#f59e0b] cursor-pointer"
                 />
               </div>
 
               {/* Calculated Cash Box */}
               <div className="p-4 clay-card-inset rounded-2xl space-y-2">
-                <div className="flex justify-between text-slate-600 font-bold">
+                <div className="flex justify-between text-slate-300 font-bold">
                   <span>Baseline Cash:</span>
-                  <span className="text-slate-900 font-mono">${simBaseCash.toLocaleString()}</span>
+                  <span className="text-white font-mono">${simBaseCash.toLocaleString()}</span>
                 </div>
-                <div className="flex justify-between text-emerald-700 font-black">
+                <div className="flex justify-between text-emerald-400 font-black">
                   <span>Float Net Delta:</span>
                   <span className="font-mono">+${deltaCash.toLocaleString()}</span>
                 </div>
-                <div className="pt-2 border-t border-slate-300 flex justify-between text-slate-900 font-black text-sm">
+                <div className="pt-2 border-t border-white/10 flex justify-between text-white font-black text-sm">
                   <span>Projected Cash:</span>
-                  <span className="text-[#648283] font-mono">${simEndCash.toLocaleString()}</span>
+                  <span className="text-emerald-400 font-mono">${simEndCash.toLocaleString()}</span>
                 </div>
               </div>
             </div>
@@ -729,35 +729,35 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
 
           {/* Report Summary Drawer (when reportData exists) */}
           {reportData && (
-            <div className="clay-card p-6 rounded-3xl space-y-4 border-2 border-emerald-300">
+            <div className="clay-card p-6 rounded-3xl space-y-4 border-2 border-[#00A884] bg-[#07241b]">
               <div className="flex items-center justify-between">
-                <h3 className="text-sm font-extrabold text-emerald-800 flex items-center space-x-2">
+                <h3 className="text-sm font-extrabold text-emerald-300 flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                   <span>Synthesized Moonshot Report</span>
                 </h3>
-                <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full clay-pill-sage text-slate-900">
+                <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full clay-pill-sage text-white">
                   Ready
                 </span>
               </div>
 
-              <div className="space-y-2 text-xs font-mono text-slate-700">
+              <div className="space-y-2 text-xs font-mono text-slate-300">
                 <div>
-                  Report ID: <span className="text-slate-900 font-bold">{reportData.report_id?.slice(0, 16)}...</span>
+                  Report ID: <span className="text-white font-bold">{reportData.report_id?.slice(0, 16)}...</span>
                 </div>
                 <div>
-                  Top Ranked Moves: <strong className="text-emerald-700">{reportData.top_strategies_count || 3}</strong>
+                  Top Ranked Moves: <strong className="text-emerald-400">{reportData.top_strategies_count || 3}</strong>
                 </div>
                 <div>
-                  Sensitivity: <span className="text-[#8e7ca8] font-bold">{reportData.sensitivity?.summary}</span>
+                  Sensitivity: <span className="text-amber-400 font-bold">{reportData.sensitivity?.summary}</span>
                 </div>
               </div>
 
               {/* Export Buttons */}
-              <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-300 text-xs">
+              <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/10 text-xs">
                 <button
                   type="button"
                   onClick={() => handleExport("markdown")}
-                  className="clay-btn p-2 rounded-full font-bold text-slate-700 flex items-center justify-center space-x-1"
+                  className="clay-btn p-2 rounded-full font-bold text-slate-300 flex items-center justify-center space-x-1"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Markdown</span>
@@ -765,7 +765,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                 <button
                   type="button"
                   onClick={() => handleExport("html")}
-                  className="clay-pill-sage p-2 rounded-full font-bold text-slate-900 flex items-center justify-center space-x-1 shadow-md"
+                  className="clay-pill-sage p-2 rounded-full font-bold text-white flex items-center justify-center space-x-1 shadow-md"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span>PDF / HTML</span>
@@ -773,7 +773,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
               </div>
 
               {/* Disclaimer */}
-              <p className="text-[10px] text-slate-500 italic pt-2 border-t border-slate-300 leading-tight">
+              <p className="text-[10px] text-slate-400 italic pt-2 border-t border-white/10 leading-tight">
                 {reportData.disclaimer ||
                   "Disclaimer: NeuralCFO provides deterministic decision support, not certified financial advice."}
               </p>

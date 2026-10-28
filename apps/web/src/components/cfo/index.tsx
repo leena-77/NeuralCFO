@@ -352,14 +352,14 @@ export const CfoDashboard: React.FC = () => {
       <div className="clay-card p-5 rounded-3xl flex flex-wrap justify-between items-center gap-4 shadow-sm">
         <div>
           <div className="flex items-center space-x-3">
-            <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-xl font-extrabold text-white tracking-tight">
               NeuralCFO Finance Engine
             </h2>
             <span className="clay-pill-sage px-3 py-0.5 rounded-full text-xs font-bold shadow-xs">
               CFO Mode Active
             </span>
           </div>
-          <p className="text-xs text-slate-600 font-semibold mt-1">
+          <p className="text-xs text-slate-300 font-semibold mt-1">
             Deterministic 26-week cash projection matrix · Acme Digital Agency
           </p>
         </div>
@@ -368,7 +368,7 @@ export const CfoDashboard: React.FC = () => {
           <button
             onClick={recalculateBaseline}
             disabled={isBaselineLoading}
-            className="clay-btn px-4 py-2 rounded-full text-xs font-bold text-slate-800 flex items-center space-x-1.5"
+            className="clay-btn px-4 py-2 rounded-full text-xs font-bold text-white flex items-center space-x-1.5"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${isBaselineLoading ? 'animate-spin' : ''}`} />
             <span>{isBaselineLoading ? 'Calculating...' : 'Recalculate Baseline'}</span>
@@ -376,7 +376,7 @@ export const CfoDashboard: React.FC = () => {
 
           <button
             onClick={() => setIsUploadOpen(true)}
-            className="clay-pill-sage px-4 py-2 rounded-full text-xs font-bold text-slate-900 flex items-center space-x-1.5 shadow-md"
+            className="clay-pill-sage px-4 py-2 rounded-full text-xs font-bold text-white flex items-center space-x-1.5 shadow-md"
           >
             <UploadCloud className="w-3.5 h-3.5" />
             <span>Upload Financial CSV</span>
@@ -386,14 +386,14 @@ export const CfoDashboard: React.FC = () => {
 
       {/* Dynamic Notification Banner */}
       {notification && (
-        <div className="clay-card p-4 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-900 text-xs font-bold flex justify-between items-center shadow-sm">
+        <div className="clay-card p-4 rounded-2xl border-2 border-[#00A884] bg-[#07241b] text-emerald-200 text-xs font-bold flex justify-between items-center shadow-sm">
           <div className="flex items-center space-x-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
             <span>{notification}</span>
           </div>
           <button
             onClick={() => setNotification(null)}
-            className="clay-btn w-6 h-6 rounded-full flex items-center justify-center text-slate-700"
+            className="clay-btn w-6 h-6 rounded-full flex items-center justify-center text-slate-200"
           ><X className="w-4 h-4" /></button>
         </div>
       )}
@@ -405,19 +405,19 @@ export const CfoDashboard: React.FC = () => {
             Sponsor Adapter
           </span>
           <div>
-            <div className="font-extrabold text-sm text-slate-900 flex items-center space-x-1.5">
-              <Database className="w-4 h-4 text-[#648283]" />
+            <div className="font-extrabold text-sm text-white flex items-center space-x-1.5">
+              <Database className="w-4 h-4 text-emerald-400" />
               <span>Zetaris Networked Data Platform</span>
             </div>
-            <div className="text-[11px] text-slate-600 font-medium">
+            <div className="text-[11px] text-slate-300 font-medium">
               Enterprise Federated Data Engine · Real-time General Ledger Query Provenance
             </div>
           </div>
         </div>
 
         <div className="flex items-center space-x-2">
-          <div className="flex items-center space-x-1.5 clay-pill-sage px-3.5 py-1.5 rounded-full text-xs font-bold text-emerald-950 shadow-xs">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-800" />
+          <div className="flex items-center space-x-1.5 clay-pill-sage px-3.5 py-1.5 rounded-full text-xs font-bold text-white shadow-xs">
+            <ShieldCheck className="w-3.5 h-3.5 text-white" />
             <span>Federated Sync Active</span>
           </div>
         </div>
@@ -467,7 +467,7 @@ export const CfoDashboard: React.FC = () => {
       </div>
 
       {/* Disclaimer */}
-      <footer className="text-center text-xs text-slate-500 font-medium pt-2">
+      <footer className="text-center text-xs text-slate-400 font-medium pt-2">
         Decision support, not certified financial advice. Forecasts depend on the deterministic assumptions shown.
       </footer>
 

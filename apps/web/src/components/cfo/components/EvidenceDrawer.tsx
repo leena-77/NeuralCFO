@@ -227,7 +227,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
         aria-label="Evidence & Mathematical Lineage Inspector"
         className="w-full max-w-2xl h-full shadow-2xl flex flex-col font-[var(--font-ui)] overflow-y-auto outline-none transition-all duration-300 bg-[#fbf9f5] border-l-2 border-[#ded9cf] text-slate-900 rounded-none"
         style={{
-          backgroundColor: '#fbf9f5',
+          backgroundColor: 'rgba(5, 20, 15, 0.75)',
           borderLeft: '1px solid var(--glass-border)',
           color: 'var(--text)',
         }}
@@ -276,7 +276,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
             aria-label="Close evidence drawer"
             className="p-2 rounded-[var(--radius-control)] hover:scale-105 active:scale-95 transition-all text-sm font-bold glass-pill"
             style={{
-              backgroundColor: '#fbf9f5',
+              backgroundColor: 'rgba(5, 20, 15, 0.75)',
               color: 'var(--text)',
             }}
           ><X className="w-4 h-4" /></button>
@@ -353,7 +353,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                     <div
                       className="font-[var(--font-mono)] text-xs p-3 rounded-[var(--radius-control)] border font-semibold"
                       style={{
-                        backgroundColor: '#fbf9f5',
+                        backgroundColor: 'rgba(5, 20, 15, 0.75)',
                         borderColor: 'var(--divider)',
                         color: 'var(--text)',
                       }}
@@ -374,7 +374,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                     {/* Step 1: Opening Anchor */}
                     <div
                       className="p-3 rounded-[var(--radius-control)] border flex justify-between items-center text-xs"
-                      style={{ backgroundColor: '#fbf9f5', borderColor: 'var(--divider)' }}
+                      style={{ backgroundColor: 'rgba(5, 20, 15, 0.75)', borderColor: 'var(--divider)' }}
                     >
                       <div>
                         <span className="font-bold block" style={{ color: 'var(--text)' }}>
@@ -392,7 +392,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                     {/* Step 2: Sum Inflows */}
                     <div
                       className="p-3 rounded-[var(--radius-control)] border flex justify-between items-center text-xs"
-                      style={{ backgroundColor: '#fbf9f5', borderColor: 'var(--divider)' }}
+                      style={{ backgroundColor: 'rgba(5, 20, 15, 0.75)', borderColor: 'var(--divider)' }}
                     >
                       <div>
                         <span className="font-bold block" style={{ color: 'var(--status-verified)' }}>
@@ -410,7 +410,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                     {/* Step 3: Sum Outflows */}
                     <div
                       className="p-3 rounded-[var(--radius-control)] border flex justify-between items-center text-xs"
-                      style={{ backgroundColor: '#fbf9f5', borderColor: 'var(--divider)' }}
+                      style={{ backgroundColor: 'rgba(5, 20, 15, 0.75)', borderColor: 'var(--divider)' }}
                     >
                       <div>
                         <span className="font-bold block" style={{ color: 'var(--status-failed)' }}>
@@ -458,7 +458,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                           key={idx}
                           className="p-3 rounded-[var(--radius-control)] border flex justify-between items-center text-xs"
                           style={{
-                            backgroundColor: '#fbf9f5',
+                            backgroundColor: 'rgba(5, 20, 15, 0.75)',
                             borderColor: 'var(--divider)',
                           }}
                         >
@@ -548,7 +548,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                         <pre
                           className="p-2.5 rounded text-[11px] overflow-x-auto"
                           style={{
-                            backgroundColor: '#fbf9f5',
+                            backgroundColor: 'rgba(5, 20, 15, 0.75)',
                             color: 'var(--text)',
                             border: '1px solid var(--divider)',
                           }}
@@ -586,7 +586,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                   {/* Verifier V1 Rule Card */}
                   <div
                     className="p-4 rounded-[var(--radius-control)] border"
-                    style={{ backgroundColor: '#fbf9f5', borderColor: 'var(--divider)' }}
+                    style={{ backgroundColor: 'rgba(5, 20, 15, 0.75)', borderColor: 'var(--divider)' }}
                   >
                     <div className="flex items-center space-x-2 mb-1.5">
                       <Check className="w-4 h-4 text-emerald-600 inline-block" />
@@ -602,7 +602,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                   {/* Verifier V4 Rule Card */}
                   <div
                     className="p-4 rounded-[var(--radius-control)] border"
-                    style={{ backgroundColor: '#fbf9f5', borderColor: 'var(--divider)' }}
+                    style={{ backgroundColor: 'rgba(5, 20, 15, 0.75)', borderColor: 'var(--divider)' }}
                   >
                     <div className="flex items-center space-x-2 mb-1.5">
                       <Check className="w-4 h-4 text-emerald-600 inline-block" />
@@ -618,7 +618,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
                   {/* Verifier V5 Rule Card */}
                   <div
                     className="p-4 rounded-[var(--radius-control)] border"
-                    style={{ backgroundColor: '#fbf9f5', borderColor: 'var(--divider)' }}
+                    style={{ backgroundColor: 'rgba(5, 20, 15, 0.75)', borderColor: 'var(--divider)' }}
                   >
                     <div className="flex items-center space-x-2 mb-1.5">
                       <Check className="w-4 h-4 text-emerald-600 inline-block" />
@@ -679,7 +679,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
             onClick={onClose}
             className="px-4 py-2 text-xs font-semibold rounded-[var(--radius-control)] border transition shadow-xs"
             style={{
-              backgroundColor: '#fbf9f5',
+              backgroundColor: 'rgba(5, 20, 15, 0.75)',
               borderColor: 'var(--ui-border)',
               color: 'var(--text)',
             }}

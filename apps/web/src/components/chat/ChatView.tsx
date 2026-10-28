@@ -201,34 +201,34 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`clay-card p-5 rounded-3xl flex flex-col font-sans shadow-sm ${compact ? "h-[calc(100vh-10.5rem)]" : "h-[calc(100vh-7rem)]"}`}>
       {/* Quick Prompts Bar */}
-      <div className="pb-3 flex items-center space-x-2 text-xs overflow-x-auto border-b border-slate-200 mb-3">
-        <span className="text-slate-500 font-bold text-xs whitespace-nowrap">Quick Actions:</span>
+      <div className="pb-3 flex items-center space-x-2 text-xs overflow-x-auto border-b border-white/10 mb-3">
+        <span className="text-slate-400 font-bold text-xs whitespace-nowrap">Quick Actions:</span>
         <button
           onClick={() => handleSend("Can we hire two developers if our biggest client pays 30 days late?")}
-          className="clay-btn px-3.5 py-1.5 rounded-full text-slate-800 font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
+          className="clay-btn px-3.5 py-1.5 rounded-full text-white font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
         >
-          <Users className="w-3.5 h-3.5 text-emerald-600" />
+          <Users className="w-3.5 h-3.5 text-emerald-400" />
           <span>[1] Hire 2 Devs + 30d</span>
         </button>
         <button
           onClick={() => handleSend("What bold move could fix this instead?")}
-          className="clay-btn px-3.5 py-1.5 rounded-full text-slate-800 font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
+          className="clay-btn px-3.5 py-1.5 rounded-full text-white font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
         >
-          <Compass className="w-3.5 h-3.5 text-purple-600" />
+          <Compass className="w-3.5 h-3.5 text-amber-400" />
           <span>[2] Bold Moonshot</span>
         </button>
         <button
           onClick={() => handleSend("Add the runway chart to my dashboard")}
-          className="clay-btn px-3.5 py-1.5 rounded-full text-slate-800 font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
+          className="clay-btn px-3.5 py-1.5 rounded-full text-white font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
         >
-          <BarChart2 className="w-3.5 h-3.5 text-blue-600" />
+          <BarChart2 className="w-3.5 h-3.5 text-cyan-400" />
           <span>[3] Add Chart</span>
         </button>
         <button
           onClick={() => handleSend("Remember that payroll is on the 28th")}
-          className="clay-btn px-3.5 py-1.5 rounded-full text-slate-800 font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
+          className="clay-btn px-3.5 py-1.5 rounded-full text-white font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
         >
-          <BookmarkCheck className="w-3.5 h-3.5 text-amber-600" />
+          <BookmarkCheck className="w-3.5 h-3.5 text-amber-400" />
           <span>[4] Save Memory</span>
         </button>
       </div>
@@ -244,18 +244,18 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
               className={`max-w-2xl p-5 rounded-3xl ${
                 m.sender === "user"
                   ? "clay-pill-teal text-white rounded-br-sm shadow-md"
-                  : "clay-cushion text-slate-800 rounded-bl-sm border border-white/80"
+                  : "clay-cushion text-slate-100 rounded-bl-sm border border-white/15"
               }`}
             >
               {/* Agent Mode / Status Header */}
               {m.sender === "assistant" && (
-                <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-200 text-xs">
-                  <span className="font-extrabold text-[#648283] flex items-center space-x-1.5">
+                <div className="flex items-center justify-between pb-2 mb-2 border-b border-white/10 text-xs">
+                  <span className="font-extrabold text-emerald-400 flex items-center space-x-1.5">
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>NeuralCFO Agent</span>
                   </span>
                   {m.status && (
-                    <span className="clay-pill-sage text-slate-900 px-2.5 py-0.5 rounded-full text-[10px] font-bold">
+                    <span className="clay-pill-sage text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold">
                       {m.status}
                     </span>
                   )}
@@ -264,8 +264,8 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
 
               {/* Progress Stages */}
               {m.stages && m.stages.length > 0 && (
-                <div className="mb-2 p-2.5 clay-card-inset rounded-xl text-xs font-mono text-purple-900 font-bold">
-                  <span className="text-slate-500">Pipeline Stages: </span>
+                <div className="mb-2 p-2.5 clay-card-inset rounded-xl text-xs font-mono text-amber-300 font-bold">
+                  <span className="text-slate-400">Pipeline Stages: </span>
                   {m.stages.join(" → ")}
                 </div>
               )}
@@ -287,8 +287,8 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
 
               {/* Clickable Evidence Citations */}
               {m.citations && m.citations.length > 0 && (
-                <div className="mt-3 pt-2 border-t border-slate-200 flex flex-wrap gap-1.5 items-center">
-                  <span className="text-[10px] text-slate-500 font-bold uppercase">Evidence:</span>
+                <div className="mt-3 pt-2 border-t border-white/10 flex flex-wrap gap-1.5 items-center">
+                  <span className="text-[10px] text-slate-400 font-bold uppercase">Evidence:</span>
                   {m.citations.map((c) => (
                     <button
                       key={c.id}
@@ -301,9 +301,9 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
                           snippet: c.snippet,
                         })
                       }
-                      className="text-xs px-3 py-1 rounded-full clay-btn text-[#648283] font-bold flex items-center space-x-1"
+                      className="text-xs px-3 py-1 rounded-full clay-btn text-emerald-400 font-bold flex items-center space-x-1"
                     >
-                      <ExternalLink className="w-3 h-3 text-[#648283]" />
+                      <ExternalLink className="w-3 h-3 text-emerald-400" />
                       <span>{c.label}</span>
                     </button>
                   ))}
@@ -316,7 +316,7 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
       </div>
 
       {/* Input Form */}
-      <div className="mt-3 pt-3 border-t border-slate-200">
+      <div className="mt-3 pt-3 border-t border-white/10">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -329,13 +329,13 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about hiring, late payments, cash runway, or bold moves..."
-            className="flex-1 clay-card-inset rounded-full px-5 py-3 text-xs text-slate-900 placeholder-slate-500 focus:outline-none transition-all font-sans"
+            className="flex-1 clay-card-inset rounded-full px-5 py-3 text-xs text-white placeholder-slate-400 focus:outline-none transition-all font-sans"
             disabled={isStreaming}
           />
           <button
             type="submit"
             disabled={isStreaming || !input.trim()}
-            className="px-6 py-3 clay-pill-sage text-slate-900 text-xs font-black rounded-full shadow-md flex items-center space-x-1.5 disabled:opacity-50 transition-all hover:scale-102"
+            className="px-6 py-3 clay-pill-sage text-white text-xs font-black rounded-full shadow-md flex items-center space-x-1.5 disabled:opacity-50 transition-all hover:scale-102"
           >
             <Send className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">{isStreaming ? "Wait" : "Send"}</span>

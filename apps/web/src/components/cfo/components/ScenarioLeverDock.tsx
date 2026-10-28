@@ -263,33 +263,33 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
               <Zap className="w-3.5 h-3.5" />
               <span>Sensitivity Studio</span>
             </span>
-            <span className="text-xs font-bold px-3 py-1 rounded-full clay-card-inset text-slate-800 font-mono">
+            <span className="text-xs font-bold px-3 py-1 rounded-full clay-card-inset text-emerald-300 font-mono">
               {activeChanges.length} Lever{activeChanges.length === 1 ? '' : 's'} Active
             </span>
           </div>
-          <h2 className="text-lg font-extrabold mt-1 text-slate-900 tracking-tight">
+          <h2 className="text-lg font-extrabold mt-1 text-white tracking-tight">
             Interactive What-If Scenario Levers
           </h2>
-          <p className="text-xs text-slate-600 font-semibold">
+          <p className="text-xs text-slate-300 font-semibold">
             Adjust parameters to project cash runway deltas against the immutable baseline.
           </p>
         </div>
 
         {/* Quick Presets */}
         <div className="flex items-center flex-wrap gap-2 text-xs">
-          <span className="font-bold text-slate-500">Presets:</span>
+          <span className="font-bold text-slate-400">Presets:</span>
           <button
             type="button"
             onClick={() => applyPreset('golden')}
-            className="clay-btn px-3.5 py-1.5 rounded-full font-bold text-slate-800 flex items-center space-x-1"
+            className="clay-btn px-3.5 py-1.5 rounded-full font-bold text-white flex items-center space-x-1"
           >
-            <Check className="w-3.5 h-3.5 text-[#648283]" />
+            <Check className="w-3.5 h-3.5 text-[#00A884]" />
             <span>Golden Demo (2 Devs + 30d Delay)</span>
           </button>
           <button
             type="button"
             onClick={() => applyPreset('cash_shield')}
-            className="clay-btn px-3.5 py-1.5 rounded-full font-bold text-slate-800 flex items-center space-x-1"
+            className="clay-btn px-3.5 py-1.5 rounded-full font-bold text-white flex items-center space-x-1"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
             <span>Cash Shield (+25% Deposit)</span>
@@ -297,7 +297,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
           <button
             type="button"
             onClick={() => applyPreset('stress_test')}
-            className="clay-btn px-3.5 py-1.5 rounded-full font-bold text-slate-800 flex items-center space-x-1"
+            className="clay-btn px-3.5 py-1.5 rounded-full font-bold text-white flex items-center space-x-1"
           >
             <AlertTriangle className="w-3.5 h-3.5 text-rose-500" />
             <span>Black Swan (Lost Apex)</span>
@@ -306,7 +306,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
             <button
               type="button"
               onClick={() => applyPreset('clear')}
-              className="clay-btn px-3 py-1 rounded-full font-bold text-slate-600 hover:text-slate-900"
+              className="clay-btn px-3 py-1 rounded-full font-bold text-slate-300 hover:text-white"
             >
               Reset All
             </button>
@@ -321,8 +321,8 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
           onClick={() => setActiveTab('talent_ops')}
           className={`px-4 py-2 rounded-full transition-all flex-1 text-center ${
             activeTab === 'talent_ops'
-              ? 'clay-pill-sage text-slate-900 shadow-sm'
-              : 'text-slate-600 hover:text-slate-900'
+              ? 'clay-pill-sage text-white shadow-sm'
+              : 'text-slate-300 hover:text-white'
           }`}
         >
           1. Headcount & Direct Outflows
@@ -333,7 +333,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
           className={`px-4 py-2 rounded-full transition-all flex-1 text-center ${
             activeTab === 'revenue_clients'
               ? 'clay-pill-teal text-white shadow-sm'
-              : 'text-slate-600 hover:text-slate-900'
+              : 'text-slate-300 hover:text-white'
           }`}
         >
           2. Client Delays & Churn Risk
@@ -343,8 +343,8 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
           onClick={() => setActiveTab('terms_cash')}
           className={`px-4 py-2 rounded-full transition-all flex-1 text-center ${
             activeTab === 'terms_cash'
-              ? 'clay-pill-lavender text-slate-900 shadow-sm'
-              : 'text-slate-600 hover:text-slate-900'
+              ? 'clay-pill-lavender text-white shadow-sm'
+              : 'text-slate-300 hover:text-white'
           }`}
         >
           3. Payment Terms, Deposits & Pricing
@@ -357,7 +357,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
         {activeTab === 'talent_ops' && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Lever: Hire Developers */}
-            <div className={`clay-cushion p-5 rounded-3xl space-y-3 ${hireActive ? 'ring-2 ring-[#648283]' : 'opacity-80'}`}>
+            <div className={`clay-cushion p-5 rounded-3xl space-y-3 ${hireActive ? 'ring-2 ring-[#00A884]' : 'opacity-80'}`}>
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2">
                   <input
@@ -365,14 +365,14 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     id="lever-hire-toggle"
                     checked={hireActive}
                     onChange={(e) => setHireActive(e.target.checked)}
-                    className="w-4 h-4 rounded cursor-pointer accent-[#648283]"
+                    className="w-4 h-4 rounded cursor-pointer accent-[#00A884]"
                   />
-                  <label htmlFor="lever-hire-toggle" className="text-xs font-extrabold uppercase tracking-wide text-slate-900 cursor-pointer">
+                  <label htmlFor="lever-hire-toggle" className="text-xs font-extrabold uppercase tracking-wide text-white cursor-pointer">
                     Lever: Hire Staff (`hire`)
                   </label>
                 </div>
                 {hireActive && (
-                  <span className="clay-card-inset text-[11px] font-mono font-black text-rose-700 px-3 py-1 rounded-full">
+                  <span className="clay-card-inset text-[11px] font-mono font-black text-rose-400 px-3 py-1 rounded-full">
                     -${(hireCount * hireMonthlyCost).toLocaleString()}/mo
                   </span>
                 )}
@@ -381,9 +381,9 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
               <div className="space-y-4">
                 {/* Stepper for Count */}
                 <div>
-                  <div className="flex justify-between text-xs mb-1.5 font-bold text-slate-700">
+                  <div className="flex justify-between text-xs mb-1.5 font-bold text-slate-300">
                     <span>New Full-Time Roles:</span>
-                    <span className="font-mono text-slate-900 font-black">
+                    <span className="font-mono text-white font-black">
                       {hireCount} Staff
                     </span>
                   </div>
@@ -403,7 +403,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                       disabled={!hireActive}
                       value={hireCount}
                       onChange={(e) => setHireCount(parseInt(e.target.value) || 0)}
-                      className="w-full accent-[#648283] cursor-pointer disabled:opacity-40"
+                      className="w-full accent-[#00A884] cursor-pointer disabled:opacity-40"
                     />
                     <button
                       type="button"
@@ -418,9 +418,9 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
 
                 {/* Monthly Cost per Head */}
                 <div>
-                  <div className="flex justify-between text-xs mb-1 font-bold text-slate-700">
+                  <div className="flex justify-between text-xs mb-1 font-bold text-slate-300">
                     <span>Cost Per Head (Monthly):</span>
-                    <span className="font-mono text-slate-900 font-black">
+                    <span className="font-mono text-white font-black">
                       ${hireMonthlyCost.toLocaleString()} / mo
                     </span>
                   </div>
@@ -432,9 +432,9 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     disabled={!hireActive}
                     value={hireMonthlyCost}
                     onChange={(e) => setHireMonthlyCost(parseInt(e.target.value) || 0)}
-                    className="w-full accent-[#648283] cursor-pointer disabled:opacity-40"
+                    className="w-full accent-[#00A884] cursor-pointer disabled:opacity-40"
                   />
-                  <div className="flex justify-between text-[10px] font-mono text-slate-500 font-bold mt-1">
+                  <div className="flex justify-between text-[10px] font-mono text-slate-400 font-bold mt-1">
                     <span>$4,000 (Junior)</span>
                     <span>$7,000 (Mid)</span>
                     <span>$15,000 (Lead)</span>
@@ -444,7 +444,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
             </div>
 
             {/* Lever: Expense Change */}
-            <div className={`clay-cushion p-5 rounded-3xl space-y-3 ${expenseActive ? 'ring-2 ring-[#648283]' : 'opacity-80'}`}>
+            <div className={`clay-cushion p-5 rounded-3xl space-y-3 ${expenseActive ? 'ring-2 ring-[#00A884]' : 'opacity-80'}`}>
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2">
                   <input
@@ -452,14 +452,14 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     id="lever-expense-toggle"
                     checked={expenseActive}
                     onChange={(e) => setExpenseActive(e.target.checked)}
-                    className="w-4 h-4 rounded cursor-pointer accent-[#648283]"
+                    className="w-4 h-4 rounded cursor-pointer accent-[#00A884]"
                   />
-                  <label htmlFor="lever-expense-toggle" className="text-xs font-extrabold uppercase tracking-wide text-slate-900 cursor-pointer">
+                  <label htmlFor="lever-expense-toggle" className="text-xs font-extrabold uppercase tracking-wide text-white cursor-pointer">
                     Lever: Opex Delta (`expense_change`)
                   </label>
                 </div>
                 {expenseActive && (
-                  <span className="clay-card-inset text-[11px] font-mono font-black text-rose-700 px-3 py-1 rounded-full">
+                  <span className="clay-card-inset text-[11px] font-mono font-black text-rose-400 px-3 py-1 rounded-full">
                     -${expenseAmt.toLocaleString()}
                   </span>
                 )}
@@ -467,9 +467,9 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
 
               <div className="space-y-4">
                 <div>
-                  <div className="flex justify-between text-xs mb-1.5 font-bold text-slate-700">
+                  <div className="flex justify-between text-xs mb-1.5 font-bold text-slate-300">
                     <span>Expense Amount:</span>
-                    <span className="font-mono text-slate-900 font-black">
+                    <span className="font-mono text-white font-black">
                       ${expenseAmt.toLocaleString()}
                     </span>
                   </div>
@@ -481,7 +481,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     disabled={!expenseActive}
                     value={expenseAmt}
                     onChange={(e) => setExpenseAmt(parseInt(e.target.value) || 0)}
-                    className="w-full accent-[#648283] cursor-pointer disabled:opacity-40"
+                    className="w-full accent-[#00A884] cursor-pointer disabled:opacity-40"
                   />
                 </div>
 
@@ -530,7 +530,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     onChange={(e) => setDelayActive(e.target.checked)}
                     className="w-4 h-4 rounded cursor-pointer accent-amber-600"
                   />
-                  <label htmlFor="lever-delay-toggle" className="text-xs font-extrabold uppercase tracking-wide text-slate-900 cursor-pointer">
+                  <label htmlFor="lever-delay-toggle" className="text-xs font-extrabold uppercase tracking-wide text-white cursor-pointer">
                     Client Delay (`payment_delay`)
                   </label>
                 </div>
@@ -572,7 +572,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     onChange={(e) => setLostClientActive(e.target.checked)}
                     className="w-4 h-4 rounded cursor-pointer accent-rose-600"
                   />
-                  <label htmlFor="lever-lost-toggle" className="text-xs font-extrabold uppercase tracking-wide text-slate-900 cursor-pointer">
+                  <label htmlFor="lever-lost-toggle" className="text-xs font-extrabold uppercase tracking-wide text-white cursor-pointer">
                     Lost Client (`lost_client`)
                   </label>
                 </div>
@@ -607,14 +607,14 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     onChange={(e) => setDepositActive(e.target.checked)}
                     className="w-4 h-4 rounded cursor-pointer accent-emerald-600"
                   />
-                  <label htmlFor="lever-deposit-toggle" className="text-xs font-extrabold uppercase text-slate-900 cursor-pointer">
+                  <label htmlFor="lever-deposit-toggle" className="text-xs font-extrabold uppercase text-white cursor-pointer">
                     Deposit % (`deposit_pct`)
                   </label>
                 </div>
               </div>
-              <div className="flex justify-between text-xs font-bold text-slate-700">
+              <div className="flex justify-between text-xs font-bold text-slate-300">
                 <span>Deposit Rate:</span>
-                <span className="font-mono text-slate-900 font-black">{depositPct}%</span>
+                <span className="font-mono text-white font-black">{depositPct}%</span>
               </div>
               <input
                 type="range"
@@ -629,7 +629,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
             </div>
 
             {/* Lever: Shift Payment Terms */}
-            <div className={`clay-cushion p-5 rounded-3xl space-y-3 ${termsActive ? 'ring-2 ring-[#648283]' : 'opacity-80'}`}>
+            <div className={`clay-cushion p-5 rounded-3xl space-y-3 ${termsActive ? 'ring-2 ring-[#00A884]' : 'opacity-80'}`}>
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2">
                   <input
@@ -637,16 +637,16 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     id="lever-terms-toggle"
                     checked={termsActive}
                     onChange={(e) => setTermsActive(e.target.checked)}
-                    className="w-4 h-4 rounded cursor-pointer accent-[#648283]"
+                    className="w-4 h-4 rounded cursor-pointer accent-[#00A884]"
                   />
-                  <label htmlFor="lever-terms-toggle" className="text-xs font-extrabold uppercase text-slate-900 cursor-pointer">
+                  <label htmlFor="lever-terms-toggle" className="text-xs font-extrabold uppercase text-white cursor-pointer">
                     Terms (`payment_terms`)
                   </label>
                 </div>
               </div>
-              <div className="flex justify-between text-xs font-bold text-slate-700">
+              <div className="flex justify-between text-xs font-bold text-slate-300">
                 <span>Shift Days:</span>
-                <span className="font-mono text-slate-900 font-black">
+                <span className="font-mono text-white font-black">
                   {paymentTermsDays >= 0 ? `+${paymentTermsDays}d` : `${paymentTermsDays}d`}
                 </span>
               </div>
@@ -658,7 +658,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                 disabled={!termsActive}
                 value={paymentTermsDays}
                 onChange={(e) => setPaymentTermsDays(parseInt(e.target.value) || 0)}
-                className="w-full accent-[#648283] cursor-pointer disabled:opacity-40"
+                className="w-full accent-[#00A884] cursor-pointer disabled:opacity-40"
               />
             </div>
 
@@ -673,14 +673,14 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                     onChange={(e) => setPriceActive(e.target.checked)}
                     className="w-4 h-4 rounded cursor-pointer accent-purple-600"
                   />
-                  <label htmlFor="lever-price-toggle" className="text-xs font-extrabold uppercase text-slate-900 cursor-pointer">
+                  <label htmlFor="lever-price-toggle" className="text-xs font-extrabold uppercase text-white cursor-pointer">
                     Price (`price_change`)
                   </label>
                 </div>
               </div>
-              <div className="flex justify-between text-xs font-bold text-slate-700">
+              <div className="flex justify-between text-xs font-bold text-slate-300">
                 <span>Price Adjustment:</span>
-                <span className="font-mono text-slate-900 font-black">
+                <span className="font-mono text-white font-black">
                   {priceChangePct >= 0 ? `+${priceChangePct}%` : `${priceChangePct}%`}
                 </span>
               </div>
@@ -702,33 +702,33 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
         <div className="mt-5 p-4 clay-card-inset rounded-2xl flex flex-wrap justify-between items-center gap-4">
           <div className="flex items-center space-x-5 text-xs">
             <div>
-              <span className="text-[10px] uppercase tracking-wider block font-bold text-slate-500">
+              <span className="text-[10px] uppercase tracking-wider block font-bold text-slate-400">
                 Est. Monthly Outflow Burden:
               </span>
-              <span className={`text-base font-extrabold font-mono ${monthlyOutflowDelta > 0 ? 'text-rose-700' : 'text-slate-900'}`}>
+              <span className={`text-base font-extrabold font-mono ${monthlyOutflowDelta > 0 ? 'text-rose-400' : 'text-slate-900'}`}>
                 {monthlyOutflowDelta > 0 ? `+$${monthlyOutflowDelta.toLocaleString()}/mo` : '$0.00'}
               </span>
             </div>
 
-            <div className="h-8 w-px bg-slate-300" />
+            <div className="h-8 w-px bg-white/15" />
 
             <div>
-              <span className="text-[10px] uppercase tracking-wider block font-bold text-slate-500">
+              <span className="text-[10px] uppercase tracking-wider block font-bold text-slate-400">
                 Cash Timing Impact:
               </span>
-              <span className="text-xs font-bold text-slate-800">
+              <span className="text-xs font-bold text-slate-200">
                 {delayActive ? `${delayClient} delayed +${delayDays}d` : 'Standard scheduled inflows'}
               </span>
             </div>
 
             {depositActive && (
               <>
-                <div className="h-8 w-px bg-slate-300" />
+                <div className="h-8 w-px bg-white/15" />
                 <div>
-                  <span className="text-[10px] uppercase tracking-wider block font-bold text-slate-500">
+                  <span className="text-[10px] uppercase tracking-wider block font-bold text-slate-400">
                     Working Capital Relief:
                   </span>
-                  <span className="text-xs font-black text-emerald-700">
+                  <span className="text-xs font-black text-emerald-400">
                     +{depositPct}% collected upfront
                   </span>
                 </div>
@@ -741,7 +741,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
             type="button"
             onClick={handleRun}
             disabled={isLoading}
-            className="px-6 py-2.5 clay-pill-sage rounded-full text-xs font-black text-slate-900 flex items-center space-x-2 shadow-md transition-all hover:scale-102"
+            className="px-6 py-2.5 clay-pill-sage rounded-full text-xs font-black text-white flex items-center space-x-2 shadow-md transition-all hover:scale-102"
           >
             {isLoading ? (
               <>

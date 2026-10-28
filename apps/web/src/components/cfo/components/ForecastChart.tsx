@@ -41,7 +41,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
 
   if (!points || points.length === 0) {
     return (
-      <div className="p-8 text-center rounded-3xl border border-dashed border-slate-300 clay-card text-slate-600 font-semibold text-xs">
+      <div className="p-8 text-center rounded-3xl border border-dashed border-slate-300 clay-card text-slate-300 font-semibold text-xs">
         No forecast data available. Run baseline or scenario simulation first.
       </div>
     );
@@ -217,14 +217,14 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
       <div className="flex flex-wrap justify-between items-center gap-4 mb-4">
         <div>
           <div className="flex items-center space-x-2.5">
-            <h3 className="text-base font-extrabold text-slate-900 tracking-tight">
+            <h3 className="text-base font-extrabold text-white tracking-tight">
               26-Week Canonical Cash Forecast
             </h3>
             <span className="text-[11px] font-mono px-3 py-0.5 rounded-full font-bold clay-pill-sage shadow-xs">
               Weekly Buckets (ISO Monday)
             </span>
           </div>
-          <p className="text-xs text-slate-600 font-semibold mt-0.5">
+          <p className="text-xs text-slate-300 font-semibold mt-0.5">
             Deterministic cash flow accumulator · Immutable baseline vs. 3-case scenario probability fan
           </p>
         </div>
@@ -237,7 +237,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
             className={`px-3.5 py-1.5 rounded-full font-bold transition-all flex items-center space-x-1.5 ${
               showFanBand
                 ? 'clay-pill-teal text-white shadow-sm'
-                : 'clay-btn text-slate-600 hover:text-slate-900'
+                : 'clay-btn text-slate-300 hover:text-white'
             }`}
           >
             <Check className="w-3.5 h-3.5" />
@@ -249,8 +249,8 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
             onClick={() => setShowBaseline(!showBaseline)}
             className={`px-3.5 py-1.5 rounded-full font-bold transition-all flex items-center space-x-1.5 ${
               showBaseline
-                ? 'clay-pill-sage text-slate-900 shadow-sm'
-                : 'clay-btn text-slate-600 hover:text-slate-900'
+                ? 'clay-pill-sage text-white shadow-sm'
+                : 'clay-btn text-slate-300 hover:text-white'
             }`}
           >
             <Check className="w-3.5 h-3.5" />
@@ -262,8 +262,8 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
             onClick={() => setShowThresholds(!showThresholds)}
             className={`px-3.5 py-1.5 rounded-full font-bold transition-all flex items-center space-x-1.5 ${
               showThresholds
-                ? 'clay-pill-lavender text-slate-900 shadow-sm'
-                : 'clay-btn text-slate-600 hover:text-slate-900'
+                ? 'clay-pill-lavender text-white shadow-sm'
+                : 'clay-btn text-slate-300 hover:text-white'
             }`}
           >
             <Check className="w-3.5 h-3.5" />
@@ -273,23 +273,23 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
       </div>
 
       {/* Legend Bar */}
-      <div className="flex flex-wrap items-center gap-4 text-xs font-bold pb-3.5 border-b border-slate-300 mb-3">
+      <div className="flex flex-wrap items-center gap-4 text-xs font-bold pb-3.5 border-b border-white/10 mb-3">
         <div className="flex items-center space-x-1.5">
-          <span className="w-4 h-2 inline-block rounded-full bg-[#158F9B] shadow-xs" />
-          <span className="text-slate-900">Expected Scenario</span>
+          <span className="w-4 h-2 inline-block rounded-full bg-[#00E5B0] shadow-xs" />
+          <span className="text-white">Expected Scenario</span>
         </div>
 
         {showFanBand && (
           <div className="flex items-center space-x-1.5">
-            <span className="w-4 h-2.5 inline-block rounded bg-[#c5b8d8] border border-[#a896c2]" />
-            <span className="text-slate-700">3-Case Bounds (Best vs Worst)</span>
+            <span className="w-4 h-2.5 inline-block rounded bg-[#00A884]/40 border border-[#00A884]" />
+            <span className="text-slate-300">3-Case Bounds (Best vs Worst)</span>
           </div>
         )}
 
         {showBaseline && (
           <div className="flex items-center space-x-1.5">
-            <span className="w-4 h-0.5 inline-block bg-slate-500" />
-            <span className="text-slate-700">Immutable Baseline</span>
+            <span className="w-4 h-0.5 inline-block bg-slate-400" />
+            <span className="text-slate-300">Immutable Baseline</span>
           </div>
         )}
 
@@ -297,14 +297,14 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
           <>
             <div className="flex items-center space-x-1.5">
               <span className="w-4 h-0.5 border-dashed border-t-2 inline-block border-amber-600" />
-              <span className="text-amber-800">
+              <span className="text-amber-300">
                 12-Week Cash Floor (~${(cashFloorAmount / 1000).toFixed(0)}k)
               </span>
             </div>
 
             <div className="flex items-center space-x-1.5">
               <span className="w-4 h-0.5 border-dashed border-t-2 inline-block border-rose-600" />
-              <span className="text-rose-800">
+              <span className="text-rose-400">
                 Reserve Floor (${(reserveAmount / 1000).toFixed(0)}k)
               </span>
             </div>
@@ -330,15 +330,15 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
           {/* SVG Definitions for Gradients and Filters */}
           <defs>
             <linearGradient id="fanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#648283" stopOpacity="0.25" />
-              <stop offset="50%" stopColor="#94af9f" stopOpacity="0.22" />
-              <stop offset="100%" stopColor="#c5b8d8" stopOpacity="0.28" />
+              <stop offset="0%" stopColor="#00A884" stopOpacity="0.25" />
+              <stop offset="50%" stopColor="#007A63" stopOpacity="0.20" />
+              <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.22" />
             </linearGradient>
 
             <linearGradient id="scenarioLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#0B6B74" />
-              <stop offset="45%" stopColor="#158F9B" />
-              <stop offset="100%" stopColor="#4c6b6c" />
+              <stop offset="0%" stopColor="#00E5B0" />
+              <stop offset="45%" stopColor="#00A884" />
+              <stop offset="100%" stopColor="#f59e0b" />
             </linearGradient>
 
             <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
@@ -360,7 +360,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   y1={y}
                   x2={width - paddingRight}
                   y2={y}
-                  stroke="#d8d4cc"
+                  stroke="rgba(255, 255, 255, 0.10)"
                   strokeWidth="1"
                   strokeDasharray="3 3"
                 />
@@ -369,7 +369,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   y={y + 3.5}
                   textAnchor="end"
                   fontSize="11"
-                  fill="#475569"
+                  fill="#cbd5e1"
                   fontWeight="700"
                   fontFamily="sans-serif"
                 >
@@ -411,8 +411,8 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   width="120"
                   height="20"
                   rx="6"
-                  fill="#fef2f2"
-                  stroke="#dc2626"
+                  fill="#2a0d10"
+                  stroke="#ef4444"
                   strokeWidth="1"
                 />
                 <text
@@ -420,7 +420,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   y="14"
                   textAnchor="middle"
                   fontSize="10"
-                  fill="#991b1b"
+                  fill="#fca5a5"
                   fontWeight="800"
                   fontFamily="sans-serif"
                 >
@@ -445,8 +445,8 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   width="126"
                   height="20"
                   rx="6"
-                  fill="#fffbeb"
-                  stroke="#d97706"
+                  fill="#2a1a08"
+                  stroke="#f59e0b"
                   strokeWidth="1"
                 />
                 <text
@@ -454,7 +454,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   y="14"
                   textAnchor="middle"
                   fontSize="10"
-                  fill="#92400e"
+                  fill="#fde68a"
                   fontWeight="800"
                   fontFamily="sans-serif"
                 >
@@ -517,7 +517,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
             y1={height - paddingBottom}
             x2={width - paddingRight}
             y2={height - paddingBottom}
-            stroke="#cbd5e1"
+            stroke="rgba(255, 255, 255, 0.15)"
             strokeWidth="1.5"
           />
 
@@ -532,7 +532,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                 y={height - paddingBottom + 18}
                 textAnchor="middle"
                 fontSize="10"
-                fill="#475569"
+                fill="#cbd5e1"
                 fontWeight="700"
                 fontFamily="sans-serif"
               >
@@ -567,8 +567,8 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
               width={minCashBadgeWidth}
               height={minCashBadgeHeight}
               rx="6"
-              fill="#ffffff"
-              stroke="#cb7a72"
+              fill="#071912"
+              stroke="#f59e0b"
               strokeWidth="1.5"
               filter="drop-shadow(0 2px 4px rgba(0,0,0,0.12))"
             />
@@ -578,7 +578,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
               textAnchor="middle"
               fontSize="10"
               fontWeight="800"
-              fill="#991b1b"
+              fill="#fde68a"
               fontFamily="sans-serif"
             >
               Min Cash: {displayMinVal}
@@ -593,7 +593,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                 y1={paddingTop}
                 x2={getX(hoverIdx)}
                 y2={height - paddingBottom}
-                stroke="#0B6B74"
+                stroke="#00E5B0"
                 strokeWidth="1.5"
                 strokeDasharray="2 2"
               />
@@ -601,7 +601,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                 cx={getX(hoverIdx)}
                 cy={getY(parseFloat(points[hoverIdx].closing_cash))}
                 r="6"
-                fill="#0B6B74"
+                fill="#00E5B0"
                 stroke="#FFFFFF"
                 strokeWidth="2.5"
                 filter="url(#softGlow)"
@@ -613,33 +613,33 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
         {/* Hover Inspection HUD Card: 100% Solid Opaque, Smart Position Flipping */}
         {hoverIdx !== null && activeHoverPoint && activeHoverVal !== null && (
           <div
-            className={`absolute top-4 ${isRightHalf ? 'left-4' : 'right-4'} p-4 rounded-2xl bg-[#faf8f5] border-2 border-[#ded9d0] shadow-[0_12px_28px_rgba(40,30,20,0.18)] z-40 pointer-events-none transition-all duration-150 min-w-[250px]`}
+            className={`absolute top-4 ${isRightHalf ? 'left-4' : 'right-4'} p-4 rounded-2xl liquid-glass-slab bg-[#071d15]/95 border-2 border-white/20 shadow-[0_16px_36px_rgba(0,0,0,0.6)] backdrop-blur-2xl z-40 pointer-events-none transition-all duration-150 min-w-[250px]`}
           >
-            <div className="flex justify-between items-center border-b border-slate-200 pb-2 mb-2">
-              <span className="font-extrabold text-[11px] uppercase tracking-wider text-[#0B6B74]">
+            <div className="flex justify-between items-center border-b border-white/10 pb-2 mb-2">
+              <span className="font-extrabold text-[11px] uppercase tracking-wider text-[#00E5B0]">
                 Week {activeHoverPoint.week_number}
               </span>
-              <span className="font-mono text-[11px] font-bold text-slate-600">
+              <span className="font-mono text-[11px] font-bold text-slate-300">
                 {activeHoverPoint.week_start}
               </span>
             </div>
 
             <div className="space-y-1.5 font-mono tabular-nums">
               <div className="flex justify-between items-center">
-                <span className="font-sans text-[11px] font-bold text-slate-600">
+                <span className="font-sans text-[11px] font-bold text-slate-300">
                   Projected Cash:
                 </span>
-                <span className="font-black text-sm text-slate-900 font-sans">
+                <span className="font-black text-sm text-white font-sans">
                   ${activeHoverVal.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                 </span>
               </div>
 
               {activeHoverBestVal !== null && (
                 <div className="flex justify-between text-[11px]">
-                  <span className="font-sans font-semibold text-slate-600">
+                  <span className="font-sans font-semibold text-slate-300">
                     Best Case (-7d):
                   </span>
-                  <span className="text-emerald-700 font-bold">
+                  <span className="text-emerald-400 font-bold">
                     ${activeHoverBestVal.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                   </span>
                 </div>
@@ -647,21 +647,21 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
 
               {activeHoverWorstVal !== null && (
                 <div className="flex justify-between text-[11px]">
-                  <span className="font-sans font-semibold text-slate-600">
+                  <span className="font-sans font-semibold text-slate-300">
                     Worst Case (+14d):
                   </span>
-                  <span className="text-rose-700 font-bold">
+                  <span className="text-rose-400 font-bold">
                     ${activeHoverWorstVal.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                   </span>
                 </div>
               )}
 
               {activeHoverBaselineVal !== null && (
-                <div className="flex justify-between text-[11px] border-t border-slate-200 pt-1.5">
-                  <span className="font-sans font-semibold text-slate-600">
+                <div className="flex justify-between text-[11px] border-t border-white/10 pt-1.5">
+                  <span className="font-sans font-semibold text-slate-300">
                     Baseline Reality:
                   </span>
-                  <span className="text-slate-800 font-bold">
+                  <span className="text-slate-200 font-bold">
                     ${activeHoverBaselineVal.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                   </span>
                 </div>
@@ -669,28 +669,28 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
             </div>
 
             {/* Breach Status Pill - Zero Emojis */}
-            <div className="mt-2.5 pt-2 border-t border-slate-200 flex justify-between items-center">
-              <span className="text-[10px] uppercase font-bold text-slate-500">
+            <div className="mt-2.5 pt-2 border-t border-white/10 flex justify-between items-center">
+              <span className="text-[10px] uppercase font-bold text-slate-400">
                 Policy Status:
               </span>
               {activeHoverVal < reserveAmount ? (
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 text-rose-800 border border-rose-300 flex items-center space-x-1">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 text-rose-400 border border-rose-300 flex items-center space-x-1">
                   <ShieldAlert className="w-3 h-3 text-rose-700" />
                   <span>Reserve Breach</span>
                 </span>
               ) : activeHoverVal < cashFloorAmount ? (
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900 border border-amber-300 flex items-center space-x-1">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-950/80 text-amber-300 border border-amber-500/40 flex items-center space-x-1">
                   <AlertTriangle className="w-3 h-3 text-amber-700" />
                   <span>Below 12-Wk Floor</span>
                 </span>
               ) : (
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-900 border border-emerald-300 flex items-center space-x-1">
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 flex items-center space-x-1">
                   <CheckCircle2 className="w-3 h-3 text-emerald-700" />
                   <span>Healthy Buffer</span>
                 </span>
               )}
             </div>
-            <div className="text-[9px] text-center mt-1.5 font-semibold text-slate-500">
+            <div className="text-[9px] text-center mt-1.5 font-semibold text-slate-400">
               Click point to open cryptographic lineage
             </div>
           </div>
