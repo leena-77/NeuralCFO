@@ -1,6 +1,6 @@
 # Chatbot Implementation Progress Log
 **Module:** LLM Chatbot Gateway & Chat (`app/chat`)  
-**Owner:** Aroon  
+**Module:** LLM Chatbot Gateway & Chat  
 **Started:** October 25, 2026  
 **Document Ref:** `/docs/chat/02_progress_log.md`
 

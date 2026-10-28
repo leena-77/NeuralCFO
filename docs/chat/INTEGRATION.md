@@ -1,7 +1,7 @@
 # Chatbot Module Integration Guide
 **Module:** LLM Chatbot Gateway & Chat (`app/chat`)  
-**Owner:** Aroon  
-**Target Audience:** Sharjeel (NeuralCFO), Aleena (Moonshot Mode), Hackathon Reviewers  
+**Module:** LLM Chatbot Gateway & Chat  
+**Target Audience:** Engineering Team, Hackathon Reviewers  
 **Document Ref:** `/docs/chat/INTEGRATION.md`  
 **Status:** Ready for Integration
 
@@ -12,7 +12,7 @@
 The Chatbot module acts as the unified conversational gateway, API router, and Next.js Web Shell host for the application.
 
 - **Shared Repository Layout:**
-  - Web UI: `/apps/web` (Aroon owns layout, session handling, chat, and Evidence Drawer host; teammates add sub-pages under `/apps/web/cfo` and `/apps/web/moonshot`).
+  - Web UI: `/apps/web` (Unified layout, session handling, chat, and Evidence Drawer host, with sub-pages under `/apps/web/cfo` and `/apps/web/moonshot`).
   - Shared Contracts: `/packages/contracts` (Single source of truth for Pydantic models, JSON schemas, and service interfaces).
   - Backend Gateway: `/services/api/app/chat`
   - Core Foundation: `/services/api/app/core` (Auth, config, audit logger, evidence registry).
@@ -76,25 +76,25 @@ All tools return the standard Part A2 envelope:
 
 | Tool Name | Owner | Target Implementation | Backend Toggle Env Var |
 | :--- | :--- | :--- | :--- |
-| `finance.get_metric` | Sharjeel | `FinanceService.get_metric()` | `FINANCE_BACKEND=fake\|real` |
-| `finance.run_scenario` | Sharjeel | `FinanceService.run_scenario()` | `FINANCE_BACKEND=fake\|real` |
-| `finance.list_source_rows` | Sharjeel | `FinanceService.list_source_rows()` | `FINANCE_BACKEND=fake\|real` |
-| `finance.explain_change` | Sharjeel | `FinanceService.explain_change()` | `FINANCE_BACKEND=fake\|real` |
+| `finance.get_metric` | CFO Module | `FinanceService.get_metric()` | `FINANCE_BACKEND=fake\|real` |
+| `finance.run_scenario` | CFO Module | `FinanceService.run_scenario()` | `FINANCE_BACKEND=fake\|real` |
+| `finance.list_source_rows` | CFO Module | `FinanceService.list_source_rows()` | `FINANCE_BACKEND=fake\|real` |
+| `finance.explain_change` | CFO Module | `FinanceService.explain_change()` | `FINANCE_BACKEND=fake\|real` |
 | `moonshot.run` | Aleena | `MoonshotWorkflow.run()` | `MOONSHOT_BACKEND=fake\|real` |
-| `rag.search` | Aroon | `RagRetriever.search()` | Built-in |
-| `memory.read` | Aroon | `MemoryStore.read()` | `MEMORY_BACKEND=fake\|meterless` |
-| `memory.write` | Aroon | `MemoryStore.propose()` | `MEMORY_BACKEND=fake\|meterless` |
-| `dashboard.propose_action` | Aroon | `ActionManager.propose()` | Built-in |
-| `web.search` | Aroon | `SearchProvider.search()` | Built-in |
+| `rag.search` | Chat Module | `RagRetriever.search()` | Built-in |
+| `memory.read` | Chat Module | `MemoryStore.read()` | `MEMORY_BACKEND=fake\|meterless` |
+| `memory.write` | Chat Module | `MemoryStore.propose()` | `MEMORY_BACKEND=fake\|meterless` |
+| `dashboard.propose_action` | Chat Module | `ActionManager.propose()` | Built-in |
+| `web.search` | Chat Module | `SearchProvider.search()` | Built-in |
 
 ---
 
 ## 5. Evidence Registry & Custom Renderers
 
 Each module registers an `EvidenceResolver` with `evidence_registry` in `app/core/evidence.py`:
-- **Sharjeel (CFO):** Registers resolvers for `source_row`, `financial_record`, `forecast_run`, `forecast_point`, `finance_assumption`.
+- **CFO Module:** Registers resolvers for `source_row`, `financial_record`, `forecast_run`, `forecast_point`, `finance_assumption`.
 - **Aleena (Moonshot):** Registers resolvers for `goal_assumption`, `kb_excerpt`, `strategy_score`, `base_rate`.
-- **Aroon (Chat):** Registers resolvers for `document_chunk`, `web_source`.
+- **Chat Module:** Registers resolvers for `document_chunk`, `web_source`.
 
 When a user clicks an evidence badge in the Web Shell, the Evidence Drawer queries `GET /v1/citations/{id}` and renders the verified lineage snippet and metadata.
 
@@ -122,7 +122,7 @@ The Chatbot owns 18 tables defined in `services/api/migrations/versions/0300_cha
 17. `dashboard_widgets`
 18. `verification_checks`
 
-**Core Tables (Sharjeel 0001–0099):** Consumed via core helpers only (`organizations`, `users`, `memberships`, `audit_logs`, `decision_runs`, `claims`, `evidence_links`).
+**Core Tables (0001-0099):** Consumed via core helpers only (`organizations`, `users`, `memberships`, `audit_logs`, `decision_runs`, `claims`, `evidence_links`).
 
 ---
 
@@ -141,9 +141,9 @@ The Chatbot owns 18 tables defined in `services/api/migrations/versions/0300_cha
 
 ---
 
-## 8. Integration Checklist for Sharjeel & Aleena
+## 8. Module Integration Checklist
 
-### For Sharjeel (NeuralCFO):
+### For NeuralCFO (Finance Engine):
 - [ ] Verify your finance service implements the frozen Part A5 contract in `/packages/contracts/finance.py`.
 - [ ] Confirm `POST /v1/finance/scenarios/run` returns three cases: `expected`, `best`, and `worst`.
 - [ ] Connect your service to Chatbot by setting `FINANCE_BACKEND=real` and calling `set_finance_service(your_service)`.

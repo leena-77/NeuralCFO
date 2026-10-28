@@ -1,6 +1,6 @@
 """Chatbot Core Schema (0300-0399).
 Alembic migration revision: 0300_chat_core
-Revises: 0099_core_frozen (once published by Sharjeel; nullable until tag exists)
+Revises: 0099_core_frozen (nullable until tag exists)
 """
 from alembic import op
 import sqlalchemy as sa

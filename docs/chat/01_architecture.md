@@ -1,6 +1,6 @@
 # Chatbot Gateway & Chat Module Architecture Specification
 **Module:** LLM Chatbot Gateway & Chat (`app/chat`)  
-**Owner:** Aroon  
+**Module:** LLM Chatbot Gateway & Chat  
 **Document Ref:** `/docs/chat/01_architecture.md`  
 **Master Spec:** *NeuralCFO + Moonshot Mode: Unified Project Documentation v0.1*  
 **Status:** Approved for Implementation
@@ -177,16 +177,16 @@ Every tool registered in `ToolRegistry` conforms strictly to:
 ### Tool Inventory Table:
 | Tool Name | Owner Module | Service Provider | Risk | Minimum Role | Timeout | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `finance.get_metric` | CFO (Sharjeel) | `FinanceService` | LOW | viewer | 10s | Retrieve revenue, cash, burn, expenses with source rows |
-| `finance.run_scenario` | CFO (Sharjeel) | `FinanceService` | LOW | member | 15s | Run A5 scenario contract against baseline (3 cases) |
-| `finance.list_source_rows` | CFO (Sharjeel) | `FinanceService` | LOW | viewer | 10s | Get underlying raw rows behind a calculated figure |
-| `finance.explain_change` | CFO (Sharjeel) | `FinanceService` | LOW | viewer | 10s | Period comparison & driver decomposition |
+| `finance.get_metric` | CFO (Finance) | `FinanceService` | LOW | viewer | 10s | Retrieve revenue, cash, burn, expenses with source rows |
+| `finance.run_scenario` | CFO (Finance) | `FinanceService` | LOW | member | 15s | Run A5 scenario contract against baseline (3 cases) |
+| `finance.list_source_rows` | CFO (Finance) | `FinanceService` | LOW | viewer | 10s | Get underlying raw rows behind a calculated figure |
+| `finance.explain_change` | CFO (Finance) | `FinanceService` | LOW | viewer | 10s | Period comparison & driver decomposition |
 | `moonshot.run` | Moonshot (Aleena) | `MoonshotWorkflow`| LOW | member | 30s | Run 6-card pipeline or return `needs_input` |
-| `rag.search` | Chat (Aroon) | `RagRetriever` | LOW | viewer | 5s | Hybrid semantic search over uploaded org documents |
-| `memory.read` | Chat (Aroon) | `MemoryStore` | LOW | viewer | 5s | Read stored facts/assumptions for user & org |
-| `memory.write` | Chat (Aroon) | `MemoryStore` | MEDIUM | member | 5s | Propose a fact/assumption for user confirmation |
-| `dashboard.propose_action` | Chat (Aroon) | `ActionManager` | LOW-HIGH | member | 5s | Propose dashboard UI change with preview |
-| `web.search` | Chat (Aroon) | `SearchProvider` | LOW | member | 10s | External context retrieval (marked untrusted) |
+| `rag.search` | Chat (Gateway) | `RagRetriever` | LOW | viewer | 5s | Hybrid semantic search over uploaded org documents |
+| `memory.read` | Chat (Gateway) | `MemoryStore` | LOW | viewer | 5s | Read stored facts/assumptions for user & org |
+| `memory.write` | Chat (Gateway) | `MemoryStore` | MEDIUM | member | 5s | Propose a fact/assumption for user confirmation |
+| `dashboard.propose_action` | Chat (Gateway) | `ActionManager` | LOW-HIGH | member | 5s | Propose dashboard UI change with preview |
+| `web.search` | Chat (Gateway) | `SearchProvider` | LOW | member | 10s | External context retrieval (marked untrusted) |
 
 ---
 
@@ -569,7 +569,7 @@ The Web Shell provides the common host for all three modules:
 - `/apps/web/src/app/chat/page.tsx`: Conversational interface with streaming message bubbles, tool-progress pills, inline chart renderers, action approval cards, and Moonshot report renderers.
 - `/apps/web/src/components/evidence/EvidenceDrawer.tsx`: Shared slide-out drawer resolving citation UUIDs against `GET /v1/citations/{id}` and hosting modular renderers.
 - Sub-routes for teammates:
-  - `/apps/web/src/app/cfo/`: NeuralCFO pages (owned by Sharjeel).
+  - `/apps/web/src/app/cfo/`: NeuralCFO scenario pages.
   - `/apps/web/src/app/moonshot/`: Moonshot pages (owned by Aleena).
 
 ---

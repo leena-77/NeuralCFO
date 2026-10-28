@@ -1,5 +1,5 @@
 # NeuralCFO Finance Engine Module
-**Owner:** Sharjeel  
+**Module:** NeuralCFO Finance Engine
 **Location:** `/services/api/app/cfo`  
 **Migrations Allocated:** `0100-0199`  
 **Tables Owned:**

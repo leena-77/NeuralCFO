@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: NeuralCFO Chatbot API Fragment
   version: 1.0.0
-  description: OpenAPI 3.0 fragment for the LLM Chatbot Gateway & Chat module owned by Aroon.
+  description: OpenAPI 3.0 fragment for the LLM Chatbot Gateway & Chat module for the NeuralCFO platform.
 paths:
   /v1/conversations:
     post:

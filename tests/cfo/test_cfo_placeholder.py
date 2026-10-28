@@ -1,3 +1,3 @@
-"""CFO Module Unit Tests (Sharjeel)."""
+"""CFO Module Unit Tests."""
 def test_cfo_module_placeholder():
     assert True

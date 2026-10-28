@@ -1,5 +1,5 @@
 """Shared Finance Engine Contract v1 (Part A5 & Moonshot Mode Part 2).
-Canonical contract between NeuralCFO (Sharjeel), Moonshot (Aleena), and Chatbot (Aroon).
+Canonical contract between NeuralCFO (Finance), Moonshot (Strategy), and Chatbot Gateway.
 """
 from __future__ import annotations
 
@@ -168,7 +168,7 @@ class ExplainChangeData(BaseModel):
     source_row_ids: List[UUID] = Field(default_factory=list)
 
 class FinanceService(Protocol):
-    """Service interface published by Sharjeel (NeuralCFO)."""
+    """Service interface published by NeuralCFO Finance Engine."""
     async def run_scenario(self, org_id: UUID, request: ScenarioRunRequest) -> ToolResultEnvelope[ScenarioRunResponseData]:
         ...
 

@@ -3,7 +3,7 @@
 Coordinates the 10-stage pipeline:
 Intake -> Constraint Check -> Decomposition -> Retrieval -> Simulation -> Gating & Scoring -> Skeptic -> Report
 Emits SSE stage events and supports resumable clarification cycles (needs_input).
-Provides FakeMoonshotWorkflow for Aroon's frontend & chat integration.
+Provides FakeMoonshotWorkflow for frontend & chat integration.
 """
 from __future__ import annotations
 
@@ -232,7 +232,7 @@ class MoonshotWorkflow:
 
 
 class FakeMoonshotWorkflow:
-    """Deterministic canned workflow for Aroon's chat and UI integration (PDF B2.11)."""
+    """Deterministic canned workflow for chat and UI integration (PDF B2.11)."""
 
     def __init__(self):
         self.default_report_id = "r0000000-0000-0000-0000-000000000001"

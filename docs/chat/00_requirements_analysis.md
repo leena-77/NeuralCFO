@@ -1,5 +1,5 @@
 # Requirements Analysis & Verification (Chatbot Gateway + Chat Module)
-**Module Owner:** Aroon (LLM Chatbot Gateway & Chat)  
+**Module Focus:** LLM Chatbot Gateway & Chat  
 **Document Ref:** `/docs/chat/00_requirements_analysis.md`  
 **Master Specification:** *NeuralCFO + Moonshot Mode: Unified Project Documentation v0.1*  
 **Date:** October 25, 2026  
@@ -12,16 +12,16 @@
 In accordance with Prompt 3 of 3 for the Open Agent Hackathon 2026:
 - **Product:** NeuralCFO + Moonshot Mode (Unified Platform)
 - **Team Split:**
-  - **Sharjeel:** NeuralCFO finance engine (`/services/api/app/cfo`, migrations `0100-0199`)
+  - **Finance Engine:** NeuralCFO finance engine (`/services/api/app/cfo`, migrations `0100-0199`)
   - **Aleena:** Moonshot Mode strategy engine (`/services/api/app/moonshot`, migrations `0200-0299`)
-  - **Aroon (This Module):** LLM Chatbot gateway + chat (`/services/api/app/chat`, migrations `0300-0399`, Web Shell `/apps/web`, shared provider contracts)
+  - **Chatbot Gateway (This Module):** LLM Chatbot gateway + chat (`/services/api/app/chat`, migrations `0300-0399`, Web Shell `/apps/web`, shared provider contracts)
 - **Core Principle:** The model understands and explains, tools calculate, code verifies, and every number and quote traces to a source.
 - **Strict Boundary Rules:**
   - The LLM **never** directly accesses the database, server secrets, or writes UI/dashboard code.
   - The LLM calls **only registered, typed tools** with server-validated schemas.
   - Every tool and API route enforces `org_id` and role permissions in backend Python code derived exclusively from the authenticated JWT session context (never from user input, query params, or model parameters).
   - Cross-module communication occurs exclusively via typed service interfaces in `/packages/contracts` and HTTP API routes under `/v1`. No internal table imports or cross-module direct database reads.
-  - Until Sharjeel publishes the Foundation Kit (`foundation-v1`), Aroon builds against `/packages/contracts`, `FakeFinanceService`, and `FakeMoonshotWorkflow`, without writing core `0001-0099` migrations or duplicating core tables.
+  - Until the Foundation Kit (`foundation-v1`) is finalized, the module builds against `/packages/contracts`, `FakeFinanceService`, and `FakeMoonshotWorkflow`, without writing core `0001-0099` migrations or duplicating core tables.
 
 ---
 
@@ -182,7 +182,7 @@ In accordance with Prompt 3 of 3 for the Open Agent Hackathon 2026:
 - **Reference:** PDF §14 (pp. 33–34)
 - **Meterless:** Planned for `MemoryStore` and execution tracing. Real adapter + labeled Postgres fallback with identical protocol. Smoke test: write, read, trace one memory item.
 - **NVIDIA / LLMProvider:** Swappable model interface (`LLMProvider`) supporting streaming and schema-validated tool calling. Model name configurable via env var. Benchmark harness comparing candidate models on reliability, latency, and cost.
-- **Zetaris:** Owned by Sharjeel (`FinanceDataSource`). Chat consumes only through `finance.*` tools.
+- **Zetaris:** Owned by Finance Engine (`FinanceDataSource`). Chat consumes only through `finance.*` tools.
 - **Cursor vs Antigravity:** PDF notes conflict F1. Handled by modular code structure and documented rules verification.
 
 ### Section 15: Testing and Evaluation
@@ -235,11 +235,11 @@ In accordance with Prompt 3 of 3 for the Open Agent Hackathon 2026:
 | **F5** | High | Scope exceeds hackathon window (60 tables, voice, web, etc.). | Scope explosion across chat features. | **Resolved by Part B2:** Strict prioritization. Must (core chat, streaming, tool loop, verifier, memory) built first. Should (RAG, actions, evals) secondary. Voice/Web in Could. |
 | **F6** | Med | Two Moonshot designs: free tool loop vs gated 6-card pipeline. | Chat agent orchestration and tool registry. | **Resolved by Part B2.7:** Chat Moonshot agent calls **exactly one tool**: `moonshot.run`. No free-form card execution from chat. Web search is context only, never strategy generation. |
 | **F7** | Med | Orchestration framework undecided (LangGraph vs Meterless Swarms vs custom loop). | Agent runtime architecture and latency. | **Resolved by Part B1, D4:** Custom typed Python tool-calling loop. Deterministic, inspectable, zero external framework overhead. |
-| **F8** | Med | Sponsor roles inconsistent & unverified. | Meterless and Zetaris integration boundaries. | **Resolved by Part A1, B0, B2.10:** Zetaris handled entirely by Sharjeel in CFO. Meterless encapsulated in `MemoryStore` with Postgres fallback. Real adapter + fake provided. |
+| **F8** | Med | Sponsor roles inconsistent & unverified. | Meterless and Zetaris integration boundaries. | **Resolved by Part A1, B0, B2.10:** Zetaris handled entirely in CFO module. Meterless encapsulated in `MemoryStore` with Postgres fallback. Real adapter + fake provided. |
 | **F9** | Med | Scenario vs case terminology confusion. | Chat scenario display and chart event generation. | **Resolved by Part A5:** A scenario represents changed business levers; each scenario run evaluates three distinct cases (`expected`, `best`, `worst`). |
 | **F10** | Med | Granularity & cash floor representation. | Unit verifier (V5) and scenario summary text. | **Resolved by Part A5:** Weekly forecast series is canonical. Cash floor checks both currency reserve and runway weeks. |
 | **F11** | Med | Evidence modeled three ways across documents. | Evidence drawer API (`/v1/citations/{id}`) and claim validation. | **Resolved by Part A3, §12.1:** Unified core `claims` and `evidence_links` (each link points to exactly one target UUID). Chat registers resolvers for `document_chunk` and `web_source`. |
-| **F12** | Med | Ownership gaps (dashboard UI, config API, QA, card curation). | Dashboard actions and web shell ownership. | **Resolved by Part A1, B0:** Aroon owns the Next.js web shell, chat UI, dashboard action state machine, and evidence drawer host. Sharjeel and Aleena contribute sub-pages and card curators. |
+| **F12** | Med | Ownership gaps (dashboard UI, config API, QA, card curation). | Dashboard actions and web shell ownership. | **Resolved by Part A1, B0:** Modular Next.js web shell, chat UI, dashboard action state machine, and evidence drawer host, with modular sub-pages for CFO and Moonshot. |
 | **F13** | Low | Naming clash: `assumption` (Moonshot) vs `BusinessAssumption` (CFO). | Memory write proposals and evidence target resolution. | **Resolved by Part A3:** Explicitly separated as `goal_assumptions` (Moonshot) and `finance_assumptions` (CFO). |
 | **F14** | Low | Retrieval described three ways (tags vs pgvector vs semantic score). | Strategy card retrieval vs document RAG. | **Resolved by Part B2.8, B2.13:** Two independent paths: Moonshot owns card retrieval (tags/keywords/re-rank); Chatbot owns user document RAG using pgvector hybrid search with pre-filtering by `org_id`. |
 | **F15** | Low | Unverified base rates in Moonshot documentation. | Citations rendered in chat reports. | **Resolved by Part A8:** Unverified base rates excluded from demo data unless backed by verifiable sources. |
@@ -261,7 +261,7 @@ In accordance with Prompt 3 of 3 for the Open Agent Hackathon 2026:
 | **Evidence & Claim Data Model** | Data Model | `[DECIDED, F11]` | Core `claims` and `evidence_links` tables. `evidence_links` contains `target_type` and `target_id`. No duplicate chat evidence tables. |
 | **Chatbot Migration Range** | Data Model | `[DECIDED, A3]` | Migrations strictly numbered `0300–0399`. Core tables (`0001–0099`) referenced by foreign key only after `foundation-v1` tag. |
 | **Meterless Integration** | Integration | `[PROPOSED, D14]` | `MeterlessMemoryStore` implementing `MemoryStore` protocol. Backed by `PostgresMemoryStore` fake/fallback until official credentials/SDK are verified. |
-| **Zetaris Integration Boundary** | Integration | `[DECIDED, F8]` | Sharjeel owns Zetaris integration in NeuralCFO. Chat accesses Zetaris data exclusively via `finance.get_metric` and `finance.list_source_rows`. |
+| **Zetaris Integration Boundary** | Integration | `[DECIDED, F8]` | Finance Engine owns Zetaris integration in NeuralCFO. Chat accesses Zetaris data exclusively via `finance.get_metric` and `finance.list_source_rows`. |
 | **Verifier Invariants (V1–V9)** | Verification | `[DECIDED, §12.2]` | Deterministic checks run post-turn. Any number not traceable to a current-turn tool result is tagged `unverified`. One regeneration pass allowed (V9). |
 | **Dashboard Action Security** | Security | `[DECIDED, §10.4]` | Model only proposes typed action payloads. High-risk actions (`update_assumption`, `import_transactions`) strictly require human admin/owner approval. |
 | **Evaluation Question Suite** | Evaluation | `[PROPOSED, §15.2]` | Canonical 20-question suite drafted from CH2 §9 categories, to be updated if the user provides the verbatim source list. |

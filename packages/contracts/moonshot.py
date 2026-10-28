@@ -1,5 +1,5 @@
 """Shared Moonshot Mode Contract (Part A6).
-Canonical interface between Moonshot Mode (Aleena) and Chatbot (Aroon).
+Canonical interface between Moonshot Mode and Chatbot Gateway.
 """
 from typing import Any, AsyncGenerator, Dict, List, Literal, Optional, Protocol, Union
 from uuid import UUID, uuid4

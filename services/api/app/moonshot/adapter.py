@@ -1,6 +1,6 @@
 """Moonshot Contract Adapter.
 
-Adapts Aleena's Core MoonshotWorkflow to Aroon's Protocol in /packages/contracts/moonshot.py.
+Adapts Core MoonshotWorkflow to the Protocol in /packages/contracts/moonshot.py.
 Enables seamless zero-conflict plug-and-play between the conversational chatbot gateway and the strategy engine.
 """
 from __future__ import annotations
