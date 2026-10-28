@@ -4,51 +4,47 @@
 
 :root {
   /* ========================================================================= */
-  /* BALANCED LUXURY PALETTE                                                   */
-  /* 1 Black | 2-3 Greens | 2 Whites | 1 Contrasting Icy Cyan (No Orange)      */
+  /* WHITE TRANSPARENT LIQUID CLEAR CRYSTAL ON LUSH GREEN CANVAS               */
   /* ========================================================================= */
 
-  /* Black Grounding */
-  --clay-bg: #080c0a;
-  --clay-card-bg: rgba(18, 24, 22, 0.72);
-  --clay-dark-bg: #050706;
+  /* Lush Green Foliage Canvas Background */
+  --clay-bg: #072b1e;
+  --clay-card-bg: rgba(255, 255, 255, 0.18);
+  --clay-dark-bg: #03140e;
 
-  /* 2-3 Greens */
-  --clay-sage: #00E5A3;        /* Green 1: Vibrant Mint / Electric Jade */
-  --clay-slate-teal: #007A63;   /* Green 2: Deep Forest Emerald */
-  --clay-pine-subtle: #092e24;  /* Green 3: Subtle Pine / Muted Evergreen */
-
-  /* Contrasting Accent (Not Orange): Electric Icy Cyan / Azure */
-  --clay-lavender: #0ea5e9;
+  /* Accent Greens & Icy Cyan */
+  --clay-sage: #00E5A3;        /* Vibrant Mint / Crystal Emerald */
+  --clay-slate-teal: #007A63;   /* Deep Forest Emerald */
+  --clay-lavender: #38bdf8;     /* Electric Icy Cyan */
   --clay-coral: #ef4444;
 
-  /* 2 Shades of White */
-  --text: #ffffff;             /* White 1: Crisp Pure White */
-  --muted: #cbd5e1;            /* White 2: Frosted Mist / Soft Pearl */
-  --surface: rgba(18, 24, 22, 0.72);
-  --ui-border: rgba(255, 255, 255, 0.12);
-  --divider: rgba(255, 255, 255, 0.10);
+  /* High-Contrast Crisp Typography */
+  --text: #ffffff;
+  --muted: #f1f5f9;
+  --surface: rgba(255, 255, 255, 0.18);
+  --ui-border: rgba(255, 255, 255, 0.35);
+  --divider: rgba(255, 255, 255, 0.20);
   --bg-gradient: transparent;
 
   /* Status Tokens */
   --status-verified: #00E5A3;
-  --status-verified-bg: rgba(0, 229, 163, 0.15);
+  --status-verified-bg: rgba(0, 229, 163, 0.22);
   --status-warning: #38bdf8;
-  --status-warning-bg: rgba(56, 189, 248, 0.15);
-  --status-unverified: #94a3b8;
-  --status-unverified-bg: rgba(148, 163, 184, 0.12);
+  --status-warning-bg: rgba(56, 189, 248, 0.22);
+  --status-unverified: #e2e8f0;
+  --status-unverified-bg: rgba(255, 255, 255, 0.18);
 
   /* Tag Tokens */
   --tag-computed: #00E5A3;
-  --tag-computed-bg: rgba(0, 229, 163, 0.15);
+  --tag-computed-bg: rgba(0, 229, 163, 0.22);
   --tag-cited: #38bdf8;
-  --tag-cited-bg: rgba(56, 189, 248, 0.15);
+  --tag-cited-bg: rgba(56, 189, 248, 0.22);
   --tag-inferred: #0ea5e9;
-  --tag-inferred-bg: rgba(14, 165, 233, 0.15);
+  --tag-inferred-bg: rgba(14, 165, 233, 0.22);
 
   --primary-gradient: linear-gradient(135deg, #00E5A3 0%, #007A63 100%);
-  --on-primary: #050807;
-  --radius-card: 1.5rem;
+  --on-primary: #040907;
+  --radius-card: 1.75rem;
   --radius-control: 9999px;
   --radius-chip: 9999px;
 }
@@ -62,16 +58,16 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.35);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 229, 163, 0.5);
+  background: rgba(0, 229, 163, 0.7);
 }
 
-/* Deep Obsidian Canvas with delicate, non-overpowering ambient emerald & cyan mist */
+/* Lush Emerald Forest Foliage Canvas with Organic Depth */
 body {
-  background: radial-gradient(circle at 20% 15%, #0f1814 0%, #080c0a 45%, #040605 100%);
+  background: radial-gradient(circle at 18% 15%, #0f4a36 0%, #093325 40%, #041a12 100%);
   color: #ffffff;
   min-height: 100vh;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -79,62 +75,80 @@ body {
 }
 
 /* ========================================================================= */
-/* 1. FROSTED LIQUID GLASS & CLAY SYSTEM (Obsidian & Emerald Glass)          */
+/* 1. WHITE TRANSPARENT LIQUID CLEAR CRYSTAL CARDS (Images 1, 2 & 3 Style)  */
 /* ========================================================================= */
 
 .clay-cushion {
-  background: rgba(18, 25, 22, 0.70);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-top: 2px solid rgba(255, 255, 255, 0.75);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.38), 
+              0 0 20px rgba(255, 255, 255, 0.08), 
+              inset 0 1px 2px rgba(255, 255, 255, 0.65), 
+              inset 0 -1px 2px rgba(255, 255, 255, 0.15);
   border-radius: 1.75rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .clay-cushion:hover {
   transform: translateY(-2px);
-  border-color: rgba(0, 229, 163, 0.35);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75), 0 0 25px rgba(0, 229, 163, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.50);
+  border-top-color: #ffffff;
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.45), 
+              0 0 35px rgba(255, 255, 255, 0.22), 
+              inset 0 1px 3px rgba(255, 255, 255, 0.85);
 }
 
 .clay-card {
-  background: rgba(16, 22, 19, 0.72);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-top: 2px solid rgba(255, 255, 255, 0.70);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.40);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), 
+              0 0 18px rgba(255, 255, 255, 0.06), 
+              inset 0 1px 2px rgba(255, 255, 255, 0.55), 
+              inset 0 -1px 2px rgba(255, 255, 255, 0.12);
   border-radius: 1.5rem;
 }
 
 .clay-card-sm {
-  background: rgba(18, 25, 22, 0.68);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.30), inset 0 1px 1.5px rgba(255, 255, 255, 0.50);
   border-radius: 1.25rem;
 }
 
-/* Deep Obsidian Inset Box */
+/* Crystal Debossed Inset Slabs (Contrast Interior) */
 .clay-card-inset {
-  background: rgba(6, 9, 8, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.8), inset -1px -1px 2px rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.40), inset -1px -1px 2px rgba(255, 255, 255, 0.15);
   border-radius: 1.25rem;
   color: #ffffff;
 }
 
 /* Notched Slider Track */
 .clay-notched-track {
-  background: rgba(4, 7, 6, 0.9);
-  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.85), inset -1px -1px 2px rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(14px);
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.50), inset -1px -1px 2px rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.20);
   border-radius: 9999px;
   position: relative;
 }
 
-/* Custom 3D Clay Slider Range Input with Luminous White Pearl & Mint Glow */
+/* Custom 3D Clay Slider Range Input with Luminous White Pearl Knob */
 .clay-slider {
   -webkit-appearance: none;
   appearance: none;
@@ -158,14 +172,14 @@ body {
   border-radius: 9999px;
   background: #ffffff;
   border: 2.5px solid #00E5A3;
-  box-shadow: 0 4px 14px rgba(0, 229, 163, 0.8), 0 0 12px rgba(0, 229, 163, 0.5);
+  box-shadow: 0 4px 14px rgba(0, 229, 163, 0.8), 0 0 16px rgba(255, 255, 255, 0.95);
   cursor: grab;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .clay-slider::-webkit-slider-thumb:hover {
   transform: scale(1.18);
-  box-shadow: 0 6px 18px rgba(0, 229, 163, 1), 0 0 16px rgba(56, 189, 248, 0.8);
+  box-shadow: 0 6px 20px rgba(0, 229, 163, 1), 0 0 20px rgba(255, 255, 255, 1);
 }
 
 .clay-slider::-webkit-slider-thumb:active {
@@ -179,41 +193,46 @@ body {
   border-radius: 9999px;
   background: #ffffff;
   border: 2.5px solid #00E5A3;
-  box-shadow: 0 4px 14px rgba(0, 229, 163, 0.8), 0 0 12px rgba(0, 229, 163, 0.5);
+  box-shadow: 0 4px 14px rgba(0, 229, 163, 0.8), 0 0 16px rgba(255, 255, 255, 0.95);
   cursor: grab;
 }
 
-/* Liquid Frosted Neutral Buttons */
+/* White Transparent Crystal Buttons (visionOS Floating Glass Pill) */
 .clay-btn {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.70);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22), inset 0 1px 1.5px rgba(255, 255, 255, 0.55);
   border-radius: 9999px;
-  color: #e2e8f0;
+  color: #ffffff;
+  font-weight: 700;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .clay-btn:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.30);
+  border-color: rgba(255, 255, 255, 0.60);
+  border-top-color: #ffffff;
   color: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), 0 0 14px rgba(0, 229, 163, 0.2);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28), 0 0 18px rgba(255, 255, 255, 0.35);
 }
 
 .clay-btn:active, .clay-btn-pressed {
   transform: translateY(1px);
-  background: rgba(0, 0, 0, 0.4);
-  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.45);
 }
 
-/* Green 1: Vibrant Mint Pill Button (#00E5A3 -> #007A63) */
+/* Vibrant Mint Crystal Pill Button */
 .clay-pill-sage {
-  background: linear-gradient(135deg, #00E5A3 0%, #007A63 100%);
-  box-shadow: 0 6px 18px rgba(0, 229, 163, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(135deg, rgba(0, 229, 163, 0.95) 0%, rgba(0, 122, 99, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 6px 18px rgba(0, 229, 163, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: 9999px;
   color: #040907;
   font-weight: 800;
@@ -222,15 +241,17 @@ body {
 
 .clay-pill-sage:hover {
   transform: translateY(-1px);
-  background: linear-gradient(135deg, #1af0b1 0%, #009176 100%);
-  box-shadow: 0 8px 24px rgba(0, 229, 163, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, rgba(26, 240, 177, 1) 0%, rgba(0, 145, 118, 1) 100%);
+  box-shadow: 0 8px 24px rgba(0, 229, 163, 0.65), inset 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 
-/* Green 2: Deep Forest Emerald Pill (#007A63 -> #063c31) */
+/* Deep Forest Emerald Crystal Pill */
 .clay-pill-teal {
-  background: linear-gradient(135deg, #007A63 0%, #063c31 100%);
-  box-shadow: 0 6px 18px rgba(0, 122, 99, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(135deg, rgba(0, 122, 99, 0.88) 0%, rgba(6, 60, 49, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 6px 18px rgba(0, 122, 99, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
   border-radius: 9999px;
   color: #ffffff;
   font-weight: 700;
@@ -239,15 +260,17 @@ body {
 
 .clay-pill-teal:hover {
   transform: translateY(-1px);
-  background: linear-gradient(135deg, #009176 0%, #0b4a3d 100%);
+  background: linear-gradient(135deg, rgba(0, 145, 118, 0.95) 0%, rgba(11, 74, 61, 1) 100%);
   box-shadow: 0 8px 22px rgba(0, 122, 99, 0.6);
 }
 
-/* Contrasting Accent: Electric Icy Cyan / Azure Pill (#38bdf8 -> #0284c7) */
+/* Electric Icy Cyan Crystal Pill */
 .clay-pill-lavender {
-  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.92) 0%, rgba(2, 132, 199, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: 9999px;
   color: #04121d;
   font-weight: 800;
@@ -256,100 +279,110 @@ body {
 
 .clay-pill-lavender:hover {
   transform: translateY(-1px);
-  background: linear-gradient(135deg, #56cbf9 0%, #0369a1 100%);
+  background: linear-gradient(135deg, rgba(86, 203, 249, 1) 0%, rgba(3, 105, 161, 1) 100%);
   box-shadow: 0 8px 22px rgba(56, 189, 248, 0.6);
 }
 
 /* Electric Icy Cyan Inset Pill */
 .clay-input-lavender {
-  background: rgba(6, 14, 20, 0.7);
-  border: 1.5px solid rgba(56, 189, 248, 0.4);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.15);
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 14px rgba(56, 189, 248, 0.18);
   border-radius: 9999px;
   color: #ffffff;
 }
 
 /* Elevated Squircle for Icons */
 .clay-squircle {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.30), inset 0 1px 1px rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.70);
   border-radius: 1.25rem;
 }
 
 /* Segmented Tab Bar */
 .clay-segmented-bar {
-  background: rgba(8, 12, 10, 0.85);
-  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(16px);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 1.25rem;
   padding: 4px;
 }
 
 /* ========================================================================= */
-/* 2. OBSIDIAN GLASS NAVIGATION RAIL                                         */
+/* 2. FLOATING WHITE TRANSPARENT LIQUID GLASS NAVIGATION RAIL                */
 /* ========================================================================= */
 
 .clay-sidebar {
-  background: linear-gradient(180deg, rgba(12, 16, 14, 0.94) 0%, rgba(6, 8, 7, 0.98) 100%);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.40), inset 0 1px 2px rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 2px solid rgba(255, 255, 255, 0.70);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.40);
   border-radius: 2rem;
 }
 
 .clay-sidebar-item {
-  color: #94a3b8;
+  color: #f1f5f9;
   border-radius: 1.15rem;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .clay-sidebar-item:hover {
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.20);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.35);
 }
 
 .clay-sidebar-item-active {
-  background: linear-gradient(135deg, #00E5A3 0%, #007A63 100%);
+  background: linear-gradient(135deg, rgba(0, 229, 163, 0.95) 0%, rgba(0, 122, 99, 0.95) 100%);
   color: #040907;
-  box-shadow: 0 6px 18px rgba(0, 229, 163, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 229, 163, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .clay-dark-card {
-  background: rgba(10, 14, 12, 0.85);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 1.75rem;
 }
 
 /* ========================================================================= */
-/* 3. LIQUID GLASS KIT SYSTEM (Translucent Slabs & Gradients)                */
+/* 3. LIQUID GLASS KIT SYSTEM (Liquid Crystal Slabs)                         */
 /* ========================================================================= */
 
 .liquid-glass-slab {
-  background: rgba(18, 24, 21, 0.72);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1.5px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.65), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-top: 2px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.40), inset 0 1px 2px rgba(255, 255, 255, 0.55);
   border-radius: 1.75rem;
 }
 
 .iridescent-card {
-  background: linear-gradient(135deg, rgba(0, 229, 163, 0.15) 0%, rgba(14, 165, 233, 0.12) 50%, rgba(0, 122, 99, 0.15) 100%);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1.5px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(0, 229, 163, 0.18) 50%, rgba(56, 189, 248, 0.18) 100%);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  border: 1.5px solid rgba(255, 255, 255, 0.40);
+  border-top: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.6);
   border-radius: 1.5rem;
 }
 
 /* 3D Vertical Pillar for Bar Charts */
 .clay-bar {
   border-radius: 9999px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35), inset 0 2px 3px rgba(255, 255, 255, 0.55);
   transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease, filter 0.2s ease;
 }
 
