@@ -65,22 +65,33 @@
   background: rgba(0, 229, 163, 0.7);
 }
 
-/* Lush Emerald Silk Gradient Canvas (User Uploaded Exact Reference) */
+/* Lush Emerald Silk Gradient Canvas (Lightened & 70% Opacity) */
 body {
-  background-color: #07221b;
-  background-image: 
-    radial-gradient(ellipse at 50% 88%, rgba(39, 163, 101, 0.30) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(24, 110, 78, 0.20) 0%, transparent 50%),
-    radial-gradient(ellipse at 15% 40%, rgba(18, 88, 64, 0.25) 0%, transparent 55%),
-    url('/bg-emerald-gradient.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #051a14;
   color: #ffffff;
   min-height: 100vh;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: #07221b;
+  background-image: 
+    radial-gradient(ellipse at 50% 88%, rgba(39, 163, 101, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(24, 110, 78, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 15% 40%, rgba(18, 88, 64, 0.35) 0%, transparent 55%),
+    url('/bg-emerald-gradient.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.70; /* Lightened to 70% opacity */
+  filter: brightness(1.20) saturate(1.10);
+  pointer-events: none;
 }
 
 /* ========================================================================= */
