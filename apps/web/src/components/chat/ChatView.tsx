@@ -214,7 +214,7 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
           onClick={() => handleSend("What bold move could fix this instead?")}
           className="clay-btn px-3.5 py-1.5 rounded-full text-white font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
         >
-          <Compass className="w-3.5 h-3.5 text-amber-400" />
+          <Compass className="w-3.5 h-3.5 text-sky-400" />
           <span>[2] Bold Moonshot</span>
         </button>
         <button
@@ -228,7 +228,7 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
           onClick={() => handleSend("Remember that payroll is on the 28th")}
           className="clay-btn px-3.5 py-1.5 rounded-full text-white font-bold whitespace-nowrap transition-transform hover:-translate-y-0.5 flex items-center space-x-1.5 text-xs"
         >
-          <BookmarkCheck className="w-3.5 h-3.5 text-amber-400" />
+          <BookmarkCheck className="w-3.5 h-3.5 text-sky-400" />
           <span>[4] Save Memory</span>
         </button>
       </div>
@@ -264,7 +264,7 @@ export function ChatView({ compact = false }: { compact?: boolean }) {
 
               {/* Progress Stages */}
               {m.stages && m.stages.length > 0 && (
-                <div className="mb-2 p-2.5 clay-card-inset rounded-xl text-xs font-mono text-amber-300 font-bold">
+                <div className="mb-2 p-2.5 clay-card-inset rounded-xl text-xs font-mono text-sky-300 font-bold">
                   <span className="text-slate-400">Pipeline Stages: </span>
                   {m.stages.join(" → ")}
                 </div>

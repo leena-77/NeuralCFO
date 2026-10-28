@@ -535,7 +535,7 @@ export const ScenarioLeverDock: React.FC<ScenarioLeverDockProps> = ({
                   </label>
                 </div>
                 {delayActive && (
-                  <span className="clay-card-inset text-[11px] font-mono font-black text-amber-800 px-3 py-1 rounded-full">
+                  <span className="clay-card-inset text-[11px] font-mono font-black text-sky-300 px-3 py-1 rounded-full">
                     +{delayDays}d Delay
                   </span>
                 )}

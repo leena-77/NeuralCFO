@@ -3,43 +3,51 @@
 @tailwind utilities;
 
 :root {
-  /* Emerald Forest & Radiant Amber Core Palette */
-  --clay-bg: #071912;
-  --clay-card-bg: rgba(14, 38, 28, 0.65);
-  --clay-dark-bg: #040e0a;
-  --clay-sage: #00A884;
-  --clay-slate-teal: #007A63;
-  --clay-lavender: #f59e0b;
+  /* ========================================================================= */
+  /* BALANCED LUXURY PALETTE                                                   */
+  /* 1 Black | 2-3 Greens | 2 Whites | 1 Contrasting Icy Cyan (No Orange)      */
+  /* ========================================================================= */
+
+  /* Black Grounding */
+  --clay-bg: #080c0a;
+  --clay-card-bg: rgba(18, 24, 22, 0.72);
+  --clay-dark-bg: #050706;
+
+  /* 2-3 Greens */
+  --clay-sage: #00E5A3;        /* Green 1: Vibrant Mint / Electric Jade */
+  --clay-slate-teal: #007A63;   /* Green 2: Deep Forest Emerald */
+  --clay-pine-subtle: #092e24;  /* Green 3: Subtle Pine / Muted Evergreen */
+
+  /* Contrasting Accent (Not Orange): Electric Icy Cyan / Azure */
+  --clay-lavender: #0ea5e9;
   --clay-coral: #ef4444;
 
-  /* Theme Tokens for Complete Visual Visibility & High Contrast */
-  --font-ui: "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono: ui-monospace, monospace;
-  --text: #f8fafc;
-  --muted: #94a3b8;
-  --surface: rgba(14, 38, 28, 0.65);
-  --ui-border: rgba(255, 255, 255, 0.14);
-  --divider: rgba(255, 255, 255, 0.12);
+  /* 2 Shades of White */
+  --text: #ffffff;             /* White 1: Crisp Pure White */
+  --muted: #cbd5e1;            /* White 2: Frosted Mist / Soft Pearl */
+  --surface: rgba(18, 24, 22, 0.72);
+  --ui-border: rgba(255, 255, 255, 0.12);
+  --divider: rgba(255, 255, 255, 0.10);
   --bg-gradient: transparent;
 
   /* Status Tokens */
-  --status-verified: #00A884;
-  --status-verified-bg: rgba(0, 168, 132, 0.18);
-  --status-warning: #f59e0b;
-  --status-warning-bg: rgba(245, 158, 11, 0.18);
+  --status-verified: #00E5A3;
+  --status-verified-bg: rgba(0, 229, 163, 0.15);
+  --status-warning: #38bdf8;
+  --status-warning-bg: rgba(56, 189, 248, 0.15);
   --status-unverified: #94a3b8;
-  --status-unverified-bg: rgba(148, 163, 184, 0.15);
+  --status-unverified-bg: rgba(148, 163, 184, 0.12);
 
   /* Tag Tokens */
-  --tag-computed: #00A884;
-  --tag-computed-bg: rgba(0, 168, 132, 0.15);
+  --tag-computed: #00E5A3;
+  --tag-computed-bg: rgba(0, 229, 163, 0.15);
   --tag-cited: #38bdf8;
   --tag-cited-bg: rgba(56, 189, 248, 0.15);
-  --tag-inferred: #fbbf24;
-  --tag-inferred-bg: rgba(251, 191, 36, 0.15);
+  --tag-inferred: #0ea5e9;
+  --tag-inferred-bg: rgba(14, 165, 233, 0.15);
 
-  --primary-gradient: linear-gradient(135deg, #00A884 0%, #007A63 100%);
-  --on-primary: #ffffff;
+  --primary-gradient: linear-gradient(135deg, #00E5A3 0%, #007A63 100%);
+  --on-primary: #050807;
   --radius-card: 1.5rem;
   --radius-control: 9999px;
   --radius-chip: 9999px;
@@ -54,77 +62,79 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 168, 132, 0.35);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 168, 132, 0.6);
+  background: rgba(0, 229, 163, 0.5);
 }
 
+/* Deep Obsidian Canvas with delicate, non-overpowering ambient emerald & cyan mist */
 body {
-  background: radial-gradient(circle at 18% 18%, #0f3326 0%, #092017 40%, #040e0a 100%);
-  color: #f8fafc;
+  background: radial-gradient(circle at 20% 15%, #0f1814 0%, #080c0a 45%, #040605 100%);
+  color: #ffffff;
   min-height: 100vh;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   overflow-x: hidden;
 }
 
 /* ========================================================================= */
-/* 1. FROSTED LIQUID GLASS & CLAY SYSTEM (Dark Emerald & Amber Luxury)       */
+/* 1. FROSTED LIQUID GLASS & CLAY SYSTEM (Obsidian & Emerald Glass)          */
 /* ========================================================================= */
 
 .clay-cushion {
-  background: rgba(14, 38, 28, 0.62);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.22);
+  background: rgba(18, 25, 22, 0.70);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.20);
   border-radius: 1.75rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .clay-cushion:hover {
   transform: translateY(-2px);
-  border-color: rgba(0, 168, 132, 0.35);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 168, 132, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  border-color: rgba(0, 229, 163, 0.35);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75), 0 0 25px rgba(0, 229, 163, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.25);
 }
 
 .clay-card {
-  background: rgba(12, 34, 25, 0.65);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.18);
+  background: rgba(16, 22, 19, 0.72);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.16);
   border-radius: 1.5rem;
 }
 
 .clay-card-sm {
-  background: rgba(15, 40, 30, 0.65);
+  background: rgba(18, 25, 22, 0.68);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.14);
   border-radius: 1.25rem;
 }
 
+/* Deep Obsidian Inset Box */
 .clay-card-inset {
-  background: rgba(4, 16, 12, 0.72);
+  background: rgba(6, 9, 8, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.7), inset -1px -1px 2px rgba(255, 255, 255, 0.05);
+  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.8), inset -1px -1px 2px rgba(255, 255, 255, 0.04);
   border-radius: 1.25rem;
-  color: #f1f5f9;
+  color: #ffffff;
 }
 
 /* Notched Slider Track */
 .clay-notched-track {
-  background: rgba(3, 14, 10, 0.85);
-  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.8), inset -1px -1px 2px rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(4, 7, 6, 0.9);
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.85), inset -1px -1px 2px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 9999px;
   position: relative;
 }
 
-/* Custom 3D Clay Slider Range Input with Emerald Pearl Knob */
+/* Custom 3D Clay Slider Range Input with Luminous White Pearl & Mint Glow */
 .clay-slider {
   -webkit-appearance: none;
   appearance: none;
@@ -146,16 +156,16 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #ffffff 0%, #00A884 100%);
-  border: 2.5px solid #ffffff;
-  box-shadow: 0 4px 14px rgba(0, 168, 132, 0.8), 0 0 12px rgba(0, 168, 132, 0.5);
+  background: #ffffff;
+  border: 2.5px solid #00E5A3;
+  box-shadow: 0 4px 14px rgba(0, 229, 163, 0.8), 0 0 12px rgba(0, 229, 163, 0.5);
   cursor: grab;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .clay-slider::-webkit-slider-thumb:hover {
   transform: scale(1.18);
-  box-shadow: 0 6px 18px rgba(0, 168, 132, 1), 0 0 16px rgba(0, 229, 176, 0.8);
+  box-shadow: 0 6px 18px rgba(0, 229, 163, 1), 0 0 16px rgba(56, 189, 248, 0.8);
 }
 
 .clay-slider::-webkit-slider-thumb:active {
@@ -167,60 +177,60 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #ffffff 0%, #00A884 100%);
-  border: 2.5px solid #ffffff;
-  box-shadow: 0 4px 14px rgba(0, 168, 132, 0.8), 0 0 12px rgba(0, 168, 132, 0.5);
+  background: #ffffff;
+  border: 2.5px solid #00E5A3;
+  box-shadow: 0 4px 14px rgba(0, 229, 163, 0.8), 0 0 12px rgba(0, 229, 163, 0.5);
   cursor: grab;
 }
 
-/* Liquid Frosted Buttons */
+/* Liquid Frosted Neutral Buttons */
 .clay-btn {
-  background: rgba(18, 48, 36, 0.65);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.18);
   border-radius: 9999px;
-  color: #f1f5f9;
+  color: #e2e8f0;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .clay-btn:hover {
   transform: translateY(-1px);
-  background: rgba(24, 60, 46, 0.8);
-  border-color: rgba(0, 168, 132, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
   color: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 0 14px rgba(0, 168, 132, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), 0 0 14px rgba(0, 229, 163, 0.2);
 }
 
 .clay-btn:active, .clay-btn-pressed {
   transform: translateY(1px);
-  background: rgba(10, 28, 20, 0.85);
+  background: rgba(0, 0, 0, 0.4);
   box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Vibrant Emerald Mint Pill Button (#00A884) */
+/* Green 1: Vibrant Mint Pill Button (#00E5A3 -> #007A63) */
 .clay-pill-sage {
-  background: linear-gradient(135deg, #00A884 0%, #007A63 100%);
-  box-shadow: 0 6px 18px rgba(0, 168, 132, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.45);
+  background: linear-gradient(135deg, #00E5A3 0%, #007A63 100%);
+  box-shadow: 0 6px 18px rgba(0, 229, 163, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 9999px;
-  color: #ffffff;
-  font-weight: 700;
+  color: #040907;
+  font-weight: 800;
   transition: all 0.2s ease;
 }
 
 .clay-pill-sage:hover {
   transform: translateY(-1px);
-  background: linear-gradient(135deg, #05be96 0%, #008f75 100%);
-  box-shadow: 0 8px 24px rgba(0, 168, 132, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.55);
+  background: linear-gradient(135deg, #1af0b1 0%, #009176 100%);
+  box-shadow: 0 8px 24px rgba(0, 229, 163, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.6);
 }
 
-/* Deep Emerald Teal Pill Button (#007A63) */
+/* Green 2: Deep Forest Emerald Pill (#007A63 -> #063c31) */
 .clay-pill-teal {
-  background: linear-gradient(135deg, #007A63 0%, #083c31 100%);
-  box-shadow: 0 6px 18px rgba(0, 122, 99, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, #007A63 0%, #063c31 100%);
+  box-shadow: 0 6px 18px rgba(0, 122, 99, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 9999px;
   color: #ffffff;
   font-weight: 700;
@@ -233,59 +243,59 @@ body {
   box-shadow: 0 8px 22px rgba(0, 122, 99, 0.6);
 }
 
-/* Radiant Amber Pill Button (#f59e0b) */
+/* Contrasting Accent: Electric Icy Cyan / Azure Pill (#38bdf8 -> #0284c7) */
 .clay-pill-lavender {
-  background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
-  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.45);
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 9999px;
-  color: #ffffff;
-  font-weight: 700;
+  color: #04121d;
+  font-weight: 800;
   transition: all 0.2s ease;
 }
 
 .clay-pill-lavender:hover {
   transform: translateY(-1px);
-  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.6);
+  background: linear-gradient(135deg, #56cbf9 0%, #0369a1 100%);
+  box-shadow: 0 8px 22px rgba(56, 189, 248, 0.6);
 }
 
-/* Radiant Amber Inset Pill */
+/* Electric Icy Cyan Inset Pill */
 .clay-input-lavender {
-  background: rgba(14, 38, 28, 0.65);
-  border: 1.5px solid rgba(245, 158, 11, 0.4);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 12px rgba(245, 158, 11, 0.15);
+  background: rgba(6, 14, 20, 0.7);
+  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.15);
   border-radius: 9999px;
   color: #ffffff;
 }
 
 /* Elevated Squircle for Icons */
 .clay-squircle {
-  background: linear-gradient(135deg, rgba(22, 54, 42, 0.8) 0%, rgba(10, 28, 20, 0.9) 100%);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1.25rem;
 }
 
 /* Segmented Tab Bar */
 .clay-segmented-bar {
-  background: rgba(6, 20, 15, 0.75);
-  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(8, 12, 10, 0.85);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.25rem;
   padding: 4px;
 }
 
 /* ========================================================================= */
-/* 2. DARK PINE FROSTED GLASS NAVIGATION RAIL                                */
+/* 2. OBSIDIAN GLASS NAVIGATION RAIL                                         */
 /* ========================================================================= */
 
 .clay-sidebar {
-  background: linear-gradient(180deg, rgba(8, 26, 19, 0.92) 0%, rgba(4, 16, 12, 0.97) 100%);
+  background: linear-gradient(180deg, rgba(12, 16, 14, 0.94) 0%, rgba(6, 8, 7, 0.98) 100%);
   backdrop-filter: blur(28px) saturate(180%);
   -webkit-backdrop-filter: blur(28px) saturate(180%);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 2rem;
 }
 
@@ -297,53 +307,53 @@ body {
 
 .clay-sidebar-item:hover {
   color: #ffffff;
-  background: rgba(0, 168, 132, 0.12);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .clay-sidebar-item-active {
-  background: linear-gradient(135deg, #00A884 0%, #007A63 100%);
-  color: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 168, 132, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #00E5A3 0%, #007A63 100%);
+  color: #040907;
+  box-shadow: 0 6px 18px rgba(0, 229, 163, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .clay-dark-card {
-  background: rgba(6, 20, 15, 0.85);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 14, 12, 0.85);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.75rem;
 }
 
 /* ========================================================================= */
-/* 3. LIQUID GLASS KIT SYSTEM (Translucent Slabs & Iridescent Gradients)     */
+/* 3. LIQUID GLASS KIT SYSTEM (Translucent Slabs & Gradients)                */
 /* ========================================================================= */
 
 .liquid-glass-slab {
-  background: rgba(14, 40, 30, 0.58);
+  background: rgba(18, 24, 21, 0.72);
   backdrop-filter: blur(28px) saturate(190%);
   -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.55), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.65), inset 0 1px 2px rgba(255, 255, 255, 0.2);
   border-radius: 1.75rem;
 }
 
 .iridescent-card {
-  background: linear-gradient(135deg, rgba(0, 168, 132, 0.22) 0%, rgba(13, 148, 136, 0.18) 50%, rgba(245, 158, 11, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(0, 229, 163, 0.15) 0%, rgba(14, 165, 233, 0.12) 50%, rgba(0, 122, 99, 0.15) 100%);
   backdrop-filter: blur(28px) saturate(190%);
   -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), inset 0 1px 2px rgba(255, 255, 255, 0.25);
   border-radius: 1.5rem;
 }
 
 /* 3D Vertical Pillar for Bar Charts */
 .clay-bar {
   border-radius: 9999px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.35);
   transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease, filter 0.2s ease;
 }
 
 .clay-bar:hover {
   transform: scaleY(1.05);
-  filter: brightness(1.2);
+  filter: brightness(1.25);
 }

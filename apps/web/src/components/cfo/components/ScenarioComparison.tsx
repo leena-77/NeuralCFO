@@ -121,7 +121,7 @@ export const ScenarioComparison: React.FC<ScenarioComparisonProps> = ({
               </td>
               <td className="py-3.5 px-4">
                 {expected.runway_weeks !== null ? (
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-950/80 text-amber-300 border border-amber-500/40">
+                  <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-sky-950/80 text-sky-300 border border-sky-500/40">
                     {expected.runway_weeks} wks
                   </span>
                 ) : (
@@ -150,12 +150,12 @@ export const ScenarioComparison: React.FC<ScenarioComparisonProps> = ({
               <td className="py-3.5 px-4">
                 <span
                   className={`px-3 py-1 rounded-full text-xs font-bold inline-flex items-center space-x-1 ${
-                    baseline.cash_floor_breach ? 'bg-amber-950/80 text-amber-300 border border-amber-500/40' : 'bg-emerald-950/80 text-emerald-300 border border-emerald-500/40'
+                    baseline.cash_floor_breach ? 'bg-sky-950/80 text-sky-300 border border-sky-500/40' : 'bg-emerald-950/80 text-emerald-300 border border-emerald-500/40'
                   }`}
                 >
                   {baseline.cash_floor_breach ? (
                     <>
-                      <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
+                      <AlertTriangle className="w-3.5 h-3.5 text-sky-400" />
                       <span>Breached</span>
                     </>
                   ) : (
@@ -169,12 +169,12 @@ export const ScenarioComparison: React.FC<ScenarioComparisonProps> = ({
               <td className="py-3.5 px-4">
                 <span
                   className={`px-3 py-1 rounded-full text-xs font-bold inline-flex items-center space-x-1 ${
-                    expected.cash_floor_breach ? 'bg-amber-950/80 text-amber-300 border border-amber-500/40' : 'bg-emerald-950/80 text-emerald-300 border border-emerald-500/40'
+                    expected.cash_floor_breach ? 'bg-sky-950/80 text-sky-300 border border-sky-500/40' : 'bg-emerald-950/80 text-emerald-300 border border-emerald-500/40'
                   }`}
                 >
                   {expected.cash_floor_breach ? (
                     <>
-                      <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
+                      <AlertTriangle className="w-3.5 h-3.5 text-sky-400" />
                       <span>Breached</span>
                     </>
                   ) : (

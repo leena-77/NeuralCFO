@@ -274,9 +274,9 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
             </span>
           </div>
           <div className="flex items-center space-x-2">
-            <Hash className="w-4 h-4 text-amber-400" />
+            <Hash className="w-4 h-4 text-sky-400" />
             <span>
-              Quotes: <strong className="text-amber-400">SHA-256 Verbatim</strong>
+              Quotes: <strong className="text-sky-400">SHA-256 Verbatim</strong>
             </span>
           </div>
         </div>
@@ -333,12 +333,12 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
         <div className="clay-cushion p-4 space-y-2">
           <div className="flex items-center justify-between text-xs font-bold text-slate-400">
             <span>Verifier Confidence</span>
-            <ShieldCheck className="w-4 h-4 text-amber-400" />
+            <ShieldCheck className="w-4 h-4 text-sky-400" />
           </div>
           <div className="text-2xl font-black text-white tracking-tight">
             100%
           </div>
-          <div className="text-[10px] font-bold text-amber-400">
+          <div className="text-[10px] font-bold text-sky-400">
             Strict Mathematical Proofs
           </div>
         </div>
@@ -469,12 +469,12 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
 
           {/* Clarification Modal / Card when status == 'needs_input' */}
           {clarification && (
-            <div className="clay-card p-6 rounded-3xl space-y-4 border-2 border-amber-300 bg-amber-50/50">
-              <div className="flex items-center space-x-2 text-amber-800 font-bold text-sm">
+            <div className="clay-card p-6 rounded-3xl space-y-4 border-2 border-sky-500/40 bg-sky-950/40">
+              <div className="flex items-center space-x-2 text-sky-300 font-bold text-sm">
                 <AlertTriangle className="w-4 h-4" />
                 <span>Round {clarification.round_number} Clarification Required (HR-05)</span>
               </div>
-              <p className="text-xs text-amber-900 leading-relaxed">
+              <p className="text-xs text-sky-200 leading-relaxed">
                 Operating constraints are unspecified. Please clarify before executing full financial simulation:
               </p>
               <div className="space-y-3 text-xs">
@@ -519,7 +519,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-extrabold text-white flex items-center space-x-2">
-                <Sliders className="w-4 h-4 text-amber-400" />
+                <Sliders className="w-4 h-4 text-sky-400" />
                 <span>Archival Precedent Strategy Cards</span>
               </h3>
               <div className="clay-segmented-bar flex space-x-1 text-xs">
@@ -592,7 +592,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                         onClick={() => setCardTabs((prev) => ({ ...prev, [card.id]: "quote" }))}
                         className={`pb-1.5 px-3 transition border-b-2 ${
                           activeTab === "quote"
-                            ? "border-purple-600 text-amber-300 font-bold"
+                            ? "border-purple-600 text-sky-300 font-bold"
                             : "border-transparent text-slate-400 hover:text-slate-200"
                         }`}
                       >
@@ -697,7 +697,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
               <div>
                 <div className="flex justify-between text-slate-200 font-bold mb-1">
                   <span>Price Hike Incentive:</span>
-                  <strong className="text-amber-400 font-mono">+{priceHike}%</strong>
+                  <strong className="text-sky-400 font-mono">+{priceHike}%</strong>
                 </div>
                 <input
                   type="range"
@@ -705,7 +705,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                   max="50"
                   value={priceHike}
                   onChange={(e) => setPriceHike(Number(e.target.value))}
-                  className="w-full accent-[#f59e0b] cursor-pointer"
+                  className="w-full accent-[#38bdf8] cursor-pointer"
                 />
               </div>
 
@@ -748,7 +748,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
                   Top Ranked Moves: <strong className="text-emerald-400">{reportData.top_strategies_count || 3}</strong>
                 </div>
                 <div>
-                  Sensitivity: <span className="text-amber-400 font-bold">{reportData.sensitivity?.summary}</span>
+                  Sensitivity: <span className="text-sky-400 font-bold">{reportData.sensitivity?.summary}</span>
                 </div>
               </div>
 

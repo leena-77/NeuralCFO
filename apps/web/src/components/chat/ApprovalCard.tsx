@@ -36,8 +36,8 @@ export function ApprovalCard({
     <div className="my-3 p-4 clay-card rounded-3xl shadow-sm max-w-lg font-sans border border-white/15">
       <div className="flex items-center justify-between pb-2.5 border-b border-white/10">
         <div className="flex items-center space-x-2">
-          <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-950/80 text-amber-300 border border-amber-500/40 uppercase flex items-center space-x-1">
-            <ShieldAlert className="w-3 h-3 text-amber-700" />
+          <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40 uppercase flex items-center space-x-1">
+            <ShieldAlert className="w-3 h-3 text-sky-400" />
             <span>{proposal.risk_level} Risk Action</span>
           </span>
           <span className="text-sm font-extrabold text-white">{proposal.action_type}</span>

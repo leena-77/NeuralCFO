@@ -297,7 +297,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
           <>
             <div className="flex items-center space-x-1.5">
               <span className="w-4 h-0.5 border-dashed border-t-2 inline-block border-amber-600" />
-              <span className="text-amber-300">
+              <span className="text-sky-300">
                 12-Week Cash Floor (~${(cashFloorAmount / 1000).toFixed(0)}k)
               </span>
             </div>
@@ -332,13 +332,13 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
             <linearGradient id="fanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#00A884" stopOpacity="0.25" />
               <stop offset="50%" stopColor="#007A63" stopOpacity="0.20" />
-              <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.22" />
+              <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.22" />
             </linearGradient>
 
             <linearGradient id="scenarioLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#00E5B0" />
               <stop offset="45%" stopColor="#00A884" />
-              <stop offset="100%" stopColor="#f59e0b" />
+              <stop offset="100%" stopColor="#38bdf8" />
             </linearGradient>
 
             <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
@@ -434,7 +434,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                 y1={floorY}
                 x2={width - paddingRight - 128}
                 y2={floorY}
-                stroke="#d97706"
+                stroke="#38bdf8"
                 strokeDasharray="4 4"
                 strokeWidth="1.5"
               />
@@ -445,8 +445,8 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   width="126"
                   height="20"
                   rx="6"
-                  fill="#2a1a08"
-                  stroke="#f59e0b"
+                  fill="#071b26"
+                  stroke="#38bdf8"
                   strokeWidth="1"
                 />
                 <text
@@ -454,7 +454,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   y="14"
                   textAnchor="middle"
                   fontSize="10"
-                  fill="#fde68a"
+                  fill="#bae6fd"
                   fontWeight="800"
                   fontFamily="sans-serif"
                 >
@@ -568,7 +568,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
               height={minCashBadgeHeight}
               rx="6"
               fill="#071912"
-              stroke="#f59e0b"
+              stroke="#38bdf8"
               strokeWidth="1.5"
               filter="drop-shadow(0 2px 4px rgba(0,0,0,0.12))"
             />
@@ -578,7 +578,7 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
               textAnchor="middle"
               fontSize="10"
               fontWeight="800"
-              fill="#fde68a"
+              fill="#bae6fd"
               fontFamily="sans-serif"
             >
               Min Cash: {displayMinVal}
@@ -679,8 +679,8 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({
                   <span>Reserve Breach</span>
                 </span>
               ) : activeHoverVal < cashFloorAmount ? (
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-950/80 text-amber-300 border border-amber-500/40 flex items-center space-x-1">
-                  <AlertTriangle className="w-3 h-3 text-amber-700" />
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-950/80 text-sky-300 border border-amber-500/40 flex items-center space-x-1">
+                  <AlertTriangle className="w-3 h-3 text-sky-400" />
                   <span>Below 12-Wk Floor</span>
                 </span>
               ) : (

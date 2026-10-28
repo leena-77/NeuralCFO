@@ -63,22 +63,22 @@ export default function UnifiedSystemCockpit() {
   return (
     <div className="flex h-screen w-screen overflow-hidden p-2.5 gap-2.5 font-sans">
       {/* ============================================================== */}
-      {/* 1. LEFT NAVIGATION RAIL (Frosted Dark Pine Glass)              */}
+      {/* 1. LEFT NAVIGATION RAIL (Obsidian & Emerald Glass Rail)        */}
       {/* ============================================================== */}
       <aside className="w-60 flex-shrink-0 flex flex-col justify-between p-3.5 clay-sidebar text-slate-200 relative overflow-hidden">
-        {/* Subtle Ambient Backlights (Emerald & Amber Glow) */}
-        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-[#00A884]/20 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-16 -right-10 w-40 h-40 rounded-full bg-[#f59e0b]/15 blur-3xl pointer-events-none" />
+        {/* Subtle Ambient Backlights (Delicate Emerald & Icy Cyan Glow) */}
+        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-[#00E5A3]/10 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-16 -right-10 w-40 h-40 rounded-full bg-[#38bdf8]/10 blur-3xl pointer-events-none" />
 
         {/* Top Profile / Executive Workspace */}
         <div className="relative z-10 flex flex-col items-center text-center pb-2.5">
           <div className="relative mb-2 group cursor-pointer">
-            <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#00A884] via-[#007A63] to-[#f59e0b] p-[2.5px] shadow-[0_8px_20px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-105 flex items-center justify-center">
-              <div className="w-full h-full rounded-full bg-[#071912] flex items-center justify-center overflow-hidden border-2 border-white/20">
-                <ShieldCheck className="w-7 h-7 text-[#00A884]" />
+            <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#00E5A3] via-[#007A63] to-[#38bdf8] p-[2.5px] shadow-[0_8px_20px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-105 flex items-center justify-center">
+              <div className="w-full h-full rounded-full bg-[#080c0a] flex items-center justify-center overflow-hidden border-2 border-white/20">
+                <ShieldCheck className="w-7 h-7 text-[#00E5A3]" />
               </div>
             </div>
-            <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-[#00A884] border-2 border-[#071912] shadow-sm animate-pulse" />
+            <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-[#00E5A3] border-2 border-[#080c0a] shadow-sm animate-pulse" />
           </div>
 
           <h2 className="text-sm font-bold text-white tracking-wide font-sans">
@@ -96,11 +96,11 @@ export default function UnifiedSystemCockpit() {
             onClick={() => setActivePart("overview")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
               activePart === "overview"
-                ? "clay-sidebar-item-active font-extrabold text-white shadow-md"
+                ? "clay-sidebar-item-active font-extrabold text-[#040907] shadow-md"
                 : "clay-sidebar-item font-semibold text-slate-300 hover:text-white"
             }`}
           >
-            <div className={`p-1.5 rounded-xl ${activePart === "overview" ? "bg-[#040e0a] text-[#00A884] shadow-xs" : "bg-white/5 text-slate-400"}`}>
+            <div className={`p-1.5 rounded-xl ${activePart === "overview" ? "bg-[#040907] text-[#00E5A3] shadow-xs" : "bg-white/5 text-slate-400"}`}>
               <LayoutDashboard className="w-4 h-4" />
             </div>
             <span className="text-xs font-bold tracking-wide">
@@ -113,11 +113,11 @@ export default function UnifiedSystemCockpit() {
             onClick={() => setActivePart("chat")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
               activePart === "chat"
-                ? "clay-sidebar-item-active font-extrabold text-white shadow-md"
+                ? "clay-sidebar-item-active font-extrabold text-[#040907] shadow-md"
                 : "clay-sidebar-item font-semibold text-slate-300 hover:text-white"
             }`}
           >
-            <div className={`p-1.5 rounded-xl ${activePart === "chat" ? "bg-[#040e0a] text-[#00A884] shadow-xs" : "bg-white/5 text-slate-400"}`}>
+            <div className={`p-1.5 rounded-xl ${activePart === "chat" ? "bg-[#040907] text-[#00E5A3] shadow-xs" : "bg-white/5 text-slate-400"}`}>
               <MessageSquare className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
@@ -132,11 +132,11 @@ export default function UnifiedSystemCockpit() {
             onClick={() => setActivePart("cfo")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
               activePart === "cfo"
-                ? "clay-sidebar-item-active font-extrabold text-white shadow-md"
+                ? "clay-sidebar-item-active font-extrabold text-[#040907] shadow-md"
                 : "clay-sidebar-item font-semibold text-slate-300 hover:text-white"
             }`}
           >
-            <div className={`p-1.5 rounded-xl ${activePart === "cfo" ? "bg-[#040e0a] text-[#00A884] shadow-xs" : "bg-white/5 text-slate-400"}`}>
+            <div className={`p-1.5 rounded-xl ${activePart === "cfo" ? "bg-[#040907] text-[#00E5A3] shadow-xs" : "bg-white/5 text-slate-400"}`}>
               <BarChart3 className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
@@ -151,11 +151,11 @@ export default function UnifiedSystemCockpit() {
             onClick={() => setActivePart("moonshot")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
               activePart === "moonshot"
-                ? "clay-sidebar-item-active font-extrabold text-white shadow-md"
+                ? "clay-sidebar-item-active font-extrabold text-[#040907] shadow-md"
                 : "clay-sidebar-item font-semibold text-slate-300 hover:text-white"
             }`}
           >
-            <div className={`p-1.5 rounded-xl ${activePart === "moonshot" ? "bg-[#040e0a] text-[#00A884] shadow-xs" : "bg-white/5 text-slate-400"}`}>
+            <div className={`p-1.5 rounded-xl ${activePart === "moonshot" ? "bg-[#040907] text-[#00E5A3] shadow-xs" : "bg-white/5 text-slate-400"}`}>
               <Compass className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
@@ -179,7 +179,7 @@ export default function UnifiedSystemCockpit() {
               onClick={() => setActivePart("chat")}
               className="w-full flex items-center space-x-3 px-3 py-2 rounded-xl text-left text-slate-400 hover:text-slate-200 transition-colors"
             >
-              <Zap className="w-3.5 h-3.5 text-[#f59e0b]" />
+              <Zap className="w-3.5 h-3.5 text-[#38bdf8]" />
               <span className="text-xs font-semibold">Activity & Audit</span>
             </button>
           </div>
@@ -188,7 +188,7 @@ export default function UnifiedSystemCockpit() {
         {/* Bottom Banner Card (Clay Dark Cushion) */}
         <div className="relative z-10 pt-2">
           <div className="p-3 rounded-2xl clay-dark-card border border-white/10 flex flex-col items-center text-center space-y-1.5">
-            <div className="w-7 h-7 rounded-full bg-[#00A884]/20 border border-[#00A884]/40 flex items-center justify-center text-[#00A884] shadow-sm">
+            <div className="w-7 h-7 rounded-full bg-[#00E5A3]/15 border border-[#00E5A3]/40 flex items-center justify-center text-[#00E5A3] shadow-sm">
               <ShieldCheck className="w-3.5 h-3.5" />
             </div>
             <div>
@@ -225,7 +225,7 @@ export default function UnifiedSystemCockpit() {
 
           {/* Search Pill */}
           <div className="flex-1 max-w-md relative">
-            <Search className="w-3.5 h-3.5 text-emerald-400 absolute left-4 top-1/2 -translate-y-1/2" />
+            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
@@ -240,7 +240,7 @@ export default function UnifiedSystemCockpit() {
             {/* Notification Bell */}
             <button className="w-9 h-9 clay-btn flex items-center justify-center text-slate-300 hover:text-white relative">
               <Bell className="w-3.5 h-3.5" />
-              <span className="w-2 h-2 rounded-full bg-[#00A884] absolute top-2 right-2 shadow-sm animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#00E5A3] absolute top-2 right-2 shadow-sm animate-pulse" />
             </button>
 
             {/* Profile Squircle */}
@@ -248,7 +248,7 @@ export default function UnifiedSystemCockpit() {
               onClick={() => setActivePart("overview")}
               className="w-9 h-9 clay-btn flex items-center justify-center text-white font-bold text-xs"
             >
-              <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-[#00A884] to-[#007A63] text-white flex items-center justify-center text-[8px] font-black tracking-wider shadow-sm">
+              <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-[#00E5A3] to-[#007A63] text-[#040907] flex items-center justify-center text-[8px] font-black tracking-wider shadow-sm">
                 CFO
               </div>
             </button>
@@ -263,20 +263,20 @@ export default function UnifiedSystemCockpit() {
           {activePart === "overview" && (
             <div className="space-y-2.5 pb-2">
               {/* Hero Banner Card */}
-              <div className="relative clay-card p-4 overflow-hidden flex items-center justify-between shadow-xl border border-white/20">
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#00A884]/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#f59e0b]/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="relative clay-card p-4 overflow-hidden flex items-center justify-between shadow-xl border border-white/12">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#00E5A3]/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#38bdf8]/08 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative z-10 max-w-lg space-y-1">
-                  <div className="flex items-center space-x-2 text-emerald-300 text-[11px] font-bold">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  <div className="flex items-center space-x-2 text-[#00E5A3] text-[11px] font-bold">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#00E5A3]" />
                     <span>NeuralCFO Multi-Agent Decision Engine</span>
                   </div>
                   <h2 className="text-lg font-black text-white tracking-tight">
                     Executive Strategy & Runway Command
                   </h2>
-                  <p className="text-xs text-slate-200 leading-relaxed font-sans font-medium">
-                    Your small business runway is currently solvent at <strong className="text-emerald-300 font-extrabold">18.4 weeks</strong>. 
-                    Simulate hiring 2 developers or deploy upfront retainers to push cash reserves past <strong className="text-amber-300 font-extrabold">${(projectedCash).toLocaleString()}</strong>.
+                  <p className="text-xs text-slate-300 leading-relaxed font-sans font-medium">
+                    Your small business runway is currently solvent at <strong className="text-[#00E5A3] font-extrabold">18.4 weeks</strong>. 
+                    Simulate hiring 2 developers or deploy upfront retainers to push cash reserves past <strong className="text-[#38bdf8] font-extrabold">${(projectedCash).toLocaleString()}</strong>.
                   </p>
                   <div className="pt-1 flex items-center space-x-2.5">
                     <button
@@ -296,8 +296,8 @@ export default function UnifiedSystemCockpit() {
                 </div>
 
                 {/* 3D Visual Mascot / Art Element */}
-                <div className="hidden md:flex relative z-10 w-24 h-24 rounded-3xl clay-squircle items-center justify-center shadow-lg border border-white/20">
-                  <Sparkles className="w-10 h-10 text-[#00A884] animate-pulse" />
+                <div className="hidden md:flex relative z-10 w-24 h-24 rounded-3xl clay-squircle items-center justify-center shadow-lg border border-white/10">
+                  <Sparkles className="w-10 h-10 text-[#00E5A3] animate-pulse" />
                 </div>
               </div>
 
@@ -305,35 +305,35 @@ export default function UnifiedSystemCockpit() {
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
                 {/* Metric 1: Cash Runway */}
                 <div className="clay-cushion p-3.5 space-y-1">
-                  <div className="w-8 h-8 clay-squircle flex items-center justify-center text-emerald-400">
+                  <div className="w-8 h-8 clay-squircle flex items-center justify-center text-[#00E5A3]">
                     <TrendingUp className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-slate-300">
+                    <div className="text-[10px] font-bold text-slate-400">
                       Cash Runway
                     </div>
                     <div className="text-xl font-black text-white tracking-tight font-sans">
                       {simulatedRunwayWeeks} w
                     </div>
-                    <div className="text-[9px] font-bold text-emerald-400">
+                    <div className="text-[9px] font-bold text-[#00E5A3]">
                       +{(((simulatedRunwayWeeks - 18.4) / 18.4) * 100).toFixed(0)}% simulated gain
                     </div>
                   </div>
                 </div>
 
-                {/* Metric 2: Floor Reserve */}
+                {/* Metric 2: Floor Reserve (Contrasting Icy Cyan - Not Orange) */}
                 <div className="clay-cushion p-3.5 space-y-1">
-                  <div className="w-8 h-8 clay-squircle flex items-center justify-center text-amber-400">
+                  <div className="w-8 h-8 clay-squircle flex items-center justify-center text-[#38bdf8]">
                     <Heart className="w-4 h-4 fill-current" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-slate-300">
+                    <div className="text-[10px] font-bold text-slate-400">
                       Floor Reserve
                     </div>
                     <div className="text-xl font-black text-white tracking-tight font-sans">
                       ${Math.round(projectedCash / 1000)}k
                     </div>
-                    <div className="text-[9px] font-bold text-amber-400">
+                    <div className="text-[9px] font-bold text-[#38bdf8]">
                       +${(calculatedDelta).toLocaleString()} safe buffer
                     </div>
                   </div>
@@ -341,17 +341,17 @@ export default function UnifiedSystemCockpit() {
 
                 {/* Metric 3: Reversibility */}
                 <div className="clay-cushion p-3.5 space-y-1">
-                  <div className="w-8 h-8 clay-squircle flex items-center justify-center text-emerald-300">
+                  <div className="w-8 h-8 clay-squircle flex items-center justify-center text-slate-300">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-slate-300">
+                    <div className="text-[10px] font-bold text-slate-400">
                       Reversibility
                     </div>
                     <div className="text-xl font-black text-white tracking-tight font-sans">
                       &lt; $5k
                     </div>
-                    <div className="text-[9px] font-bold text-emerald-300">
+                    <div className="text-[9px] font-bold text-[#00E5A3]">
                       14-day window
                     </div>
                   </div>
@@ -359,17 +359,17 @@ export default function UnifiedSystemCockpit() {
 
                 {/* Metric 4: Proof Streak */}
                 <div className="clay-cushion p-3.5 space-y-1">
-                  <div className="w-8 h-8 clay-squircle flex items-center justify-center text-amber-400">
+                  <div className="w-8 h-8 clay-squircle flex items-center justify-center text-[#00E5A3]">
                     <Flame className="w-4 h-4 fill-current" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-slate-300">
+                    <div className="text-[10px] font-bold text-slate-400">
                       Proof Streak
                     </div>
                     <div className="text-xl font-black text-white tracking-tight font-sans">
                       100%
                     </div>
-                    <div className="text-[9px] font-bold text-amber-400">
+                    <div className="text-[9px] font-bold text-[#00E5A3]">
                       0 unverified claims
                     </div>
                   </div>
@@ -385,30 +385,30 @@ export default function UnifiedSystemCockpit() {
                       <h3 className="text-xs font-extrabold text-white font-sans">
                         Runway Cash Overview
                       </h3>
-                      <p className="text-[10px] text-slate-300 font-medium">
+                      <p className="text-[10px] text-slate-400 font-medium">
                         26-week baseline vs live lever simulation
                       </p>
                     </div>
 
-                    <div className="clay-btn px-2.5 py-0.5 text-[11px] font-semibold text-slate-200 flex items-center space-x-1 cursor-pointer">
+                    <div className="clay-btn px-2.5 py-0.5 text-[11px] font-semibold text-slate-300 flex items-center space-x-1 cursor-pointer">
                       <span>This Quarter</span>
                       <ChevronDown className="w-3 h-3" />
                     </div>
                   </div>
 
-                  {/* 3D Rounded Vertical Pillar Bars */}
+                  {/* 3D Rounded Vertical Pillar Bars (Balanced Greens & Icy Cyan Contrast) */}
                   <div className="h-32 flex items-end justify-between px-3 pt-3 pb-1.5 clay-card-inset">
                     {[
-                      { label: "W1", height: "55%", color: "from-[#00A884] to-[#007A63]", val: "$185k" },
-                      { label: "W2", height: "70%", color: "from-[#10b981] to-[#059669]", val: "$172k" },
-                      { label: "W3", height: "48%", color: "from-[#007A63] to-[#043328]", val: "$161k" },
-                      { label: "W4", height: "85%", color: "from-[#00A884] to-[#007A63]", val: "$154k" },
-                      { label: "W5", height: "62%", color: "from-[#f59e0b] to-[#b45309]", val: "$147k" },
-                      { label: "W6", height: "78%", color: "from-[#007A63] to-[#064e3b]", val: "$155k" },
-                      { label: "W7", height: "92%", color: "from-[#fbbf24] to-[#d97706]", val: "$168k" },
+                      { label: "W1", height: "55%", color: "from-[#00E5A3] to-[#007A63]", val: "$185k" },
+                      { label: "W2", height: "70%", color: "from-[#007A63] to-[#043328]", val: "$172k" },
+                      { label: "W3", height: "48%", color: "from-[#38bdf8] to-[#0284c7]", val: "$161k" },
+                      { label: "W4", height: "85%", color: "from-[#00E5A3] to-[#007A63]", val: "$154k" },
+                      { label: "W5", height: "62%", color: "from-[#0284c7] to-[#0369a1]", val: "$147k" },
+                      { label: "W6", height: "78%", color: "from-[#007A63] to-[#054335]", val: "$155k" },
+                      { label: "W7", height: "92%", color: "from-[#38bdf8] to-[#007A63]", val: "$168k" },
                     ].map((bar, i) => (
                       <div key={i} className="flex flex-col items-center space-y-1.5 h-full justify-end group cursor-pointer">
-                        <span className="text-[8px] font-bold text-emerald-300 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="text-[8px] font-bold text-[#00E5A3] opacity-0 group-hover:opacity-100 transition-opacity font-mono">
                           {bar.val}
                         </span>
                         <div
@@ -429,7 +429,7 @@ export default function UnifiedSystemCockpit() {
                     <h3 className="text-xs font-extrabold text-white font-sans">
                       Capital Allocation
                     </h3>
-                    <p className="text-[10px] text-slate-300 font-medium">
+                    <p className="text-[10px] text-slate-400 font-medium">
                       Portfolio resource distribution
                     </p>
                   </div>
@@ -445,8 +445,9 @@ export default function UnifiedSystemCockpit() {
                           fill="none"
                           d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                         />
+                        {/* Slice 1: Retainers (Mint) */}
                         <path
-                          className="text-[#00A884]"
+                          className="text-[#00E5A3]"
                           strokeDasharray="45, 100"
                           strokeWidth="4"
                           strokeLinecap="round"
@@ -454,6 +455,7 @@ export default function UnifiedSystemCockpit() {
                           fill="none"
                           d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                         />
+                        {/* Slice 2: Dev Payroll (Deep Emerald) */}
                         <path
                           className="text-[#007A63]"
                           strokeDasharray="25, 100"
@@ -464,8 +466,9 @@ export default function UnifiedSystemCockpit() {
                           fill="none"
                           d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                         />
+                        {/* Slice 3: Prepay Float (Icy Cyan - Not Orange) */}
                         <path
-                          className="text-[#f59e0b]"
+                          className="text-[#38bdf8]"
                           strokeDasharray="15, 100"
                           strokeDashoffset="-70"
                           strokeWidth="4"
@@ -485,7 +488,7 @@ export default function UnifiedSystemCockpit() {
                     <div className="w-full mt-2 space-y-1 text-[11px]">
                       <div className="flex items-center justify-between">
                         <span className="flex items-center space-x-1.5 text-slate-300 font-bold">
-                          <span className="w-2 h-2 rounded-full bg-[#00A884]" />
+                          <span className="w-2 h-2 rounded-full bg-[#00E5A3]" />
                           <span>Upfront Retainers</span>
                         </span>
                         <span className="font-extrabold text-white">45%</span>
@@ -501,7 +504,7 @@ export default function UnifiedSystemCockpit() {
 
                       <div className="flex items-center justify-between">
                         <span className="flex items-center space-x-1.5 text-slate-300 font-bold">
-                          <span className="w-2 h-2 rounded-full bg-[#f59e0b]" />
+                          <span className="w-2 h-2 rounded-full bg-[#38bdf8]" />
                           <span>Prepay Float</span>
                         </span>
                         <span className="font-extrabold text-white">15%</span>
@@ -529,7 +532,7 @@ export default function UnifiedSystemCockpit() {
                     </h3>
                     <button
                       onClick={() => setActivePart("cfo")}
-                      className="text-[11px] font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+                      className="text-[11px] font-bold text-[#00E5A3] hover:text-[#38bdf8] transition-colors"
                     >
                       See All
                     </button>
@@ -539,21 +542,21 @@ export default function UnifiedSystemCockpit() {
                     {/* Scenario 1 */}
                     <div className="flex items-center justify-between p-1.5 rounded-2xl hover:bg-white/10 transition-colors">
                       <div className="flex items-center space-x-2.5">
-                        <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#00A884] to-[#007A63] flex items-center justify-center text-white shadow-sm font-bold text-[10px]">
+                        <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#00E5A3] to-[#007A63] flex items-center justify-center text-[#040907] shadow-sm font-black text-[10px]">
                           UR
                         </div>
                         <div>
                           <div className="text-xs font-bold text-white">
                             Upfront Retainers
                           </div>
-                          <div className="text-[10px] text-slate-300 font-medium">
+                          <div className="text-[10px] text-slate-400 font-medium">
                             Shift hourly billing to $15k/mo upfront
                           </div>
                         </div>
                       </div>
                       <button
                         onClick={() => setActivePart("cfo")}
-                        className="w-7 h-7 clay-btn flex items-center justify-center text-emerald-400 hover:text-white"
+                        className="w-7 h-7 clay-btn flex items-center justify-center text-[#00E5A3] hover:text-white"
                       >
                         <Play className="w-3 h-3 fill-current" />
                       </button>
@@ -569,37 +572,37 @@ export default function UnifiedSystemCockpit() {
                           <div className="text-xs font-bold text-white">
                             Hire 2 Developers
                           </div>
-                          <div className="text-[10px] text-slate-300 font-medium">
+                          <div className="text-[10px] text-slate-400 font-medium">
                             30-day delay + $14k monthly burn
                           </div>
                         </div>
                       </div>
                       <button
                         onClick={() => setActivePart("cfo")}
-                        className="w-7 h-7 clay-btn flex items-center justify-center text-emerald-400 hover:text-white"
+                        className="w-7 h-7 clay-btn flex items-center justify-center text-[#00E5A3] hover:text-white"
                       >
                         <Play className="w-3 h-3 fill-current" />
                       </button>
                     </div>
 
-                    {/* Scenario 3 */}
+                    {/* Scenario 3 (Contrasting Icy Cyan - Not Orange) */}
                     <div className="flex items-center justify-between p-1.5 rounded-2xl hover:bg-white/10 transition-colors">
                       <div className="flex items-center space-x-2.5">
-                        <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#f59e0b] to-[#b45309] flex items-center justify-center text-white shadow-sm font-bold text-[10px]">
+                        <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#38bdf8] to-[#0284c7] flex items-center justify-center text-[#04121d] shadow-sm font-black text-[10px]">
                           N15
                         </div>
                         <div>
                           <div className="text-xs font-bold text-white">
                             Net 15 Terms
                           </div>
-                          <div className="text-[10px] text-slate-300 font-medium">
+                          <div className="text-[10px] text-slate-400 font-medium">
                             Accelerates client receivables by 15 days
                           </div>
                         </div>
                       </div>
                       <button
                         onClick={() => setActivePart("moonshot")}
-                        className="w-7 h-7 clay-btn flex items-center justify-center text-amber-400 hover:text-white"
+                        className="w-7 h-7 clay-btn flex items-center justify-center text-[#38bdf8] hover:text-white"
                       >
                         <Play className="w-3 h-3 fill-current" />
                       </button>
@@ -616,7 +619,7 @@ export default function UnifiedSystemCockpit() {
                       <h3 className="text-xs font-extrabold text-white font-sans tracking-wide">
                         Live Strategic Lever Simulator
                       </h3>
-                      <p className="text-[10px] text-slate-300 font-semibold">
+                      <p className="text-[10px] text-slate-400 font-semibold">
                         Simulate cash float and runway impact in real time
                       </p>
                     </div>
@@ -626,7 +629,7 @@ export default function UnifiedSystemCockpit() {
                       <button
                         onClick={() => setLeverTab("capital")}
                         className={`px-2.5 py-0.5 rounded-full transition-all ${
-                          leverTab === "capital" ? "clay-pill-sage text-white shadow-sm" : "text-slate-300 hover:text-white"
+                          leverTab === "capital" ? "clay-pill-sage text-[#040907] shadow-sm font-extrabold" : "text-slate-400 hover:text-white"
                         }`}
                       >
                         Working Capital
@@ -634,7 +637,7 @@ export default function UnifiedSystemCockpit() {
                       <button
                         onClick={() => setLeverTab("staff")}
                         className={`px-2.5 py-0.5 rounded-full transition-all ${
-                          leverTab === "staff" ? "clay-pill-teal text-white shadow-sm" : "text-slate-300 hover:text-white"
+                          leverTab === "staff" ? "clay-pill-teal text-white shadow-sm" : "text-slate-400 hover:text-white"
                         }`}
                       >
                         Staffing
@@ -642,7 +645,7 @@ export default function UnifiedSystemCockpit() {
                       <button
                         onClick={() => setLeverTab("terms")}
                         className={`px-2.5 py-0.5 rounded-full transition-all ${
-                          leverTab === "terms" ? "clay-pill-lavender text-white shadow-sm" : "text-slate-300 hover:text-white"
+                          leverTab === "terms" ? "clay-pill-lavender text-[#04121d] shadow-sm font-extrabold" : "text-slate-400 hover:text-white"
                         }`}
                       >
                         Terms & Risk
@@ -652,16 +655,17 @@ export default function UnifiedSystemCockpit() {
 
                   {/* Sensible Scenario Toggle Buttons with Real Logic & Active States */}
                   <div className="grid grid-cols-3 gap-2 text-xs">
+                    {/* Retainers (Icy Cyan - Not Orange) */}
                     <button
                       onClick={() => setRetainerActive(!retainerActive)}
-                      className={`px-2 py-1.5 rounded-full font-bold transition-all text-center flex items-center justify-center space-x-1 ${
+                      className={`px-2 py-1.5 rounded-full font-extrabold transition-all text-center flex items-center justify-center space-x-1 ${
                         retainerActive
                           ? "clay-pill-lavender shadow-md"
                           : "clay-btn text-slate-300 hover:text-white"
                       }`}
                       title="Toggle $15,000 monthly upfront retainer contracts"
                     >
-                      <span className="w-2 h-2 rounded-full bg-amber-300" />
+                      <span className="w-2 h-2 rounded-full bg-white shadow-xs" />
                       <span className="truncate">Retainers (+15k)</span>
                     </button>
 
@@ -674,20 +678,20 @@ export default function UnifiedSystemCockpit() {
                       }`}
                       title="Enforce 15-day late payment reserve buffer"
                     >
-                      <span className="w-2 h-2 rounded-full bg-emerald-300" />
+                      <span className="w-2 h-2 rounded-full bg-[#00E5A3]" />
                       <span className="truncate">Delay Defense</span>
                     </button>
 
                     <button
                       onClick={() => setCovenantActive(!covenantActive)}
-                      className={`px-2 py-1.5 rounded-full font-bold transition-all text-center flex items-center justify-center space-x-1 ${
+                      className={`px-2 py-1.5 rounded-full font-extrabold transition-all text-center flex items-center justify-center space-x-1 ${
                         covenantActive
                           ? "clay-pill-sage shadow-md"
                           : "clay-btn text-slate-300 hover:text-white"
                       }`}
                       title="Enforce strict zero-debt zero-dilution covenant"
                     >
-                      <Check className="w-3 h-3 text-white" />
+                      <Check className="w-3 h-3 text-[#040907]" />
                       <span className="truncate">Zero-Debt</span>
                     </button>
                   </div>
@@ -698,10 +702,10 @@ export default function UnifiedSystemCockpit() {
                       Upfront Prepayment Acceptance
                     </span>
                     <div className="flex items-center space-x-1.5">
-                      <span className="font-black text-amber-400 font-mono text-xs">
+                      <span className="font-black text-[#38bdf8] font-mono text-xs">
                         {prepayRate}%
                       </span>
-                      <span className="text-[10px] font-bold text-emerald-300 bg-emerald-950/70 border border-emerald-500/30 px-2 py-0.5 rounded-full font-mono">
+                      <span className="text-[10px] font-bold text-[#00E5A3] bg-[#00E5A3]/15 border border-[#00E5A3]/30 px-2 py-0.5 rounded-full font-mono">
                         +${(Math.round((prepayRate / 100) * 45000)).toLocaleString()}
                       </span>
                     </div>
@@ -710,7 +714,7 @@ export default function UnifiedSystemCockpit() {
                   {/* REAL 3D TACTILE CLAY SLIDER WITH VISIBLE SLIDING KNOB */}
                   <div className="relative flex items-center py-1">
                     {/* Notched track background with tick marks */}
-                    <div className="w-full clay-notched-track h-6 px-3 flex items-center justify-between text-slate-400 font-mono text-[9px] select-none pointer-events-none relative">
+                    <div className="w-full clay-notched-track h-6 px-3 flex items-center justify-between text-slate-500 font-mono text-[9px] select-none pointer-events-none relative">
                       <span>0%</span>
                       <span>|</span>
                       <span>25%</span>
@@ -721,12 +725,12 @@ export default function UnifiedSystemCockpit() {
                       <span>|</span>
                       <span>100%</span>
 
-                      {/* Tactile 3D Emerald Pearl Sliding Knob */}
+                      {/* Tactile 3D Pure White Pearl Sliding Knob with Mint Ring */}
                       <div
                         style={{ left: `calc(${prepayRate}% * 0.90 + 5%)` }}
-                        className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#ffffff] border-2 border-[#00A884] shadow-[0_3px_10px_rgba(0,168,132,0.7),0_0_8px_rgba(0,168,132,0.5)] flex items-center justify-center pointer-events-none transition-all duration-75"
+                        className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#ffffff] border-2 border-[#00E5A3] shadow-[0_3px_12px_rgba(0,229,163,0.7),0_0_8px_rgba(56,189,248,0.5)] flex items-center justify-center pointer-events-none transition-all duration-75"
                       >
-                        <div className="w-2.5 h-2.5 rounded-full bg-[#00A884]" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-[#00E5A3]" />
                       </div>
                     </div>
 
@@ -748,23 +752,23 @@ export default function UnifiedSystemCockpit() {
                       <span className="text-[9px] uppercase font-bold text-slate-400 block">
                         Net Float Delta
                       </span>
-                      <strong className={`font-black font-mono text-xs ${calculatedDelta >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                      <strong className={`font-black font-mono text-xs ${calculatedDelta >= 0 ? 'text-[#00E5A3]' : 'text-rose-400'}`}>
                         {calculatedDelta >= 0 ? `+$${calculatedDelta.toLocaleString()}` : `-$${Math.abs(calculatedDelta).toLocaleString()}`}
                       </strong>
                     </div>
 
-                    <div className="h-5 w-px bg-white/15" />
+                    <div className="h-5 w-px bg-white/10" />
 
                     <div>
                       <span className="text-[9px] uppercase font-bold text-slate-400 block">
                         Simulated Runway
                       </span>
-                      <strong className="text-amber-400 font-black font-mono text-xs">
+                      <strong className="text-[#38bdf8] font-black font-mono text-xs">
                         {simulatedRunwayWeeks} Weeks
                       </strong>
                     </div>
 
-                    <div className="h-5 w-px bg-white/15" />
+                    <div className="h-5 w-px bg-white/10" />
 
                     <div>
                       <span className="text-[9px] uppercase font-bold text-slate-400 block">
@@ -777,7 +781,7 @@ export default function UnifiedSystemCockpit() {
 
                     <button
                       onClick={() => setActivePart("cfo")}
-                      className="clay-pill-sage px-3 py-1 rounded-full text-[10px] font-black text-white flex items-center space-x-1 shadow-sm transition-transform hover:scale-105"
+                      className="clay-pill-sage px-3 py-1 rounded-full text-[10px] font-black text-[#040907] flex items-center space-x-1 shadow-sm transition-transform hover:scale-105"
                       title="Load these levers directly into Part 2 CFO Matrix"
                     >
                       <span>Apply</span>
