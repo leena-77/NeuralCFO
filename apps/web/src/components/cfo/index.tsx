@@ -386,7 +386,7 @@ export const CfoDashboard: React.FC = () => {
 
       {/* Dynamic Notification Banner */}
       {notification && (
-        <div className="clay-card p-4 rounded-2xl border-2 border-[#00A884] bg-[#07241b] text-emerald-200 text-xs font-bold flex justify-between items-center shadow-sm">
+        <div className="clay-card p-4 rounded-2xl border border-emerald-400/40 text-emerald-200 text-xs font-bold flex justify-between items-center shadow-sm">
           <div className="flex items-center space-x-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
             <span>{notification}</span>

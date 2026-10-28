@@ -729,7 +729,7 @@ export function MoonshotView({ compact = false }: { compact?: boolean }) {
 
           {/* Report Summary Drawer (when reportData exists) */}
           {reportData && (
-            <div className="clay-card p-6 rounded-3xl space-y-4 border-2 border-[#00A884] bg-[#07241b]">
+            <div className="clay-card p-6 rounded-3xl space-y-4 border border-emerald-400/40">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-extrabold text-emerald-300 flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600" />

@@ -65,9 +65,15 @@
   background: rgba(0, 229, 163, 0.7);
 }
 
-/* Lush Emerald Forest Foliage Canvas with Organic Depth */
+/* Rich Emerald Forest Foliage Canvas with Organic Gradient Depth */
 body {
-  background: radial-gradient(circle at 18% 15%, #0f4a36 0%, #093325 40%, #041a12 100%);
+  background: 
+    radial-gradient(ellipse 75% 45% at 15% 10%, rgba(16, 185, 129, 0.45) 0%, transparent 65%),
+    radial-gradient(ellipse 65% 55% at 85% 20%, rgba(52, 211, 153, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% 85%, rgba(5, 150, 105, 0.40) 0%, transparent 65%),
+    radial-gradient(circle at 80% 60%, rgba(13, 148, 136, 0.28) 0%, transparent 50%),
+    linear-gradient(135deg, #064e3b 0%, #065f46 25%, #043f30 55%, #022c22 80%, #011912 100%);
+  background-attachment: fixed;
   color: #ffffff;
   min-height: 100vh;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -79,61 +85,61 @@ body {
 /* ========================================================================= */
 
 .clay-cushion {
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(36px) saturate(200%);
-  -webkit-backdrop-filter: blur(36px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  border-top: 2px solid rgba(255, 255, 255, 0.75);
-  border-left: 1.5px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.38), 
-              0 0 20px rgba(255, 255, 255, 0.08), 
-              inset 0 1px 2px rgba(255, 255, 255, 0.65), 
-              inset 0 -1px 2px rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
+  border-left: 1.2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.32), 
+              0 0 20px rgba(16, 185, 129, 0.10), 
+              inset 0 1px 2px rgba(255, 255, 255, 0.50), 
+              inset 0 -1px 2px rgba(255, 255, 255, 0.06);
   border-radius: 1.75rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .clay-cushion:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.24);
-  border-color: rgba(255, 255, 255, 0.50);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.40);
   border-top-color: #ffffff;
-  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.45), 
-              0 0 35px rgba(255, 255, 255, 0.22), 
-              inset 0 1px 3px rgba(255, 255, 255, 0.85);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.38), 
+              0 0 30px rgba(16, 185, 129, 0.20), 
+              inset 0 1px 3px rgba(255, 255, 255, 0.75);
 }
 
 .clay-card {
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(36px) saturate(200%);
-  -webkit-backdrop-filter: blur(36px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-top: 2px solid rgba(255, 255, 255, 0.70);
-  border-left: 1.5px solid rgba(255, 255, 255, 0.40);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), 
-              0 0 18px rgba(255, 255, 255, 0.06), 
-              inset 0 1px 2px rgba(255, 255, 255, 0.55), 
-              inset 0 -1px 2px rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.60);
+  border-left: 1.2px solid rgba(255, 255, 255, 0.30);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.30), 
+              0 0 15px rgba(16, 185, 129, 0.08), 
+              inset 0 1px 2px rgba(255, 255, 255, 0.45), 
+              inset 0 -1px 2px rgba(255, 255, 255, 0.05);
   border-radius: 1.5rem;
 }
 
 .clay-card-sm {
-  background: rgba(255, 255, 255, 0.17);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(255, 255, 255, 0.30);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.30), inset 0 1px 1.5px rgba(255, 255, 255, 0.50);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26), inset 0 1px 1.5px rgba(255, 255, 255, 0.40);
   border-radius: 1.25rem;
 }
 
 /* Crystal Debossed Inset Slabs (Contrast Interior) */
 .clay-card-inset {
-  background: rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.40), inset -1px -1px 2px rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.35), inset -1px -1px 2px rgba(255, 255, 255, 0.12);
   border-radius: 1.25rem;
   color: #ffffff;
 }
@@ -199,12 +205,12 @@ body {
 
 /* White Transparent Crystal Buttons (visionOS Floating Glass Pill) */
 .clay-btn {
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.70);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22), inset 0 1px 1.5px rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.60);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.20), inset 0 1px 1.5px rgba(255, 255, 255, 0.45);
   border-radius: 9999px;
   color: #ffffff;
   font-weight: 700;
@@ -213,11 +219,11 @@ body {
 
 .clay-btn:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.30);
-  border-color: rgba(255, 255, 255, 0.60);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
   border-top-color: #ffffff;
   color: #ffffff;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28), 0 0 18px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25), 0 0 18px rgba(255, 255, 255, 0.25);
 }
 
 .clay-btn:active, .clay-btn-pressed {
@@ -318,13 +324,13 @@ body {
 /* ========================================================================= */
 
 .clay-sidebar {
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(36px) saturate(200%);
-  -webkit-backdrop-filter: blur(36px) saturate(200%);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.40), inset 0 1px 2px rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-top: 2px solid rgba(255, 255, 255, 0.70);
-  border-left: 1.5px solid rgba(255, 255, 255, 0.40);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.32), inset 0 1px 2px rgba(255, 255, 255, 0.40);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.60);
+  border-left: 1.2px solid rgba(255, 255, 255, 0.30);
   border-radius: 2rem;
 }
 
@@ -360,12 +366,12 @@ body {
 /* ========================================================================= */
 
 .liquid-glass-slab {
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(36px) saturate(200%);
-  -webkit-backdrop-filter: blur(36px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  border-top: 2px solid rgba(255, 255, 255, 0.75);
-  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.40), inset 0 1px 2px rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.50);
   border-radius: 1.75rem;
 }
 
