@@ -35,7 +35,7 @@ class StrategyCard(BaseModel):
     source_excerpt_hash: str
     strategic_mechanism: str = ""
     status: Literal["approved", "draft", "archived"] = "approved"
-    reviewer: str = "Aleena Lead Reviewer"
+    reviewer: str = "Lead Reviewer"
     review_date: date = date(2026, 10, 24)
     tags: List[str] = Field(default_factory=list)
 

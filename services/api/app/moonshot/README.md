@@ -1,5 +1,5 @@
 # Moonshot Mode Strategy Module
-**Owner:** Aleena (`leena-77`)  
+**Module:** Moonshot Mode Strategy Engine  
 **Location:** `/services/api/app/moonshot`  
 **Migrations Allocated:** `0200-0299`  
 **Tables Owned:**

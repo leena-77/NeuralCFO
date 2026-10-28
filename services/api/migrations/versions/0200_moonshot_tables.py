@@ -1,6 +1,6 @@
 """Moonshot Mode Schema (0200-0299).
 Alembic migration revision: 0200_moonshot_tables
-Revises: None (standalone module migration range 0200-0299 for Aleena)
+Revises: None (standalone module migration range 0200-0299)
 """
 from alembic import op
 import sqlalchemy as sa

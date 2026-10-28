@@ -80,7 +80,7 @@ All tools return the standard Part A2 envelope:
 | `finance.run_scenario` | CFO Module | `FinanceService.run_scenario()` | `FINANCE_BACKEND=fake\|real` |
 | `finance.list_source_rows` | CFO Module | `FinanceService.list_source_rows()` | `FINANCE_BACKEND=fake\|real` |
 | `finance.explain_change` | CFO Module | `FinanceService.explain_change()` | `FINANCE_BACKEND=fake\|real` |
-| `moonshot.run` | Aleena | `MoonshotWorkflow.run()` | `MOONSHOT_BACKEND=fake\|real` |
+| `moonshot.run` | Moonshot Module | `MoonshotWorkflow.run()` | `MOONSHOT_BACKEND=fake\|real` |
 | `rag.search` | Chat Module | `RagRetriever.search()` | Built-in |
 | `memory.read` | Chat Module | `MemoryStore.read()` | `MEMORY_BACKEND=fake\|meterless` |
 | `memory.write` | Chat Module | `MemoryStore.propose()` | `MEMORY_BACKEND=fake\|meterless` |
@@ -93,7 +93,7 @@ All tools return the standard Part A2 envelope:
 
 Each module registers an `EvidenceResolver` with `evidence_registry` in `app/core/evidence.py`:
 - **CFO Module:** Registers resolvers for `source_row`, `financial_record`, `forecast_run`, `forecast_point`, `finance_assumption`.
-- **Aleena (Moonshot):** Registers resolvers for `goal_assumption`, `kb_excerpt`, `strategy_score`, `base_rate`.
+- **Moonshot Module:** Registers resolvers for `goal_assumption`, `kb_excerpt`, `strategy_score`, `base_rate`.
 - **Chat Module:** Registers resolvers for `document_chunk`, `web_source`.
 
 When a user clicks an evidence badge in the Web Shell, the Evidence Drawer queries `GET /v1/citations/{id}` and renders the verified lineage snippet and metadata.
@@ -150,7 +150,7 @@ The Chatbot owns 18 tables defined in `services/api/migrations/versions/0300_cha
 - [ ] Place your CFO dashboard pages under `/apps/web/src/app/cfo/`.
 - [ ] Register your target resolvers (`source_row`, `forecast_point`, etc.) with `evidence_registry`.
 
-### For Aleena (Moonshot Mode):
+### For Moonshot Mode (Strategy Engine):
 - [ ] Verify your workflow implements the protocol in `/packages/contracts/moonshot.py`.
 - [ ] Confirm your clarification questions conform to `NeedsInputResult` with tappable options.
 - [ ] Connect your workflow to Chatbot by setting `MOONSHOT_BACKEND=real` and calling `set_moonshot_workflow(your_workflow)`.

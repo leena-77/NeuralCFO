@@ -81,7 +81,7 @@ class StageEvent(BaseModel):
     status: Literal["started", "completed", "failed"]
 
 class MoonshotWorkflow(Protocol):
-    """Protocol for Aleena's MoonshotWorkflow."""
+    """Protocol for MoonshotWorkflow."""
     async def run(
         self,
         org_id: UUID,
@@ -217,7 +217,7 @@ class FakeMoonshotWorkflow:
         )
 
 
-# --- Moonshot Pipeline Models (Aleena Engine) ---
+# --- Moonshot Pipeline Models (Strategy Engine) ---
 class FixedConstraints(BaseModel):
     horizon_weeks: int = Field(default=26, ge=1, le=104)
     budget_cap: float = Field(default=50_000.0, ge=0.0)

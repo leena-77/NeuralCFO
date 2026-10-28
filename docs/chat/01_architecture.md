@@ -181,7 +181,7 @@ Every tool registered in `ToolRegistry` conforms strictly to:
 | `finance.run_scenario` | CFO (Finance) | `FinanceService` | LOW | member | 15s | Run A5 scenario contract against baseline (3 cases) |
 | `finance.list_source_rows` | CFO (Finance) | `FinanceService` | LOW | viewer | 10s | Get underlying raw rows behind a calculated figure |
 | `finance.explain_change` | CFO (Finance) | `FinanceService` | LOW | viewer | 10s | Period comparison & driver decomposition |
-| `moonshot.run` | Moonshot (Aleena) | `MoonshotWorkflow`| LOW | member | 30s | Run 6-card pipeline or return `needs_input` |
+| `moonshot.run` | Moonshot (Strategy) | `MoonshotWorkflow`| LOW | member | 30s | Run 6-card pipeline or return `needs_input` |
 | `rag.search` | Chat (Gateway) | `RagRetriever` | LOW | viewer | 5s | Hybrid semantic search over uploaded org documents |
 | `memory.read` | Chat (Gateway) | `MemoryStore` | LOW | viewer | 5s | Read stored facts/assumptions for user & org |
 | `memory.write` | Chat (Gateway) | `MemoryStore` | MEDIUM | member | 5s | Propose a fact/assumption for user confirmation |
@@ -570,7 +570,7 @@ The Web Shell provides the common host for all three modules:
 - `/apps/web/src/components/evidence/EvidenceDrawer.tsx`: Shared slide-out drawer resolving citation UUIDs against `GET /v1/citations/{id}` and hosting modular renderers.
 - Sub-routes for teammates:
   - `/apps/web/src/app/cfo/`: NeuralCFO scenario pages.
-  - `/apps/web/src/app/moonshot/`: Moonshot pages (owned by Aleena).
+  - `/apps/web/src/app/moonshot/`: Moonshot pages.
 
 ---
 *End of Architecture Specification.*

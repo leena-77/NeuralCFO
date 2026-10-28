@@ -12,7 +12,7 @@ This repository is built as a **Modular Monolith** designed for seamless 3-perso
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **LLM Chatbot Gateway & Chat** | Conversational Core | `/services/api/app/chat` | `0300-0399` | `/apps/web/src/app/chat` | Conversational gateway, router, tool registry, verifier (V1-V9), web shell host, SSE streaming |
 | **NeuralCFO (Finance Engine)** | Financial Simulation | `/services/api/app/cfo` | `0100-0199` | `/apps/web/src/app/cfo` | Cash runway engine, baseline forecast, scenarios (hiring, late payments), CSV import |
-| **Moonshot Mode (Strategy)** | **Aleena** (`leena-77`) | `/services/api/app/moonshot` | `0200-0299` | `/apps/web/src/app/moonshot` | 6-card strategy pipeline, constraint intake, gating, scoring profiles, skeptic section |
+| **Moonshot Mode (Strategy)** | Strategic Engine | `/services/api/app/moonshot` | `0200-0299` | `/apps/web/src/app/moonshot` | 6-card strategy pipeline, constraint intake, gating, scoring profiles, skeptic section |
 
 ---
 
@@ -25,7 +25,7 @@ This repository is built as a **Modular Monolith** designed for seamless 3-perso
 │       └── src/app/
 │           ├── chat/          # Conversational interface + Evidence Drawer host
 │           ├── cfo/           # Scenario comparison & cash dashboard
-│           └── moonshot/      # Strategy card explorer & experiment plans (Aleena)
+│           └── moonshot/      # Strategy card explorer & experiment plans
 ├── packages/
 │   └── contracts/             # SINGLE SOURCE OF TRUTH (Shared Pydantic models, protocols & fakes)
 │       ├── envelope.py        # Standard ToolResultEnvelope & ErrorEnvelope
@@ -40,7 +40,7 @@ This repository is built as a **Modular Monolith** designed for seamless 3-perso
 │       │   ├── core/          # Foundation Kit (Auth, JWT, audit logging, errors, evidence registry)
 │       │   ├── chat/          # Chatbot module (Router, agents, tools, runtime, verifier)
 │       │   ├── cfo/           # NeuralCFO module (Cash runway & financial models)
-│       │   └── moonshot/      # Moonshot Mode module (Aleena's workspace)
+│       │   └── moonshot/      # Moonshot Mode module (Strategy and decision pipeline)
 │       └── migrations/        # Alembic versions partitioned by owner ranges (0001-0399)
 ├── docs/                      # Per-module architecture, progress logs, and test reports
 │   ├── chat/                  # Architecture & integration readiness reports
@@ -71,13 +71,13 @@ This repository is built as a **Modular Monolith** designed for seamless 3-perso
 Every external service and peer module has a runnable **Fake** in `/packages/contracts`:
 - Chat runs completely on its own using `FakeFinanceService` and `FakeMoonshotWorkflow`.
 - When ready to connect the real Finance Engine, simply toggle `FINANCE_BACKEND=real`.
-- When Aleena is ready to connect the real Moonshot Engine, simply toggle `MOONSHOT_BACKEND=real`.
+- When ready to connect the real Moonshot Engine, simply toggle `MOONSHOT_BACKEND=real`.
 
 ### 3. Database Migration Ranges
 Never edit another owner's migration file:
 - **`0001-0099`**: Core tables (`organizations`, `users`, `audit_logs`, `decision_runs`, `claims`, `evidence_links`)
 - **`0100-0199`**: CFO tables (Finance Engine)
-- **`0200-0299`**: Moonshot tables (Aleena)
+- **`0200-0299`**: Moonshot tables (Strategy Pipeline)
 - **`0300-0399`**: Chat tables (Gateway & Chatbot)
 
 ---

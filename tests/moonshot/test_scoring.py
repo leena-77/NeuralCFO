@@ -80,7 +80,7 @@ def test_reversibility_bands():
 
 
 def test_pdf_worked_example_golden_test():
-    """Golden Test (PDF §8 / §9.3 & Aleena Prompt B2.8):
+    """Golden Test (PDF §8 / §9.3 & Strategy Prompt B2.8):
 
     Strategy A = 60.4 (ROC) / 60.0 (Rank-Sum) / 60.0 (Equal)
     Strategy B = 67.2 (ROC) / 64.5 (Rank-Sum) / 56.3 (Equal)

@@ -13,7 +13,7 @@ In accordance with Prompt 3 of 3 for the Open Agent Hackathon 2026:
 - **Product:** NeuralCFO + Moonshot Mode (Unified Platform)
 - **Team Split:**
   - **Finance Engine:** NeuralCFO finance engine (`/services/api/app/cfo`, migrations `0100-0199`)
-  - **Aleena:** Moonshot Mode strategy engine (`/services/api/app/moonshot`, migrations `0200-0299`)
+  - **Moonshot Mode:** Strategy engine (`/services/api/app/moonshot`, migrations `0200-0299`)
   - **Chatbot Gateway (This Module):** LLM Chatbot gateway + chat (`/services/api/app/chat`, migrations `0300-0399`, Web Shell `/apps/web`, shared provider contracts)
 - **Core Principle:** The model understands and explains, tools calculate, code verifies, and every number and quote traces to a source.
 - **Strict Boundary Rules:**
