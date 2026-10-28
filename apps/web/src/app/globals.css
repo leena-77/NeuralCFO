@@ -99,61 +99,61 @@ body::before {
 /* ========================================================================= */
 
 .clay-cushion {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
-  border-left: 1.2px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.32), 
-              0 0 20px rgba(16, 185, 129, 0.10), 
-              inset 0 1px 2px rgba(255, 255, 255, 0.50), 
-              inset 0 -1px 2px rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(8px) saturate(130%);
+  -webkit-backdrop-filter: blur(8px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.80);
+  border-left: 1.2px solid rgba(255, 255, 255, 0.50);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), 
+              0 0 16px rgba(255, 255, 255, 0.12), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.50), 
+              inset 0 -1px 1px rgba(255, 255, 255, 0.05);
   border-radius: 1.75rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .clay-cushion:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.40);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.60);
   border-top-color: #ffffff;
-  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.38), 
-              0 0 30px rgba(16, 185, 129, 0.20), 
-              inset 0 1px 3px rgba(255, 255, 255, 0.75);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.45), 
+              0 0 25px rgba(255, 255, 255, 0.22), 
+              inset 0 1px 2px rgba(255, 255, 255, 0.75);
 }
 
 .clay-card {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.20);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.60);
-  border-left: 1.2px solid rgba(255, 255, 255, 0.30);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.30), 
-              0 0 15px rgba(16, 185, 129, 0.08), 
-              inset 0 1px 2px rgba(255, 255, 255, 0.45), 
-              inset 0 -1px 2px rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px) saturate(130%);
+  -webkit-backdrop-filter: blur(8px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.75);
+  border-left: 1.2px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32), 
+              0 0 14px rgba(255, 255, 255, 0.10), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.45), 
+              inset 0 -1px 1px rgba(255, 255, 255, 0.04);
   border-radius: 1.5rem;
 }
 
 .clay-card-sm {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(22px) saturate(180%);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.20);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26), inset 0 1px 1.5px rgba(255, 255, 255, 0.40);
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(8px) saturate(130%);
+  -webkit-backdrop-filter: blur(8px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.70);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26), inset 0 1px 1px rgba(255, 255, 255, 0.40);
   border-radius: 1.25rem;
 }
 
 /* Crystal Debossed Inset Slabs (Contrast Interior) */
 .clay-card-inset {
-  background: rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.35), inset -1px -1px 2px rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.25), inset -1px -1px 1px rgba(255, 255, 255, 0.15);
   border-radius: 1.25rem;
   color: #ffffff;
 }
@@ -219,12 +219,12 @@ body::before {
 
 /* White Transparent Crystal Buttons (visionOS Floating Glass Pill) */
 .clay-btn {
-  background: rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.60);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.20), inset 0 1px 1.5px rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.45);
   border-radius: 9999px;
   color: #ffffff;
   font-weight: 700;
@@ -233,11 +233,11 @@ body::before {
 
 .clay-btn:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.60);
   border-top-color: #ffffff;
   color: #ffffff;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25), 0 0 18px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.30), 0 0 18px rgba(255, 255, 255, 0.25);
 }
 
 .clay-btn:active, .clay-btn-pressed {
@@ -315,11 +315,12 @@ body::before {
 
 /* Elevated Squircle for Icons */
 .clay-squircle {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.30), inset 0 1px 1px rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.30);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.70);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.45);
   border-radius: 1.25rem;
 }
 
@@ -338,13 +339,13 @@ body::before {
 /* ========================================================================= */
 
 .clay-sidebar {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.32), inset 0 1px 2px rgba(255, 255, 255, 0.40);
-  border: 1px solid rgba(255, 255, 255, 0.20);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.60);
-  border-left: 1.2px solid rgba(255, 255, 255, 0.30);
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(10px) saturate(130%);
+  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35), 0 0 15px rgba(255, 255, 255, 0.10), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.75);
+  border-left: 1.2px solid rgba(255, 255, 255, 0.45);
   border-radius: 2rem;
 }
 
@@ -380,12 +381,12 @@ body::before {
 /* ========================================================================= */
 
 .liquid-glass-slab {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
-  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.50);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px) saturate(130%);
+  -webkit-backdrop-filter: blur(8px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.45);
   border-radius: 1.75rem;
 }
 
