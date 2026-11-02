@@ -114,7 +114,7 @@ export default function UnifiedSystemCockpit() {
             </span>
           </button>
 
-          {/* Part 1: Chat Co-Pilot */}
+          {/* Chat Co-Pilot */}
           <button
             onClick={() => setActivePart("chat")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
@@ -128,12 +128,12 @@ export default function UnifiedSystemCockpit() {
             </div>
             <div className="flex-1 min-w-0">
               <span className="text-xs font-bold tracking-wide block truncate">
-                [Part 1] Chat Co-Pilot
+                Chat Co-Pilot
               </span>
             </div>
           </button>
 
-          {/* Part 2: CFO Matrix */}
+          {/* CFO Matrix */}
           <button
             onClick={() => setActivePart("cfo")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
@@ -147,12 +147,12 @@ export default function UnifiedSystemCockpit() {
             </div>
             <div className="flex-1 min-w-0">
               <span className="text-xs font-bold tracking-wide block truncate">
-                [Part 2] CFO Matrix
+                CFO Matrix
               </span>
             </div>
           </button>
 
-          {/* Part 3: Moonshot Studio */}
+          {/* Moonshot Studio */}
           <button
             onClick={() => setActivePart("moonshot")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
@@ -166,7 +166,7 @@ export default function UnifiedSystemCockpit() {
             </div>
             <div className="flex-1 min-w-0">
               <span className="text-xs font-bold tracking-wide block truncate">
-                [Part 3] Moonshot Studio
+                Moonshot Studio
               </span>
             </div>
           </button>
@@ -788,7 +788,7 @@ export default function UnifiedSystemCockpit() {
                     <button
                       onClick={() => setActivePart("cfo")}
                       className="clay-pill-sage px-3 py-1 rounded-full text-[10px] font-black text-[#040907] flex items-center space-x-1 shadow-sm transition-transform hover:scale-105"
-                      title="Load these levers directly into Part 2 CFO Matrix"
+                      title="Load these levers directly into CFO Matrix"
                     >
                       <span>Apply</span>
                       <ArrowRight className="w-3 h-3" />
@@ -800,7 +800,7 @@ export default function UnifiedSystemCockpit() {
           )}
 
           {/* ============================================================== */}
-          {/* PART 1: CONVERSATIONAL CFO CO-PILOT VIEW                       */}
+          {/* CONVERSATIONAL CFO CO-PILOT VIEW                       */}
           {/* ============================================================== */}
           {activePart === "chat" && (
             <div className="h-full flex flex-col overflow-y-auto">
@@ -809,7 +809,7 @@ export default function UnifiedSystemCockpit() {
           )}
 
           {/* ============================================================== */}
-          {/* PART 2: CFO FINANCE ENGINE MATRIX                              */}
+          {/* CFO FINANCE ENGINE MATRIX                              */}
           {/* ============================================================== */}
           {activePart === "cfo" && (
             <div className="h-full flex flex-col overflow-y-auto pr-1">
@@ -818,7 +818,7 @@ export default function UnifiedSystemCockpit() {
           )}
 
           {/* ============================================================== */}
-          {/* PART 3: MOONSHOT STRATEGIC REASONING STUDIO                    */}
+          {/* MOONSHOT STRATEGIC REASONING STUDIO                    */}
           {/* ============================================================== */}
           {activePart === "moonshot" && (
             <div className="h-full flex flex-col overflow-y-auto pr-1">
