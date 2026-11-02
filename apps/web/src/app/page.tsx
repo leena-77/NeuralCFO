@@ -63,24 +63,24 @@ export default function UnifiedSystemCockpit() {
   return (
     <div className="flex h-screen w-screen overflow-hidden p-2.5 gap-2.5 font-sans relative">
       {/* ============================================================== */}
-      {/* 0. LUSH EMERALD AMBIENT LIGHTING (Enhances Silk Wallpaper)     */}
+      {/* 0. SOPHISTICATED NEUTRAL & EMERALD AMBIENT LIGHTING            */}
       {/* ============================================================== */}
-      <div className="fixed -top-24 -left-24 w-96 h-96 rounded-full bg-[#10b981]/15 blur-[120px] pointer-events-none z-0" />
-      <div className="fixed bottom-0 right-0 w-[500px] h-[400px] rounded-full bg-[#27a365]/20 blur-[130px] pointer-events-none z-0" />
+      <div className="fixed -top-32 left-1/4 w-[600px] h-[350px] rounded-full bg-[#00E5A3]/10 blur-[140px] pointer-events-none z-0" />
+      <div className="fixed -bottom-24 right-10 w-[550px] h-[350px] rounded-full bg-[#1e293b]/40 blur-[130px] pointer-events-none z-0" />
 
       {/* ============================================================== */}
       {/* 1. LEFT NAVIGATION RAIL (White Transparent Liquid Crystal Rail)*/}
       {/* ============================================================== */}
       <aside className="w-60 flex-shrink-0 flex flex-col justify-between p-3.5 clay-sidebar text-slate-200 relative overflow-hidden z-20">
         {/* Subtle Ambient Backlights */}
-        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-[#00E5A3]/15 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-16 -right-10 w-40 h-40 rounded-full bg-[#38bdf8]/15 blur-3xl pointer-events-none" />
+        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-[#00E5A3]/8 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-16 -right-10 w-40 h-40 rounded-full bg-[#38bdf8]/8 blur-3xl pointer-events-none" />
 
         {/* Top Profile / Executive Workspace */}
         <div className="relative z-10 flex flex-col items-center text-center pb-2.5">
           <div className="relative mb-2 group cursor-pointer">
             <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#00E5A3] via-white/80 to-[#38bdf8] p-[2.5px] shadow-[0_8px_20px_rgba(0,0,0,0.4)] transition-transform duration-300 group-hover:scale-105 flex items-center justify-center">
-              <div className="w-full h-full rounded-full bg-[#08291e] flex items-center justify-center overflow-hidden border-2 border-white/40">
+              <div className="w-full h-full rounded-full bg-[#0f141c] flex items-center justify-center overflow-hidden border-2 border-white/20">
                 <ShieldCheck className="w-7 h-7 text-[#00E5A3]" />
               </div>
             </div>
@@ -102,11 +102,11 @@ export default function UnifiedSystemCockpit() {
             onClick={() => setActivePart("overview")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
               activePart === "overview"
-                ? "clay-sidebar-item-active font-extrabold text-[#040907] shadow-md"
+                ? "clay-sidebar-item-active font-extrabold text-white shadow-md"
                 : "clay-sidebar-item font-semibold text-slate-200 hover:text-white"
             }`}
           >
-            <div className={`p-1.5 rounded-xl ${activePart === "overview" ? "bg-[#040907] text-[#00E5A3] shadow-xs" : "bg-white/10 text-slate-300"}`}>
+            <div className={`p-1.5 rounded-xl ${activePart === "overview" ? "bg-[#00E5A3]/20 text-[#00E5A3] border border-[#00E5A3]/30 shadow-xs" : "bg-white/5 text-slate-400"}`}>
               <LayoutDashboard className="w-4 h-4" />
             </div>
             <span className="text-xs font-bold tracking-wide">
@@ -119,11 +119,11 @@ export default function UnifiedSystemCockpit() {
             onClick={() => setActivePart("chat")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
               activePart === "chat"
-                ? "clay-sidebar-item-active font-extrabold text-[#040907] shadow-md"
+                ? "clay-sidebar-item-active font-extrabold text-white shadow-md"
                 : "clay-sidebar-item font-semibold text-slate-200 hover:text-white"
             }`}
           >
-            <div className={`p-1.5 rounded-xl ${activePart === "chat" ? "bg-[#040907] text-[#00E5A3] shadow-xs" : "bg-white/10 text-slate-300"}`}>
+            <div className={`p-1.5 rounded-xl ${activePart === "chat" ? "bg-[#00E5A3]/20 text-[#00E5A3] border border-[#00E5A3]/30 shadow-xs" : "bg-white/5 text-slate-400"}`}>
               <MessageSquare className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
@@ -138,11 +138,11 @@ export default function UnifiedSystemCockpit() {
             onClick={() => setActivePart("cfo")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
               activePart === "cfo"
-                ? "clay-sidebar-item-active font-extrabold text-[#040907] shadow-md"
+                ? "clay-sidebar-item-active font-extrabold text-white shadow-md"
                 : "clay-sidebar-item font-semibold text-slate-200 hover:text-white"
             }`}
           >
-            <div className={`p-1.5 rounded-xl ${activePart === "cfo" ? "bg-[#040907] text-[#00E5A3] shadow-xs" : "bg-white/10 text-slate-300"}`}>
+            <div className={`p-1.5 rounded-xl ${activePart === "cfo" ? "bg-[#00E5A3]/20 text-[#00E5A3] border border-[#00E5A3]/30 shadow-xs" : "bg-white/5 text-slate-400"}`}>
               <BarChart3 className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
@@ -157,11 +157,11 @@ export default function UnifiedSystemCockpit() {
             onClick={() => setActivePart("moonshot")}
             className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-2xl text-left transition-all ${
               activePart === "moonshot"
-                ? "clay-sidebar-item-active font-extrabold text-[#040907] shadow-md"
+                ? "clay-sidebar-item-active font-extrabold text-white shadow-md"
                 : "clay-sidebar-item font-semibold text-slate-200 hover:text-white"
             }`}
           >
-            <div className={`p-1.5 rounded-xl ${activePart === "moonshot" ? "bg-[#040907] text-[#00E5A3] shadow-xs" : "bg-white/10 text-slate-300"}`}>
+            <div className={`p-1.5 rounded-xl ${activePart === "moonshot" ? "bg-[#00E5A3]/20 text-[#00E5A3] border border-[#00E5A3]/30 shadow-xs" : "bg-white/5 text-slate-400"}`}>
               <Compass className="w-4 h-4" />
             </div>
             <div className="flex-1 min-w-0">
@@ -270,8 +270,8 @@ export default function UnifiedSystemCockpit() {
             <div className="space-y-2.5 pb-2">
               {/* Hero Banner Card (White Liquid Crystal Slab) */}
               <div className="relative clay-card p-4 overflow-hidden flex items-center justify-between shadow-xl border border-white/25">
-                <div className="absolute top-0 right-0 w-80 h-80 bg-[#00E5A3]/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#38bdf8]/12 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#00E5A3]/8 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#38bdf8]/8 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative z-10 max-w-lg space-y-1">
                   <div className="flex items-center space-x-2 text-[#00E5A3] text-[11px] font-bold">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#00E5A3]" />
